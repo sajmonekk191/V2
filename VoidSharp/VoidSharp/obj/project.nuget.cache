@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kj7p1LydN9CHr6KukBw+iKnsLqBESAAKQFZky4Hix6sU/ney7h9Oveu3yHpqgzBmw2MXIdXrdve75VTUEMRlUA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\simon.novak\\Desktop\\VOID2-main\\VoidRemake\\VoidSharp\\VoidSharp\\VoidSharp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\simon.novak\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+  ],
+  "logs": []
+}

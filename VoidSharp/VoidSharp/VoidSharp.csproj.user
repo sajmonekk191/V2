@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="aimuser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomControls\DarkButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\DarkCheckbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\DarkCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\DarkCombobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\DarkGroupbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\DarkLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\DarkListbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\DarkPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\DarkPicturebox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\DarkProgressbar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\DarkRadio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="CustomControls\DarkTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="generaluser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="healbarrieruser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="miscuser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="orbuser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="VoidSharp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
