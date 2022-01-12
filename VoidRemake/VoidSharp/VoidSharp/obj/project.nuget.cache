@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "cB7sK/eAY24pJthsLEVjQN0q7+uyLwto30Dis4xH/53WHUrtvOK3pP/6OWq4kQ/OGgjy05qj7P23+5oABqLauA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Root\\Desktop\\VoidRemake\\VoidSharp\\VoidSharp\\VoidSharp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Root\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
+    "C:\\Users\\Root\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Root\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Root\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
