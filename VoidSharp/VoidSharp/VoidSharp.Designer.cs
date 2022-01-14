@@ -41,7 +41,9 @@
             this.MiscButton = new ClassicDarkTheme.Dark.DarkButton();
             this.HealBarrierButton = new ClassicDarkTheme.Dark.DarkButton();
             this.LogoPic = new System.Windows.Forms.PictureBox();
-            this.generaluser1 = new VoidSharp.generaluser();
+            this.generaluser1 = new global::VoidSharp.generaluser();
+            this.miscuser1 = new global::VoidSharp.miscuser();
+            this.darkLabel1 = new ClassicDarkTheme.Dark.DarkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.DiscordPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PayPalPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPic)).BeginInit();
@@ -97,7 +99,7 @@
             this.ExitButton.AutoSize = true;
             this.ExitButton.BackColor = System.Drawing.Color.Firebrick;
             this.ExitButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ExitButton.Location = new System.Drawing.Point(570, 0);
+            this.ExitButton.Location = new System.Drawing.Point(571, 0);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(49, 19);
             this.ExitButton.TabIndex = 10;
@@ -111,7 +113,7 @@
             this.MinimizeButton.AutoSize = true;
             this.MinimizeButton.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.MinimizeButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MinimizeButton.Location = new System.Drawing.Point(531, 0);
+            this.MinimizeButton.Location = new System.Drawing.Point(532, 0);
             this.MinimizeButton.Name = "MinimizeButton";
             this.MinimizeButton.Size = new System.Drawing.Size(39, 19);
             this.MinimizeButton.TabIndex = 11;
@@ -200,6 +202,7 @@
             this.MiscButton.TabIndex = 15;
             this.MiscButton.Text = "Misc";
             this.MiscButton.UseVisualStyleBackColor = false;
+            this.MiscButton.Click += new System.EventHandler(this.MiscButton_Click);
             // 
             // HealBarrierButton
             // 
@@ -237,8 +240,29 @@
             this.generaluser1.BackColor = System.Drawing.Color.Transparent;
             this.generaluser1.Location = new System.Drawing.Point(189, 82);
             this.generaluser1.Name = "generaluser1";
-            this.generaluser1.Size = new System.Drawing.Size(417, 260);
+            this.generaluser1.Size = new System.Drawing.Size(417, 276);
             this.generaluser1.TabIndex = 18;
+            // 
+            // miscuser1
+            // 
+            this.miscuser1.BackColor = System.Drawing.Color.Transparent;
+            this.miscuser1.Location = new System.Drawing.Point(189, 71);
+            this.miscuser1.Name = "miscuser1";
+            this.miscuser1.Size = new System.Drawing.Size(416, 282);
+            this.miscuser1.TabIndex = 19;
+            // 
+            // darkLabel1
+            // 
+            this.darkLabel1.AutoSize = true;
+            this.darkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.darkLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.darkLabel1.IsLink = false;
+            this.darkLabel1.Link = "";
+            this.darkLabel1.Location = new System.Drawing.Point(562, 349);
+            this.darkLabel1.Name = "darkLabel1";
+            this.darkLabel1.Size = new System.Drawing.Size(48, 15);
+            this.darkLabel1.TabIndex = 20;
+            this.darkLabel1.Text = "Void 1.0";
             // 
             // VoidSharp
             // 
@@ -246,6 +270,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(618, 370);
+            this.Controls.Add(this.darkLabel1);
+            this.Controls.Add(this.miscuser1);
             this.Controls.Add(this.generaluser1);
             this.Controls.Add(this.LogoPic);
             this.Controls.Add(this.HealBarrierButton);
@@ -290,6 +316,8 @@
         private ClassicDarkTheme.Dark.DarkButton MiscButton;
         private ClassicDarkTheme.Dark.DarkButton HealBarrierButton;
         private System.Windows.Forms.PictureBox LogoPic;
-        private VoidSharp.generaluser generaluser1;
+        private global::VoidSharp.generaluser generaluser1;
+        private global::VoidSharp.miscuser miscuser1;
+        private ClassicDarkTheme.Dark.DarkLabel darkLabel1;
     }
 }

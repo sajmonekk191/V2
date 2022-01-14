@@ -71,6 +71,16 @@ namespace VoidSharp.Properties {
         }
         
         /// <summary>
+        ///   Vyhledává lokalizovaný prostředek typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fail {
+            get {
+                object obj = ResourceManager.GetObject("Fail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledává lokalizovaný prostředek typu System.Drawing.Icon podobný (Ikona).
         /// </summary>
         internal static System.Drawing.Icon logo {
@@ -106,6 +116,16 @@ namespace VoidSharp.Properties {
         internal static System.Drawing.Bitmap splashscreen {
             get {
                 object obj = ResourceManager.GetObject("splashscreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledává lokalizovaný prostředek typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Succesfull {
+            get {
+                object obj = ResourceManager.GetObject("Succesfull", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

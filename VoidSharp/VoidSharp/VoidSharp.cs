@@ -19,6 +19,7 @@ namespace VoidSharp
             progressBar1.Location = new Point(12, 138);
             ExitButton.BackColor = Color.FromArgb(127, 37, 37);
             MinimizeButton.BackColor = Color.FromArgb(108, 116, 116);
+            miscuser1.Visible = false;
             generaluser1.Visible = false;
             LogoPic.Visible = false;
             ExitButton.Visible = false;
@@ -166,6 +167,13 @@ namespace VoidSharp
         private void ConnectButton_Click(object sender, EventArgs e)
         {
             generaluser1.Visible = true;
+            miscuser1.Visible = false;
+        }
+
+        private void MiscButton_Click(object sender, EventArgs e)
+        {
+            miscuser1.Visible = true;
+            generaluser1.Visible = false;
         }
     }
 }
