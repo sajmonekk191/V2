@@ -86,5 +86,19 @@ namespace VoidSharp.Other
         public static float vaynebwm = 1f;
         public static float xayahbwm = 1f;
         // Champion Windup Modifier //
+
+        // Account Manager //
+        public static string CurentUsername = string.Empty;
+        public static string CurentPassword = string.Empty;
+        public static bool AccountUsed1 = false;
+        public static bool AccountUsed2 = false;
+        public static bool AccountUsed3 = false;
+        public static bool AccountUsed4 = false;
+        public static bool AccountUsed5 = false;
+        public static bool AccountUsed6 = false;
+        public static bool AccountUsed7 = false;
+        public static bool AccountUsed8 = false;
+        public static bool AccountLoaded = false;
+        // Account Manager //
     }
 }

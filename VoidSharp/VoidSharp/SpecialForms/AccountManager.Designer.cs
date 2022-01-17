@@ -28,132 +28,134 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.darkLabel1 = new ClassicDarkTheme.Dark.DarkLabel();
+            this.AccountManLBL = new ClassicDarkTheme.Dark.DarkLabel();
             this.darkPanel1 = new ClassicDarkTheme.Dark.DarkPanel();
-            this.darkLabel16 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkLabel15 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkLabel14 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkLabel13 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkLabel12 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkLabel11 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkLabel10 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkLabel9 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.darkPicturebox8 = new ClassicDarkTheme.Dark.DarkPicturebox();
-            this.darkPicturebox7 = new ClassicDarkTheme.Dark.DarkPicturebox();
-            this.darkPicturebox6 = new ClassicDarkTheme.Dark.DarkPicturebox();
-            this.darkPicturebox5 = new ClassicDarkTheme.Dark.DarkPicturebox();
-            this.darkPicturebox4 = new ClassicDarkTheme.Dark.DarkPicturebox();
-            this.darkPicturebox3 = new ClassicDarkTheme.Dark.DarkPicturebox();
-            this.darkPicturebox2 = new ClassicDarkTheme.Dark.DarkPicturebox();
-            this.darkPicturebox1 = new ClassicDarkTheme.Dark.DarkPicturebox();
-            this.darkLabel4 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkLabel3 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkLabel2 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkLabel5 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkTextbox1 = new AmongUsExternal.DarkTextbox();
-            this.darkLabel6 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkLabel7 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkTextbox2 = new AmongUsExternal.DarkTextbox();
-            this.darkButton1 = new ClassicDarkTheme.Dark.DarkButton();
-            this.darkButton2 = new ClassicDarkTheme.Dark.DarkButton();
-            this.darkButton3 = new ClassicDarkTheme.Dark.DarkButton();
-            this.darkButton4 = new ClassicDarkTheme.Dark.DarkButton();
-            this.darkLabel8 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.LBLpassword8 = new System.Windows.Forms.Label();
+            this.LBLpassword7 = new System.Windows.Forms.Label();
+            this.LBLpassword6 = new System.Windows.Forms.Label();
+            this.LBLpassword5 = new System.Windows.Forms.Label();
+            this.LBLpassword4 = new System.Windows.Forms.Label();
+            this.LBLpassword3 = new System.Windows.Forms.Label();
+            this.LBLpassword2 = new System.Windows.Forms.Label();
+            this.LBLpassword1 = new System.Windows.Forms.Label();
+            this.LBLusername8 = new System.Windows.Forms.Label();
+            this.LBLusername7 = new System.Windows.Forms.Label();
+            this.LBLusername6 = new System.Windows.Forms.Label();
+            this.LBLusername5 = new System.Windows.Forms.Label();
+            this.LBLusername4 = new System.Windows.Forms.Label();
+            this.LBLusername3 = new System.Windows.Forms.Label();
+            this.LBLusername2 = new System.Windows.Forms.Label();
+            this.LBLusername1 = new System.Windows.Forms.Label();
+            this.lbl8 = new ClassicDarkTheme.Dark.DarkLabel();
+            this.lbl7 = new ClassicDarkTheme.Dark.DarkLabel();
+            this.lbl6 = new ClassicDarkTheme.Dark.DarkLabel();
+            this.lbl5 = new ClassicDarkTheme.Dark.DarkLabel();
+            this.lbl4 = new ClassicDarkTheme.Dark.DarkLabel();
+            this.lbl3 = new ClassicDarkTheme.Dark.DarkLabel();
+            this.lbl2 = new ClassicDarkTheme.Dark.DarkLabel();
+            this.lbl1 = new ClassicDarkTheme.Dark.DarkLabel();
+            this.selectedCB8 = new System.Windows.Forms.CheckBox();
+            this.selectedCB7 = new System.Windows.Forms.CheckBox();
+            this.selectedCB6 = new System.Windows.Forms.CheckBox();
+            this.selectedCB5 = new System.Windows.Forms.CheckBox();
+            this.selectedCB4 = new System.Windows.Forms.CheckBox();
+            this.selectedCB3 = new System.Windows.Forms.CheckBox();
+            this.selectedCB2 = new System.Windows.Forms.CheckBox();
+            this.selectedCB1 = new System.Windows.Forms.CheckBox();
+            this.showpassPB8 = new ClassicDarkTheme.Dark.DarkPicturebox();
+            this.showpassPB7 = new ClassicDarkTheme.Dark.DarkPicturebox();
+            this.showpassPB6 = new ClassicDarkTheme.Dark.DarkPicturebox();
+            this.showpassPB5 = new ClassicDarkTheme.Dark.DarkPicturebox();
+            this.showpassPB4 = new ClassicDarkTheme.Dark.DarkPicturebox();
+            this.showpassPB3 = new ClassicDarkTheme.Dark.DarkPicturebox();
+            this.showpassPB2 = new ClassicDarkTheme.Dark.DarkPicturebox();
+            this.showpassPB1 = new ClassicDarkTheme.Dark.DarkPicturebox();
+            this.accLBL = new ClassicDarkTheme.Dark.DarkLabel();
+            this.PasswordLBL = new ClassicDarkTheme.Dark.DarkLabel();
+            this.UsernameLBL = new ClassicDarkTheme.Dark.DarkLabel();
+            this.ExitLBL = new ClassicDarkTheme.Dark.DarkLabel();
+            this.usernameTB = new AmongUsExternal.DarkTextbox();
+            this.LBLusername = new ClassicDarkTheme.Dark.DarkLabel();
+            this.LBLPassword = new ClassicDarkTheme.Dark.DarkLabel();
+            this.passwordTB = new AmongUsExternal.DarkTextbox();
+            this.AddAccountBTN = new ClassicDarkTheme.Dark.DarkButton();
+            this.DeleteBTN = new ClassicDarkTheme.Dark.DarkButton();
+            this.LoadBTN = new ClassicDarkTheme.Dark.DarkButton();
+            this.ClearBTN = new ClassicDarkTheme.Dark.DarkButton();
+            this.versionLBL = new ClassicDarkTheme.Dark.DarkLabel();
+            this.selectedaccLBL = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.darkPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB1)).BeginInit();
             this.SuspendLayout();
             // 
-            // darkLabel1
+            // AccountManLBL
             // 
-            this.darkLabel1.AutoSize = true;
-            this.darkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.darkLabel1.ForeColor = System.Drawing.Color.White;
-            this.darkLabel1.IsLink = false;
-            this.darkLabel1.Link = "";
-            this.darkLabel1.Location = new System.Drawing.Point(141, 9);
-            this.darkLabel1.Name = "darkLabel1";
-            this.darkLabel1.Size = new System.Drawing.Size(132, 21);
-            this.darkLabel1.TabIndex = 0;
-            this.darkLabel1.Text = "Account Manager";
+            this.AccountManLBL.AutoSize = true;
+            this.AccountManLBL.BackColor = System.Drawing.Color.Transparent;
+            this.AccountManLBL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AccountManLBL.ForeColor = System.Drawing.Color.White;
+            this.AccountManLBL.IsLink = false;
+            this.AccountManLBL.Link = "";
+            this.AccountManLBL.Location = new System.Drawing.Point(140, 11);
+            this.AccountManLBL.Name = "AccountManLBL";
+            this.AccountManLBL.Size = new System.Drawing.Size(132, 21);
+            this.AccountManLBL.TabIndex = 0;
+            this.AccountManLBL.Text = "Account Manager";
             // 
             // darkPanel1
             // 
             this.darkPanel1.BorderThickness = 3F;
-            this.darkPanel1.Controls.Add(this.label16);
-            this.darkPanel1.Controls.Add(this.label15);
-            this.darkPanel1.Controls.Add(this.label14);
-            this.darkPanel1.Controls.Add(this.label13);
-            this.darkPanel1.Controls.Add(this.label12);
-            this.darkPanel1.Controls.Add(this.label11);
-            this.darkPanel1.Controls.Add(this.label10);
-            this.darkPanel1.Controls.Add(this.label9);
-            this.darkPanel1.Controls.Add(this.label8);
-            this.darkPanel1.Controls.Add(this.label7);
-            this.darkPanel1.Controls.Add(this.label6);
-            this.darkPanel1.Controls.Add(this.label5);
-            this.darkPanel1.Controls.Add(this.label4);
-            this.darkPanel1.Controls.Add(this.label3);
-            this.darkPanel1.Controls.Add(this.label2);
-            this.darkPanel1.Controls.Add(this.label1);
-            this.darkPanel1.Controls.Add(this.darkLabel16);
-            this.darkPanel1.Controls.Add(this.darkLabel15);
-            this.darkPanel1.Controls.Add(this.darkLabel14);
-            this.darkPanel1.Controls.Add(this.darkLabel13);
-            this.darkPanel1.Controls.Add(this.darkLabel12);
-            this.darkPanel1.Controls.Add(this.darkLabel11);
-            this.darkPanel1.Controls.Add(this.darkLabel10);
-            this.darkPanel1.Controls.Add(this.darkLabel9);
-            this.darkPanel1.Controls.Add(this.checkBox8);
-            this.darkPanel1.Controls.Add(this.checkBox7);
-            this.darkPanel1.Controls.Add(this.checkBox6);
-            this.darkPanel1.Controls.Add(this.checkBox5);
-            this.darkPanel1.Controls.Add(this.checkBox4);
-            this.darkPanel1.Controls.Add(this.checkBox3);
-            this.darkPanel1.Controls.Add(this.checkBox2);
-            this.darkPanel1.Controls.Add(this.checkBox1);
-            this.darkPanel1.Controls.Add(this.darkPicturebox8);
-            this.darkPanel1.Controls.Add(this.darkPicturebox7);
-            this.darkPanel1.Controls.Add(this.darkPicturebox6);
-            this.darkPanel1.Controls.Add(this.darkPicturebox5);
-            this.darkPanel1.Controls.Add(this.darkPicturebox4);
-            this.darkPanel1.Controls.Add(this.darkPicturebox3);
-            this.darkPanel1.Controls.Add(this.darkPicturebox2);
-            this.darkPanel1.Controls.Add(this.darkPicturebox1);
-            this.darkPanel1.Controls.Add(this.darkLabel4);
-            this.darkPanel1.Controls.Add(this.darkLabel3);
-            this.darkPanel1.Controls.Add(this.darkLabel2);
+            this.darkPanel1.Controls.Add(this.LBLpassword8);
+            this.darkPanel1.Controls.Add(this.LBLpassword7);
+            this.darkPanel1.Controls.Add(this.LBLpassword6);
+            this.darkPanel1.Controls.Add(this.LBLpassword5);
+            this.darkPanel1.Controls.Add(this.LBLpassword4);
+            this.darkPanel1.Controls.Add(this.LBLpassword3);
+            this.darkPanel1.Controls.Add(this.LBLpassword2);
+            this.darkPanel1.Controls.Add(this.LBLpassword1);
+            this.darkPanel1.Controls.Add(this.LBLusername8);
+            this.darkPanel1.Controls.Add(this.LBLusername7);
+            this.darkPanel1.Controls.Add(this.LBLusername6);
+            this.darkPanel1.Controls.Add(this.LBLusername5);
+            this.darkPanel1.Controls.Add(this.LBLusername4);
+            this.darkPanel1.Controls.Add(this.LBLusername3);
+            this.darkPanel1.Controls.Add(this.LBLusername2);
+            this.darkPanel1.Controls.Add(this.LBLusername1);
+            this.darkPanel1.Controls.Add(this.lbl8);
+            this.darkPanel1.Controls.Add(this.lbl7);
+            this.darkPanel1.Controls.Add(this.lbl6);
+            this.darkPanel1.Controls.Add(this.lbl5);
+            this.darkPanel1.Controls.Add(this.lbl4);
+            this.darkPanel1.Controls.Add(this.lbl3);
+            this.darkPanel1.Controls.Add(this.lbl2);
+            this.darkPanel1.Controls.Add(this.lbl1);
+            this.darkPanel1.Controls.Add(this.selectedCB8);
+            this.darkPanel1.Controls.Add(this.selectedCB7);
+            this.darkPanel1.Controls.Add(this.selectedCB6);
+            this.darkPanel1.Controls.Add(this.selectedCB5);
+            this.darkPanel1.Controls.Add(this.selectedCB4);
+            this.darkPanel1.Controls.Add(this.selectedCB3);
+            this.darkPanel1.Controls.Add(this.selectedCB2);
+            this.darkPanel1.Controls.Add(this.selectedCB1);
+            this.darkPanel1.Controls.Add(this.showpassPB8);
+            this.darkPanel1.Controls.Add(this.showpassPB7);
+            this.darkPanel1.Controls.Add(this.showpassPB6);
+            this.darkPanel1.Controls.Add(this.showpassPB5);
+            this.darkPanel1.Controls.Add(this.showpassPB4);
+            this.darkPanel1.Controls.Add(this.showpassPB3);
+            this.darkPanel1.Controls.Add(this.showpassPB2);
+            this.darkPanel1.Controls.Add(this.showpassPB1);
+            this.darkPanel1.Controls.Add(this.accLBL);
+            this.darkPanel1.Controls.Add(this.PasswordLBL);
+            this.darkPanel1.Controls.Add(this.UsernameLBL);
             this.darkPanel1.GradientValue = 90F;
             this.darkPanel1.Location = new System.Drawing.Point(31, 48);
             this.darkPanel1.Name = "darkPanel1";
@@ -163,635 +165,657 @@
             this.darkPanel1.Size = new System.Drawing.Size(356, 281);
             this.darkPanel1.TabIndex = 1;
             // 
-            // darkLabel16
-            // 
-            this.darkLabel16.AutoSize = true;
-            this.darkLabel16.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel16.ForeColor = System.Drawing.Color.White;
-            this.darkLabel16.IsLink = false;
-            this.darkLabel16.Link = "";
-            this.darkLabel16.Location = new System.Drawing.Point(20, 250);
-            this.darkLabel16.Name = "darkLabel16";
-            this.darkLabel16.Size = new System.Drawing.Size(13, 15);
-            this.darkLabel16.TabIndex = 26;
-            this.darkLabel16.Text = "8";
-            // 
-            // darkLabel15
-            // 
-            this.darkLabel15.AutoSize = true;
-            this.darkLabel15.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel15.ForeColor = System.Drawing.Color.White;
-            this.darkLabel15.IsLink = false;
-            this.darkLabel15.Link = "";
-            this.darkLabel15.Location = new System.Drawing.Point(20, 220);
-            this.darkLabel15.Name = "darkLabel15";
-            this.darkLabel15.Size = new System.Drawing.Size(13, 15);
-            this.darkLabel15.TabIndex = 25;
-            this.darkLabel15.Text = "7";
-            // 
-            // darkLabel14
-            // 
-            this.darkLabel14.AutoSize = true;
-            this.darkLabel14.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel14.ForeColor = System.Drawing.Color.White;
-            this.darkLabel14.IsLink = false;
-            this.darkLabel14.Link = "";
-            this.darkLabel14.Location = new System.Drawing.Point(20, 191);
-            this.darkLabel14.Name = "darkLabel14";
-            this.darkLabel14.Size = new System.Drawing.Size(13, 15);
-            this.darkLabel14.TabIndex = 24;
-            this.darkLabel14.Text = "6";
-            // 
-            // darkLabel13
-            // 
-            this.darkLabel13.AutoSize = true;
-            this.darkLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel13.ForeColor = System.Drawing.Color.White;
-            this.darkLabel13.IsLink = false;
-            this.darkLabel13.Link = "";
-            this.darkLabel13.Location = new System.Drawing.Point(20, 160);
-            this.darkLabel13.Name = "darkLabel13";
-            this.darkLabel13.Size = new System.Drawing.Size(13, 15);
-            this.darkLabel13.TabIndex = 23;
-            this.darkLabel13.Text = "5";
-            // 
-            // darkLabel12
-            // 
-            this.darkLabel12.AutoSize = true;
-            this.darkLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel12.ForeColor = System.Drawing.Color.White;
-            this.darkLabel12.IsLink = false;
-            this.darkLabel12.Link = "";
-            this.darkLabel12.Location = new System.Drawing.Point(20, 130);
-            this.darkLabel12.Name = "darkLabel12";
-            this.darkLabel12.Size = new System.Drawing.Size(13, 15);
-            this.darkLabel12.TabIndex = 22;
-            this.darkLabel12.Text = "4";
-            // 
-            // darkLabel11
-            // 
-            this.darkLabel11.AutoSize = true;
-            this.darkLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel11.ForeColor = System.Drawing.Color.White;
-            this.darkLabel11.IsLink = false;
-            this.darkLabel11.Link = "";
-            this.darkLabel11.Location = new System.Drawing.Point(20, 100);
-            this.darkLabel11.Name = "darkLabel11";
-            this.darkLabel11.Size = new System.Drawing.Size(13, 15);
-            this.darkLabel11.TabIndex = 21;
-            this.darkLabel11.Text = "3";
-            // 
-            // darkLabel10
-            // 
-            this.darkLabel10.AutoSize = true;
-            this.darkLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel10.ForeColor = System.Drawing.Color.White;
-            this.darkLabel10.IsLink = false;
-            this.darkLabel10.Link = "";
-            this.darkLabel10.Location = new System.Drawing.Point(20, 73);
-            this.darkLabel10.Name = "darkLabel10";
-            this.darkLabel10.Size = new System.Drawing.Size(13, 15);
-            this.darkLabel10.TabIndex = 20;
-            this.darkLabel10.Text = "2";
-            // 
-            // darkLabel9
-            // 
-            this.darkLabel9.AutoSize = true;
-            this.darkLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel9.ForeColor = System.Drawing.Color.White;
-            this.darkLabel9.IsLink = false;
-            this.darkLabel9.Link = "";
-            this.darkLabel9.Location = new System.Drawing.Point(20, 42);
-            this.darkLabel9.Name = "darkLabel9";
-            this.darkLabel9.Size = new System.Drawing.Size(13, 15);
-            this.darkLabel9.TabIndex = 19;
-            this.darkLabel9.Text = "1";
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(294, 250);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(15, 14);
-            this.checkBox8.TabIndex = 18;
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(294, 220);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(15, 14);
-            this.checkBox7.TabIndex = 17;
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(294, 191);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 16;
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(294, 160);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 15;
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(294, 130);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 14;
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(294, 100);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 13;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(294, 73);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 12;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(294, 41);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // darkPicturebox8
-            // 
-            this.darkPicturebox8.Location = new System.Drawing.Point(317, 246);
-            this.darkPicturebox8.Name = "darkPicturebox8";
-            this.darkPicturebox8.Size = new System.Drawing.Size(24, 24);
-            this.darkPicturebox8.TabIndex = 10;
-            this.darkPicturebox8.TabStop = false;
-            // 
-            // darkPicturebox7
-            // 
-            this.darkPicturebox7.Location = new System.Drawing.Point(317, 216);
-            this.darkPicturebox7.Name = "darkPicturebox7";
-            this.darkPicturebox7.Size = new System.Drawing.Size(24, 24);
-            this.darkPicturebox7.TabIndex = 9;
-            this.darkPicturebox7.TabStop = false;
-            // 
-            // darkPicturebox6
-            // 
-            this.darkPicturebox6.Location = new System.Drawing.Point(317, 186);
-            this.darkPicturebox6.Name = "darkPicturebox6";
-            this.darkPicturebox6.Size = new System.Drawing.Size(24, 24);
-            this.darkPicturebox6.TabIndex = 8;
-            this.darkPicturebox6.TabStop = false;
-            // 
-            // darkPicturebox5
-            // 
-            this.darkPicturebox5.Location = new System.Drawing.Point(317, 156);
-            this.darkPicturebox5.Name = "darkPicturebox5";
-            this.darkPicturebox5.Size = new System.Drawing.Size(24, 24);
-            this.darkPicturebox5.TabIndex = 7;
-            this.darkPicturebox5.TabStop = false;
-            // 
-            // darkPicturebox4
-            // 
-            this.darkPicturebox4.Location = new System.Drawing.Point(317, 126);
-            this.darkPicturebox4.Name = "darkPicturebox4";
-            this.darkPicturebox4.Size = new System.Drawing.Size(24, 24);
-            this.darkPicturebox4.TabIndex = 6;
-            this.darkPicturebox4.TabStop = false;
-            // 
-            // darkPicturebox3
-            // 
-            this.darkPicturebox3.Location = new System.Drawing.Point(317, 96);
-            this.darkPicturebox3.Name = "darkPicturebox3";
-            this.darkPicturebox3.Size = new System.Drawing.Size(24, 24);
-            this.darkPicturebox3.TabIndex = 5;
-            this.darkPicturebox3.TabStop = false;
-            // 
-            // darkPicturebox2
-            // 
-            this.darkPicturebox2.Location = new System.Drawing.Point(317, 66);
-            this.darkPicturebox2.Name = "darkPicturebox2";
-            this.darkPicturebox2.Size = new System.Drawing.Size(24, 24);
-            this.darkPicturebox2.TabIndex = 4;
-            this.darkPicturebox2.TabStop = false;
-            // 
-            // darkPicturebox1
-            // 
-            this.darkPicturebox1.Location = new System.Drawing.Point(317, 36);
-            this.darkPicturebox1.Name = "darkPicturebox1";
-            this.darkPicturebox1.Size = new System.Drawing.Size(24, 24);
-            this.darkPicturebox1.TabIndex = 3;
-            this.darkPicturebox1.TabStop = false;
-            // 
-            // darkLabel4
-            // 
-            this.darkLabel4.AutoSize = true;
-            this.darkLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel4.ForeColor = System.Drawing.Color.White;
-            this.darkLabel4.IsLink = false;
-            this.darkLabel4.Link = "";
-            this.darkLabel4.Location = new System.Drawing.Point(13, 11);
-            this.darkLabel4.Name = "darkLabel4";
-            this.darkLabel4.Size = new System.Drawing.Size(31, 15);
-            this.darkLabel4.TabIndex = 2;
-            this.darkLabel4.Text = "ACC";
-            // 
-            // darkLabel3
-            // 
-            this.darkLabel3.AutoSize = true;
-            this.darkLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel3.ForeColor = System.Drawing.Color.White;
-            this.darkLabel3.IsLink = false;
-            this.darkLabel3.Link = "";
-            this.darkLabel3.Location = new System.Drawing.Point(185, 11);
-            this.darkLabel3.Name = "darkLabel3";
-            this.darkLabel3.Size = new System.Drawing.Size(57, 15);
-            this.darkLabel3.TabIndex = 1;
-            this.darkLabel3.Text = "Password";
-            // 
-            // darkLabel2
-            // 
-            this.darkLabel2.AutoSize = true;
-            this.darkLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel2.ForeColor = System.Drawing.Color.White;
-            this.darkLabel2.IsLink = false;
-            this.darkLabel2.Link = "";
-            this.darkLabel2.Location = new System.Drawing.Point(72, 11);
-            this.darkLabel2.Name = "darkLabel2";
-            this.darkLabel2.Size = new System.Drawing.Size(60, 15);
-            this.darkLabel2.TabIndex = 0;
-            this.darkLabel2.Text = "Username";
-            // 
-            // darkLabel5
-            // 
-            this.darkLabel5.AutoSize = true;
-            this.darkLabel5.BackColor = System.Drawing.Color.Firebrick;
-            this.darkLabel5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.darkLabel5.ForeColor = System.Drawing.Color.White;
-            this.darkLabel5.IsLink = false;
-            this.darkLabel5.Link = "";
-            this.darkLabel5.Location = new System.Drawing.Point(396, 6);
-            this.darkLabel5.Name = "darkLabel5";
-            this.darkLabel5.Size = new System.Drawing.Size(17, 19);
-            this.darkLabel5.TabIndex = 2;
-            this.darkLabel5.Text = "X";
-            this.darkLabel5.Click += new System.EventHandler(this.darkLabel5_Click);
-            this.darkLabel5.MouseEnter += new System.EventHandler(this.darkLabel5_MouseEnter);
-            this.darkLabel5.MouseLeave += new System.EventHandler(this.darkLabel5_MouseLeave);
-            // 
-            // darkTextbox1
-            // 
-            this.darkTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
-            this.darkTextbox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.darkTextbox1.ForeColor = System.Drawing.Color.White;
-            this.darkTextbox1.Location = new System.Drawing.Point(44, 353);
-            this.darkTextbox1.MaxLength = 32767;
-            this.darkTextbox1.Name = "darkTextbox1";
-            this.darkTextbox1.OnlyNumbers = false;
-            this.darkTextbox1.Size = new System.Drawing.Size(100, 20);
-            this.darkTextbox1.TabIndex = 3;
-            this.darkTextbox1.Text = "darkTextbox1";
-            this.darkTextbox1.TextStr = "";
-            // 
-            // darkLabel6
-            // 
-            this.darkLabel6.AutoSize = true;
-            this.darkLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel6.ForeColor = System.Drawing.Color.White;
-            this.darkLabel6.IsLink = false;
-            this.darkLabel6.Link = "";
-            this.darkLabel6.Location = new System.Drawing.Point(64, 335);
-            this.darkLabel6.Name = "darkLabel6";
-            this.darkLabel6.Size = new System.Drawing.Size(60, 15);
-            this.darkLabel6.TabIndex = 4;
-            this.darkLabel6.Text = "Username";
-            // 
-            // darkLabel7
-            // 
-            this.darkLabel7.AutoSize = true;
-            this.darkLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.darkLabel7.ForeColor = System.Drawing.Color.White;
-            this.darkLabel7.IsLink = false;
-            this.darkLabel7.Link = "";
-            this.darkLabel7.Location = new System.Drawing.Point(64, 383);
-            this.darkLabel7.Name = "darkLabel7";
-            this.darkLabel7.Size = new System.Drawing.Size(57, 15);
-            this.darkLabel7.TabIndex = 5;
-            this.darkLabel7.Text = "Password";
-            // 
-            // darkTextbox2
-            // 
-            this.darkTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
-            this.darkTextbox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.darkTextbox2.ForeColor = System.Drawing.Color.White;
-            this.darkTextbox2.Location = new System.Drawing.Point(44, 401);
-            this.darkTextbox2.MaxLength = 32767;
-            this.darkTextbox2.Name = "darkTextbox2";
-            this.darkTextbox2.OnlyNumbers = false;
-            this.darkTextbox2.Size = new System.Drawing.Size(100, 20);
-            this.darkTextbox2.TabIndex = 6;
-            this.darkTextbox2.Text = "darkTextbox2";
-            this.darkTextbox2.TextStr = "";
-            // 
-            // darkButton1
-            // 
-            this.darkButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.darkButton1.FlatAppearance.BorderSize = 0;
-            this.darkButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.darkButton1.ForeColor = System.Drawing.Color.White;
-            this.darkButton1.Location = new System.Drawing.Point(51, 433);
-            this.darkButton1.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkButton1.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
-            this.darkButton1.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkButton1.MouseLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkButton1.MouseUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkButton1.Name = "darkButton1";
-            this.darkButton1.Size = new System.Drawing.Size(81, 23);
-            this.darkButton1.TabIndex = 7;
-            this.darkButton1.Text = "Add Account";
-            this.darkButton1.UseVisualStyleBackColor = true;
-            // 
-            // darkButton2
-            // 
-            this.darkButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.darkButton2.FlatAppearance.BorderSize = 0;
-            this.darkButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.darkButton2.ForeColor = System.Drawing.Color.White;
-            this.darkButton2.Location = new System.Drawing.Point(238, 353);
-            this.darkButton2.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkButton2.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
-            this.darkButton2.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkButton2.MouseLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkButton2.MouseUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkButton2.Name = "darkButton2";
-            this.darkButton2.Size = new System.Drawing.Size(100, 23);
-            this.darkButton2.TabIndex = 8;
-            this.darkButton2.Text = "Delete Account";
-            this.darkButton2.UseVisualStyleBackColor = true;
-            // 
-            // darkButton3
-            // 
-            this.darkButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.darkButton3.FlatAppearance.BorderSize = 0;
-            this.darkButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.darkButton3.ForeColor = System.Drawing.Color.White;
-            this.darkButton3.Location = new System.Drawing.Point(238, 410);
-            this.darkButton3.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkButton3.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
-            this.darkButton3.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkButton3.MouseLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkButton3.MouseUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkButton3.Name = "darkButton3";
-            this.darkButton3.Size = new System.Drawing.Size(100, 23);
-            this.darkButton3.TabIndex = 9;
-            this.darkButton3.Text = "Load Account";
-            this.darkButton3.UseVisualStyleBackColor = true;
-            // 
-            // darkButton4
-            // 
-            this.darkButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.darkButton4.FlatAppearance.BorderSize = 0;
-            this.darkButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.darkButton4.ForeColor = System.Drawing.Color.White;
-            this.darkButton4.Location = new System.Drawing.Point(238, 381);
-            this.darkButton4.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkButton4.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
-            this.darkButton4.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkButton4.MouseLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkButton4.MouseUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkButton4.Name = "darkButton4";
-            this.darkButton4.Size = new System.Drawing.Size(100, 23);
-            this.darkButton4.TabIndex = 10;
-            this.darkButton4.Text = "Clear Accounts";
-            this.darkButton4.UseVisualStyleBackColor = true;
-            // 
-            // darkLabel8
-            // 
-            this.darkLabel8.AutoSize = true;
-            this.darkLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.darkLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.darkLabel8.IsLink = false;
-            this.darkLabel8.Link = "";
-            this.darkLabel8.Location = new System.Drawing.Point(365, 460);
-            this.darkLabel8.Name = "darkLabel8";
-            this.darkLabel8.Size = new System.Drawing.Size(48, 15);
-            this.darkLabel8.TabIndex = 11;
-            this.darkLabel8.Text = "Void 1.0";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(72, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 15);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Username";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(72, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 15);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Username";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(72, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 15);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Username";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(72, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 15);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Username";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(72, 160);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 15);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Username";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(72, 191);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 15);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "Username";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(72, 220);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 15);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Username";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(72, 250);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 15);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Username";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(185, 42);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 15);
-            this.label9.TabIndex = 35;
-            this.label9.Text = "Password";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(185, 73);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 15);
-            this.label10.TabIndex = 36;
-            this.label10.Text = "Password";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(185, 100);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 15);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Password";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(185, 130);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 15);
-            this.label12.TabIndex = 38;
-            this.label12.Text = "Password";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(185, 160);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(57, 15);
-            this.label13.TabIndex = 39;
-            this.label13.Text = "Password";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(185, 191);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(57, 15);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "Password";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(185, 220);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(57, 15);
-            this.label15.TabIndex = 41;
-            this.label15.Text = "Password";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(185, 250);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(57, 15);
-            this.label16.TabIndex = 42;
-            this.label16.Text = "Password";
+            // LBLpassword8
+            // 
+            this.LBLpassword8.AutoSize = true;
+            this.LBLpassword8.ForeColor = System.Drawing.Color.White;
+            this.LBLpassword8.Location = new System.Drawing.Point(185, 250);
+            this.LBLpassword8.Name = "LBLpassword8";
+            this.LBLpassword8.Size = new System.Drawing.Size(57, 15);
+            this.LBLpassword8.TabIndex = 42;
+            this.LBLpassword8.Text = "Password";
+            // 
+            // LBLpassword7
+            // 
+            this.LBLpassword7.AutoSize = true;
+            this.LBLpassword7.ForeColor = System.Drawing.Color.White;
+            this.LBLpassword7.Location = new System.Drawing.Point(185, 220);
+            this.LBLpassword7.Name = "LBLpassword7";
+            this.LBLpassword7.Size = new System.Drawing.Size(57, 15);
+            this.LBLpassword7.TabIndex = 41;
+            this.LBLpassword7.Text = "Password";
+            // 
+            // LBLpassword6
+            // 
+            this.LBLpassword6.AutoSize = true;
+            this.LBLpassword6.ForeColor = System.Drawing.Color.White;
+            this.LBLpassword6.Location = new System.Drawing.Point(185, 191);
+            this.LBLpassword6.Name = "LBLpassword6";
+            this.LBLpassword6.Size = new System.Drawing.Size(57, 15);
+            this.LBLpassword6.TabIndex = 40;
+            this.LBLpassword6.Text = "Password";
+            // 
+            // LBLpassword5
+            // 
+            this.LBLpassword5.AutoSize = true;
+            this.LBLpassword5.ForeColor = System.Drawing.Color.White;
+            this.LBLpassword5.Location = new System.Drawing.Point(185, 160);
+            this.LBLpassword5.Name = "LBLpassword5";
+            this.LBLpassword5.Size = new System.Drawing.Size(57, 15);
+            this.LBLpassword5.TabIndex = 39;
+            this.LBLpassword5.Text = "Password";
+            // 
+            // LBLpassword4
+            // 
+            this.LBLpassword4.AutoSize = true;
+            this.LBLpassword4.ForeColor = System.Drawing.Color.White;
+            this.LBLpassword4.Location = new System.Drawing.Point(185, 130);
+            this.LBLpassword4.Name = "LBLpassword4";
+            this.LBLpassword4.Size = new System.Drawing.Size(57, 15);
+            this.LBLpassword4.TabIndex = 38;
+            this.LBLpassword4.Text = "Password";
+            // 
+            // LBLpassword3
+            // 
+            this.LBLpassword3.AutoSize = true;
+            this.LBLpassword3.ForeColor = System.Drawing.Color.White;
+            this.LBLpassword3.Location = new System.Drawing.Point(185, 100);
+            this.LBLpassword3.Name = "LBLpassword3";
+            this.LBLpassword3.Size = new System.Drawing.Size(57, 15);
+            this.LBLpassword3.TabIndex = 37;
+            this.LBLpassword3.Text = "Password";
+            // 
+            // LBLpassword2
+            // 
+            this.LBLpassword2.AutoSize = true;
+            this.LBLpassword2.ForeColor = System.Drawing.Color.White;
+            this.LBLpassword2.Location = new System.Drawing.Point(185, 73);
+            this.LBLpassword2.Name = "LBLpassword2";
+            this.LBLpassword2.Size = new System.Drawing.Size(57, 15);
+            this.LBLpassword2.TabIndex = 36;
+            this.LBLpassword2.Text = "Password";
+            // 
+            // LBLpassword1
+            // 
+            this.LBLpassword1.AutoSize = true;
+            this.LBLpassword1.ForeColor = System.Drawing.Color.White;
+            this.LBLpassword1.Location = new System.Drawing.Point(185, 42);
+            this.LBLpassword1.Name = "LBLpassword1";
+            this.LBLpassword1.Size = new System.Drawing.Size(57, 15);
+            this.LBLpassword1.TabIndex = 35;
+            this.LBLpassword1.Text = "Password";
+            // 
+            // LBLusername8
+            // 
+            this.LBLusername8.AutoSize = true;
+            this.LBLusername8.ForeColor = System.Drawing.Color.White;
+            this.LBLusername8.Location = new System.Drawing.Point(72, 250);
+            this.LBLusername8.Name = "LBLusername8";
+            this.LBLusername8.Size = new System.Drawing.Size(60, 15);
+            this.LBLusername8.TabIndex = 34;
+            this.LBLusername8.Text = "Username";
+            // 
+            // LBLusername7
+            // 
+            this.LBLusername7.AutoSize = true;
+            this.LBLusername7.ForeColor = System.Drawing.Color.White;
+            this.LBLusername7.Location = new System.Drawing.Point(72, 220);
+            this.LBLusername7.Name = "LBLusername7";
+            this.LBLusername7.Size = new System.Drawing.Size(60, 15);
+            this.LBLusername7.TabIndex = 33;
+            this.LBLusername7.Text = "Username";
+            // 
+            // LBLusername6
+            // 
+            this.LBLusername6.AutoSize = true;
+            this.LBLusername6.ForeColor = System.Drawing.Color.White;
+            this.LBLusername6.Location = new System.Drawing.Point(72, 191);
+            this.LBLusername6.Name = "LBLusername6";
+            this.LBLusername6.Size = new System.Drawing.Size(60, 15);
+            this.LBLusername6.TabIndex = 32;
+            this.LBLusername6.Text = "Username";
+            // 
+            // LBLusername5
+            // 
+            this.LBLusername5.AutoSize = true;
+            this.LBLusername5.ForeColor = System.Drawing.Color.White;
+            this.LBLusername5.Location = new System.Drawing.Point(72, 160);
+            this.LBLusername5.Name = "LBLusername5";
+            this.LBLusername5.Size = new System.Drawing.Size(60, 15);
+            this.LBLusername5.TabIndex = 31;
+            this.LBLusername5.Text = "Username";
+            // 
+            // LBLusername4
+            // 
+            this.LBLusername4.AutoSize = true;
+            this.LBLusername4.ForeColor = System.Drawing.Color.White;
+            this.LBLusername4.Location = new System.Drawing.Point(72, 130);
+            this.LBLusername4.Name = "LBLusername4";
+            this.LBLusername4.Size = new System.Drawing.Size(60, 15);
+            this.LBLusername4.TabIndex = 30;
+            this.LBLusername4.Text = "Username";
+            // 
+            // LBLusername3
+            // 
+            this.LBLusername3.AutoSize = true;
+            this.LBLusername3.ForeColor = System.Drawing.Color.White;
+            this.LBLusername3.Location = new System.Drawing.Point(72, 100);
+            this.LBLusername3.Name = "LBLusername3";
+            this.LBLusername3.Size = new System.Drawing.Size(60, 15);
+            this.LBLusername3.TabIndex = 29;
+            this.LBLusername3.Text = "Username";
+            // 
+            // LBLusername2
+            // 
+            this.LBLusername2.AutoSize = true;
+            this.LBLusername2.ForeColor = System.Drawing.Color.White;
+            this.LBLusername2.Location = new System.Drawing.Point(72, 73);
+            this.LBLusername2.Name = "LBLusername2";
+            this.LBLusername2.Size = new System.Drawing.Size(60, 15);
+            this.LBLusername2.TabIndex = 28;
+            this.LBLusername2.Text = "Username";
+            // 
+            // LBLusername1
+            // 
+            this.LBLusername1.AutoSize = true;
+            this.LBLusername1.ForeColor = System.Drawing.Color.White;
+            this.LBLusername1.Location = new System.Drawing.Point(72, 42);
+            this.LBLusername1.Name = "LBLusername1";
+            this.LBLusername1.Size = new System.Drawing.Size(60, 15);
+            this.LBLusername1.TabIndex = 27;
+            this.LBLusername1.Text = "Username";
+            // 
+            // lbl8
+            // 
+            this.lbl8.AutoSize = true;
+            this.lbl8.BackColor = System.Drawing.Color.Transparent;
+            this.lbl8.ForeColor = System.Drawing.Color.White;
+            this.lbl8.IsLink = false;
+            this.lbl8.Link = "";
+            this.lbl8.Location = new System.Drawing.Point(20, 250);
+            this.lbl8.Name = "lbl8";
+            this.lbl8.Size = new System.Drawing.Size(13, 15);
+            this.lbl8.TabIndex = 26;
+            this.lbl8.Text = "8";
+            // 
+            // lbl7
+            // 
+            this.lbl7.AutoSize = true;
+            this.lbl7.BackColor = System.Drawing.Color.Transparent;
+            this.lbl7.ForeColor = System.Drawing.Color.White;
+            this.lbl7.IsLink = false;
+            this.lbl7.Link = "";
+            this.lbl7.Location = new System.Drawing.Point(20, 220);
+            this.lbl7.Name = "lbl7";
+            this.lbl7.Size = new System.Drawing.Size(13, 15);
+            this.lbl7.TabIndex = 25;
+            this.lbl7.Text = "7";
+            // 
+            // lbl6
+            // 
+            this.lbl6.AutoSize = true;
+            this.lbl6.BackColor = System.Drawing.Color.Transparent;
+            this.lbl6.ForeColor = System.Drawing.Color.White;
+            this.lbl6.IsLink = false;
+            this.lbl6.Link = "";
+            this.lbl6.Location = new System.Drawing.Point(20, 191);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.Size = new System.Drawing.Size(13, 15);
+            this.lbl6.TabIndex = 24;
+            this.lbl6.Text = "6";
+            // 
+            // lbl5
+            // 
+            this.lbl5.AutoSize = true;
+            this.lbl5.BackColor = System.Drawing.Color.Transparent;
+            this.lbl5.ForeColor = System.Drawing.Color.White;
+            this.lbl5.IsLink = false;
+            this.lbl5.Link = "";
+            this.lbl5.Location = new System.Drawing.Point(20, 160);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(13, 15);
+            this.lbl5.TabIndex = 23;
+            this.lbl5.Text = "5";
+            // 
+            // lbl4
+            // 
+            this.lbl4.AutoSize = true;
+            this.lbl4.BackColor = System.Drawing.Color.Transparent;
+            this.lbl4.ForeColor = System.Drawing.Color.White;
+            this.lbl4.IsLink = false;
+            this.lbl4.Link = "";
+            this.lbl4.Location = new System.Drawing.Point(20, 130);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(13, 15);
+            this.lbl4.TabIndex = 22;
+            this.lbl4.Text = "4";
+            // 
+            // lbl3
+            // 
+            this.lbl3.AutoSize = true;
+            this.lbl3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl3.ForeColor = System.Drawing.Color.White;
+            this.lbl3.IsLink = false;
+            this.lbl3.Link = "";
+            this.lbl3.Location = new System.Drawing.Point(20, 100);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(13, 15);
+            this.lbl3.TabIndex = 21;
+            this.lbl3.Text = "3";
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl2.ForeColor = System.Drawing.Color.White;
+            this.lbl2.IsLink = false;
+            this.lbl2.Link = "";
+            this.lbl2.Location = new System.Drawing.Point(20, 73);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(13, 15);
+            this.lbl2.TabIndex = 20;
+            this.lbl2.Text = "2";
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1.ForeColor = System.Drawing.Color.White;
+            this.lbl1.IsLink = false;
+            this.lbl1.Link = "";
+            this.lbl1.Location = new System.Drawing.Point(20, 42);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(13, 15);
+            this.lbl1.TabIndex = 19;
+            this.lbl1.Text = "1";
+            // 
+            // selectedCB8
+            // 
+            this.selectedCB8.AutoSize = true;
+            this.selectedCB8.Location = new System.Drawing.Point(294, 250);
+            this.selectedCB8.Name = "selectedCB8";
+            this.selectedCB8.Size = new System.Drawing.Size(15, 14);
+            this.selectedCB8.TabIndex = 18;
+            this.selectedCB8.UseVisualStyleBackColor = true;
+            // 
+            // selectedCB7
+            // 
+            this.selectedCB7.AutoSize = true;
+            this.selectedCB7.Location = new System.Drawing.Point(294, 220);
+            this.selectedCB7.Name = "selectedCB7";
+            this.selectedCB7.Size = new System.Drawing.Size(15, 14);
+            this.selectedCB7.TabIndex = 17;
+            this.selectedCB7.UseVisualStyleBackColor = true;
+            // 
+            // selectedCB6
+            // 
+            this.selectedCB6.AutoSize = true;
+            this.selectedCB6.Location = new System.Drawing.Point(294, 191);
+            this.selectedCB6.Name = "selectedCB6";
+            this.selectedCB6.Size = new System.Drawing.Size(15, 14);
+            this.selectedCB6.TabIndex = 16;
+            this.selectedCB6.UseVisualStyleBackColor = true;
+            // 
+            // selectedCB5
+            // 
+            this.selectedCB5.AutoSize = true;
+            this.selectedCB5.Location = new System.Drawing.Point(294, 160);
+            this.selectedCB5.Name = "selectedCB5";
+            this.selectedCB5.Size = new System.Drawing.Size(15, 14);
+            this.selectedCB5.TabIndex = 15;
+            this.selectedCB5.UseVisualStyleBackColor = true;
+            // 
+            // selectedCB4
+            // 
+            this.selectedCB4.AutoSize = true;
+            this.selectedCB4.Location = new System.Drawing.Point(294, 130);
+            this.selectedCB4.Name = "selectedCB4";
+            this.selectedCB4.Size = new System.Drawing.Size(15, 14);
+            this.selectedCB4.TabIndex = 14;
+            this.selectedCB4.UseVisualStyleBackColor = true;
+            // 
+            // selectedCB3
+            // 
+            this.selectedCB3.AutoSize = true;
+            this.selectedCB3.Location = new System.Drawing.Point(294, 100);
+            this.selectedCB3.Name = "selectedCB3";
+            this.selectedCB3.Size = new System.Drawing.Size(15, 14);
+            this.selectedCB3.TabIndex = 13;
+            this.selectedCB3.UseVisualStyleBackColor = true;
+            // 
+            // selectedCB2
+            // 
+            this.selectedCB2.AutoSize = true;
+            this.selectedCB2.Location = new System.Drawing.Point(294, 73);
+            this.selectedCB2.Name = "selectedCB2";
+            this.selectedCB2.Size = new System.Drawing.Size(15, 14);
+            this.selectedCB2.TabIndex = 12;
+            this.selectedCB2.UseVisualStyleBackColor = true;
+            // 
+            // selectedCB1
+            // 
+            this.selectedCB1.AutoSize = true;
+            this.selectedCB1.Location = new System.Drawing.Point(294, 41);
+            this.selectedCB1.Name = "selectedCB1";
+            this.selectedCB1.Size = new System.Drawing.Size(15, 14);
+            this.selectedCB1.TabIndex = 11;
+            this.selectedCB1.UseVisualStyleBackColor = true;
+            // 
+            // showpassPB8
+            // 
+            this.showpassPB8.Location = new System.Drawing.Point(317, 246);
+            this.showpassPB8.Name = "showpassPB8";
+            this.showpassPB8.Size = new System.Drawing.Size(24, 24);
+            this.showpassPB8.TabIndex = 10;
+            this.showpassPB8.TabStop = false;
+            // 
+            // showpassPB7
+            // 
+            this.showpassPB7.Location = new System.Drawing.Point(317, 216);
+            this.showpassPB7.Name = "showpassPB7";
+            this.showpassPB7.Size = new System.Drawing.Size(24, 24);
+            this.showpassPB7.TabIndex = 9;
+            this.showpassPB7.TabStop = false;
+            // 
+            // showpassPB6
+            // 
+            this.showpassPB6.Location = new System.Drawing.Point(317, 186);
+            this.showpassPB6.Name = "showpassPB6";
+            this.showpassPB6.Size = new System.Drawing.Size(24, 24);
+            this.showpassPB6.TabIndex = 8;
+            this.showpassPB6.TabStop = false;
+            // 
+            // showpassPB5
+            // 
+            this.showpassPB5.Location = new System.Drawing.Point(317, 156);
+            this.showpassPB5.Name = "showpassPB5";
+            this.showpassPB5.Size = new System.Drawing.Size(24, 24);
+            this.showpassPB5.TabIndex = 7;
+            this.showpassPB5.TabStop = false;
+            // 
+            // showpassPB4
+            // 
+            this.showpassPB4.Location = new System.Drawing.Point(317, 126);
+            this.showpassPB4.Name = "showpassPB4";
+            this.showpassPB4.Size = new System.Drawing.Size(24, 24);
+            this.showpassPB4.TabIndex = 6;
+            this.showpassPB4.TabStop = false;
+            // 
+            // showpassPB3
+            // 
+            this.showpassPB3.Location = new System.Drawing.Point(317, 96);
+            this.showpassPB3.Name = "showpassPB3";
+            this.showpassPB3.Size = new System.Drawing.Size(24, 24);
+            this.showpassPB3.TabIndex = 5;
+            this.showpassPB3.TabStop = false;
+            // 
+            // showpassPB2
+            // 
+            this.showpassPB2.Location = new System.Drawing.Point(317, 66);
+            this.showpassPB2.Name = "showpassPB2";
+            this.showpassPB2.Size = new System.Drawing.Size(24, 24);
+            this.showpassPB2.TabIndex = 4;
+            this.showpassPB2.TabStop = false;
+            // 
+            // showpassPB1
+            // 
+            this.showpassPB1.Location = new System.Drawing.Point(317, 36);
+            this.showpassPB1.Name = "showpassPB1";
+            this.showpassPB1.Size = new System.Drawing.Size(24, 24);
+            this.showpassPB1.TabIndex = 3;
+            this.showpassPB1.TabStop = false;
+            // 
+            // accLBL
+            // 
+            this.accLBL.AutoSize = true;
+            this.accLBL.BackColor = System.Drawing.Color.Transparent;
+            this.accLBL.ForeColor = System.Drawing.Color.White;
+            this.accLBL.IsLink = false;
+            this.accLBL.Link = "";
+            this.accLBL.Location = new System.Drawing.Point(13, 11);
+            this.accLBL.Name = "accLBL";
+            this.accLBL.Size = new System.Drawing.Size(31, 15);
+            this.accLBL.TabIndex = 2;
+            this.accLBL.Text = "ACC";
+            // 
+            // PasswordLBL
+            // 
+            this.PasswordLBL.AutoSize = true;
+            this.PasswordLBL.BackColor = System.Drawing.Color.Transparent;
+            this.PasswordLBL.ForeColor = System.Drawing.Color.White;
+            this.PasswordLBL.IsLink = false;
+            this.PasswordLBL.Link = "";
+            this.PasswordLBL.Location = new System.Drawing.Point(185, 11);
+            this.PasswordLBL.Name = "PasswordLBL";
+            this.PasswordLBL.Size = new System.Drawing.Size(57, 15);
+            this.PasswordLBL.TabIndex = 1;
+            this.PasswordLBL.Text = "Password";
+            // 
+            // UsernameLBL
+            // 
+            this.UsernameLBL.AutoSize = true;
+            this.UsernameLBL.BackColor = System.Drawing.Color.Transparent;
+            this.UsernameLBL.ForeColor = System.Drawing.Color.White;
+            this.UsernameLBL.IsLink = false;
+            this.UsernameLBL.Link = "";
+            this.UsernameLBL.Location = new System.Drawing.Point(72, 11);
+            this.UsernameLBL.Name = "UsernameLBL";
+            this.UsernameLBL.Size = new System.Drawing.Size(60, 15);
+            this.UsernameLBL.TabIndex = 0;
+            this.UsernameLBL.Text = "Username";
+            // 
+            // ExitLBL
+            // 
+            this.ExitLBL.AutoSize = true;
+            this.ExitLBL.BackColor = System.Drawing.Color.Firebrick;
+            this.ExitLBL.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ExitLBL.ForeColor = System.Drawing.Color.White;
+            this.ExitLBL.IsLink = false;
+            this.ExitLBL.Link = "";
+            this.ExitLBL.Location = new System.Drawing.Point(396, 6);
+            this.ExitLBL.Name = "ExitLBL";
+            this.ExitLBL.Size = new System.Drawing.Size(17, 19);
+            this.ExitLBL.TabIndex = 2;
+            this.ExitLBL.Text = "X";
+            this.ExitLBL.Click += new System.EventHandler(this.darkLabel5_Click);
+            this.ExitLBL.MouseEnter += new System.EventHandler(this.darkLabel5_MouseEnter);
+            this.ExitLBL.MouseLeave += new System.EventHandler(this.darkLabel5_MouseLeave);
+            // 
+            // usernameTB
+            // 
+            this.usernameTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
+            this.usernameTB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.usernameTB.ForeColor = System.Drawing.Color.White;
+            this.usernameTB.Location = new System.Drawing.Point(44, 353);
+            this.usernameTB.MaxLength = 32767;
+            this.usernameTB.Name = "usernameTB";
+            this.usernameTB.OnlyNumbers = false;
+            this.usernameTB.Size = new System.Drawing.Size(100, 20);
+            this.usernameTB.TabIndex = 3;
+            this.usernameTB.Text = "darkTextbox1";
+            this.usernameTB.TextStr = "";
+            // 
+            // LBLusername
+            // 
+            this.LBLusername.AutoSize = true;
+            this.LBLusername.BackColor = System.Drawing.Color.Transparent;
+            this.LBLusername.ForeColor = System.Drawing.Color.White;
+            this.LBLusername.IsLink = false;
+            this.LBLusername.Link = "";
+            this.LBLusername.Location = new System.Drawing.Point(64, 335);
+            this.LBLusername.Name = "LBLusername";
+            this.LBLusername.Size = new System.Drawing.Size(60, 15);
+            this.LBLusername.TabIndex = 4;
+            this.LBLusername.Text = "Username";
+            // 
+            // LBLPassword
+            // 
+            this.LBLPassword.AutoSize = true;
+            this.LBLPassword.BackColor = System.Drawing.Color.Transparent;
+            this.LBLPassword.ForeColor = System.Drawing.Color.White;
+            this.LBLPassword.IsLink = false;
+            this.LBLPassword.Link = "";
+            this.LBLPassword.Location = new System.Drawing.Point(64, 383);
+            this.LBLPassword.Name = "LBLPassword";
+            this.LBLPassword.Size = new System.Drawing.Size(57, 15);
+            this.LBLPassword.TabIndex = 5;
+            this.LBLPassword.Text = "Password";
+            // 
+            // passwordTB
+            // 
+            this.passwordTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
+            this.passwordTB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.passwordTB.ForeColor = System.Drawing.Color.White;
+            this.passwordTB.Location = new System.Drawing.Point(44, 401);
+            this.passwordTB.MaxLength = 32767;
+            this.passwordTB.Name = "passwordTB";
+            this.passwordTB.OnlyNumbers = false;
+            this.passwordTB.Size = new System.Drawing.Size(100, 20);
+            this.passwordTB.TabIndex = 6;
+            this.passwordTB.Text = "darkTextbox2";
+            this.passwordTB.TextStr = "";
+            // 
+            // AddAccountBTN
+            // 
+            this.AddAccountBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddAccountBTN.FlatAppearance.BorderSize = 0;
+            this.AddAccountBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddAccountBTN.ForeColor = System.Drawing.Color.White;
+            this.AddAccountBTN.Location = new System.Drawing.Point(51, 433);
+            this.AddAccountBTN.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.AddAccountBTN.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.AddAccountBTN.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.AddAccountBTN.MouseLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.AddAccountBTN.MouseUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.AddAccountBTN.Name = "AddAccountBTN";
+            this.AddAccountBTN.Size = new System.Drawing.Size(81, 23);
+            this.AddAccountBTN.TabIndex = 7;
+            this.AddAccountBTN.Text = "Add Account";
+            this.AddAccountBTN.UseVisualStyleBackColor = true;
+            this.AddAccountBTN.Click += new System.EventHandler(this.AddAccountBTN_Click);
+            // 
+            // DeleteBTN
+            // 
+            this.DeleteBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DeleteBTN.FlatAppearance.BorderSize = 0;
+            this.DeleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteBTN.ForeColor = System.Drawing.Color.White;
+            this.DeleteBTN.Location = new System.Drawing.Point(238, 353);
+            this.DeleteBTN.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.DeleteBTN.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.DeleteBTN.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.DeleteBTN.MouseLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.DeleteBTN.MouseUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.DeleteBTN.Name = "DeleteBTN";
+            this.DeleteBTN.Size = new System.Drawing.Size(100, 23);
+            this.DeleteBTN.TabIndex = 8;
+            this.DeleteBTN.Text = "Delete Account";
+            this.DeleteBTN.UseVisualStyleBackColor = true;
+            // 
+            // LoadBTN
+            // 
+            this.LoadBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoadBTN.FlatAppearance.BorderSize = 0;
+            this.LoadBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoadBTN.ForeColor = System.Drawing.Color.White;
+            this.LoadBTN.Location = new System.Drawing.Point(238, 410);
+            this.LoadBTN.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.LoadBTN.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.LoadBTN.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.LoadBTN.MouseLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.LoadBTN.MouseUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.LoadBTN.Name = "LoadBTN";
+            this.LoadBTN.Size = new System.Drawing.Size(100, 23);
+            this.LoadBTN.TabIndex = 9;
+            this.LoadBTN.Text = "Load Account";
+            this.LoadBTN.UseVisualStyleBackColor = true;
+            // 
+            // ClearBTN
+            // 
+            this.ClearBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ClearBTN.FlatAppearance.BorderSize = 0;
+            this.ClearBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearBTN.ForeColor = System.Drawing.Color.White;
+            this.ClearBTN.Location = new System.Drawing.Point(238, 381);
+            this.ClearBTN.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.ClearBTN.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.ClearBTN.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.ClearBTN.MouseLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.ClearBTN.MouseUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.ClearBTN.Name = "ClearBTN";
+            this.ClearBTN.Size = new System.Drawing.Size(100, 23);
+            this.ClearBTN.TabIndex = 10;
+            this.ClearBTN.Text = "Clear Accounts";
+            this.ClearBTN.UseVisualStyleBackColor = true;
+            // 
+            // versionLBL
+            // 
+            this.versionLBL.AutoSize = true;
+            this.versionLBL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.versionLBL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.versionLBL.IsLink = false;
+            this.versionLBL.Link = "";
+            this.versionLBL.Location = new System.Drawing.Point(365, 475);
+            this.versionLBL.Name = "versionLBL";
+            this.versionLBL.Size = new System.Drawing.Size(48, 15);
+            this.versionLBL.TabIndex = 11;
+            this.versionLBL.Text = "Void 1.0";
+            // 
+            // selectedaccLBL
+            // 
+            this.selectedaccLBL.AutoSize = true;
+            this.selectedaccLBL.ForeColor = System.Drawing.Color.White;
+            this.selectedaccLBL.Location = new System.Drawing.Point(163, 458);
+            this.selectedaccLBL.Name = "selectedaccLBL";
+            this.selectedaccLBL.Size = new System.Drawing.Size(99, 15);
+            this.selectedaccLBL.TabIndex = 12;
+            this.selectedaccLBL.Text = "Selected Account";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel1.Location = new System.Drawing.Point(84, 474);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(259, 28);
+            this.panel1.TabIndex = 13;
             // 
             // AccountManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(420, 481);
-            this.Controls.Add(this.darkLabel8);
-            this.Controls.Add(this.darkButton4);
-            this.Controls.Add(this.darkButton3);
-            this.Controls.Add(this.darkButton2);
-            this.Controls.Add(this.darkButton1);
-            this.Controls.Add(this.darkTextbox2);
-            this.Controls.Add(this.darkLabel7);
-            this.Controls.Add(this.darkLabel6);
-            this.Controls.Add(this.darkTextbox1);
-            this.Controls.Add(this.darkLabel5);
+            this.ClientSize = new System.Drawing.Size(420, 509);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.selectedaccLBL);
+            this.Controls.Add(this.versionLBL);
+            this.Controls.Add(this.ClearBTN);
+            this.Controls.Add(this.LoadBTN);
+            this.Controls.Add(this.DeleteBTN);
+            this.Controls.Add(this.AddAccountBTN);
+            this.Controls.Add(this.passwordTB);
+            this.Controls.Add(this.LBLPassword);
+            this.Controls.Add(this.LBLusername);
+            this.Controls.Add(this.usernameTB);
+            this.Controls.Add(this.ExitLBL);
             this.Controls.Add(this.darkPanel1);
-            this.Controls.Add(this.darkLabel1);
+            this.Controls.Add(this.AccountManLBL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AccountManager";
             this.Text = "AccountManager";
+            this.Load += new System.EventHandler(this.AccountManager_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AccountManager_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AccountManager_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AccountManager_MouseUp);
             this.darkPanel1.ResumeLayout(false);
             this.darkPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showpassPB1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -799,60 +823,62 @@
 
         #endregion
 
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel1;
+        private ClassicDarkTheme.Dark.DarkLabel AccountManLBL;
         private ClassicDarkTheme.Dark.DarkPanel darkPanel1;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel4;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel3;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel2;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel5;
-        private AmongUsExternal.DarkTextbox darkTextbox1;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel6;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel7;
-        private AmongUsExternal.DarkTextbox darkTextbox2;
-        private ClassicDarkTheme.Dark.DarkButton darkButton1;
-        private ClassicDarkTheme.Dark.DarkButton darkButton2;
-        private ClassicDarkTheme.Dark.DarkButton darkButton3;
-        private ClassicDarkTheme.Dark.DarkButton darkButton4;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel16;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel15;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel14;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel13;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel12;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel11;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel10;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private ClassicDarkTheme.Dark.DarkPicturebox darkPicturebox8;
-        private ClassicDarkTheme.Dark.DarkPicturebox darkPicturebox7;
-        private ClassicDarkTheme.Dark.DarkPicturebox darkPicturebox6;
-        private ClassicDarkTheme.Dark.DarkPicturebox darkPicturebox5;
-        private ClassicDarkTheme.Dark.DarkPicturebox darkPicturebox4;
-        private ClassicDarkTheme.Dark.DarkPicturebox darkPicturebox3;
-        private ClassicDarkTheme.Dark.DarkPicturebox darkPicturebox2;
-        private ClassicDarkTheme.Dark.DarkPicturebox darkPicturebox1;
-        private ClassicDarkTheme.Dark.DarkLabel darkLabel8;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private ClassicDarkTheme.Dark.DarkLabel accLBL;
+        private ClassicDarkTheme.Dark.DarkLabel PasswordLBL;
+        private ClassicDarkTheme.Dark.DarkLabel UsernameLBL;
+        private ClassicDarkTheme.Dark.DarkLabel ExitLBL;
+        private AmongUsExternal.DarkTextbox usernameTB;
+        private ClassicDarkTheme.Dark.DarkLabel LBLusername;
+        private ClassicDarkTheme.Dark.DarkLabel LBLPassword;
+        private AmongUsExternal.DarkTextbox passwordTB;
+        private ClassicDarkTheme.Dark.DarkButton AddAccountBTN;
+        private ClassicDarkTheme.Dark.DarkButton DeleteBTN;
+        private ClassicDarkTheme.Dark.DarkButton LoadBTN;
+        private ClassicDarkTheme.Dark.DarkButton ClearBTN;
+        private ClassicDarkTheme.Dark.DarkLabel lbl8;
+        private ClassicDarkTheme.Dark.DarkLabel lbl7;
+        private ClassicDarkTheme.Dark.DarkLabel lbl6;
+        private ClassicDarkTheme.Dark.DarkLabel lbl5;
+        private ClassicDarkTheme.Dark.DarkLabel lbl4;
+        private ClassicDarkTheme.Dark.DarkLabel lbl3;
+        private ClassicDarkTheme.Dark.DarkLabel lbl2;
+        private ClassicDarkTheme.Dark.DarkLabel lbl1;
+        private System.Windows.Forms.CheckBox selectedCB8;
+        private System.Windows.Forms.CheckBox selectedCB7;
+        private System.Windows.Forms.CheckBox selectedCB6;
+        private System.Windows.Forms.CheckBox selectedCB5;
+        private System.Windows.Forms.CheckBox selectedCB4;
+        private System.Windows.Forms.CheckBox selectedCB3;
+        private System.Windows.Forms.CheckBox selectedCB2;
+        private System.Windows.Forms.CheckBox selectedCB1;
+        private ClassicDarkTheme.Dark.DarkPicturebox showpassPB8;
+        private ClassicDarkTheme.Dark.DarkPicturebox showpassPB7;
+        private ClassicDarkTheme.Dark.DarkPicturebox showpassPB6;
+        private ClassicDarkTheme.Dark.DarkPicturebox showpassPB5;
+        private ClassicDarkTheme.Dark.DarkPicturebox showpassPB4;
+        private ClassicDarkTheme.Dark.DarkPicturebox showpassPB3;
+        private ClassicDarkTheme.Dark.DarkPicturebox showpassPB2;
+        private ClassicDarkTheme.Dark.DarkPicturebox showpassPB1;
+        private ClassicDarkTheme.Dark.DarkLabel versionLBL;
+        private System.Windows.Forms.Label LBLusername2;
+        private System.Windows.Forms.Label LBLusername1;
+        private System.Windows.Forms.Label LBLpassword8;
+        private System.Windows.Forms.Label LBLpassword7;
+        private System.Windows.Forms.Label LBLpassword6;
+        private System.Windows.Forms.Label LBLpassword5;
+        private System.Windows.Forms.Label LBLpassword4;
+        private System.Windows.Forms.Label LBLpassword3;
+        private System.Windows.Forms.Label LBLpassword2;
+        private System.Windows.Forms.Label LBLpassword1;
+        private System.Windows.Forms.Label LBLusername8;
+        private System.Windows.Forms.Label LBLusername7;
+        private System.Windows.Forms.Label LBLusername6;
+        private System.Windows.Forms.Label LBLusername5;
+        private System.Windows.Forms.Label LBLusername4;
+        private System.Windows.Forms.Label LBLusername3;
+        private System.Windows.Forms.Label selectedaccLBL;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -1,13 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tCNwE56oe086Aaad2QMIKHY9LqtCMVyMLUeylk/gihhKU9cbMvSCiWuhTtELjol+RHUTT+lp6eXKXEljv32f0g==",
+  "dgSpecHash": "WcfXyLKYj7y4iZLxyGBVuMFR8HRlKYRg1jkkqsFWMFWeTlSHIYQ6caBQRl4Ve2nB++NRyRIT2/l0pjWrpUczuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Root\\Desktop\\VOID2-main\\VoidSharp\\VoidSharp\\VoidSharp.csproj",
+  "projectFilePath": "C:\\Users\\simon.novak\\Desktop\\VoidNEW\\VOID2\\VoidSharp\\VoidSharp\\VoidSharp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Root\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
-    "C:\\Users\\Root\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\Root\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Root\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\simon.novak\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
   ],
   "logs": []
 }

@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Root\\.nuget\\packages\\": {}
+    "C:\\Users\\simon.novak\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Root\\Desktop\\VOID2-main\\VoidSharp\\VoidSharp\\VoidSharp.csproj",
+      "projectUniqueName": "C:\\Users\\simon.novak\\Desktop\\VoidNEW\\VOID2\\VoidSharp\\VoidSharp\\VoidSharp.csproj",
       "projectName": "VoidSharp",
-      "projectPath": "C:\\Users\\Root\\Desktop\\VOID2-main\\VoidSharp\\VoidSharp\\VoidSharp.csproj",
-      "packagesPath": "C:\\Users\\Root\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Root\\Desktop\\VOID2-main\\VoidSharp\\VoidSharp\\obj\\",
+      "projectPath": "C:\\Users\\simon.novak\\Desktop\\VoidNEW\\VOID2\\VoidSharp\\VoidSharp\\VoidSharp.csproj",
+      "packagesPath": "C:\\Users\\simon.novak\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\simon.novak\\Desktop\\VoidNEW\\VOID2\\VoidSharp\\VoidSharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Root\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\simon.novak\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -57,20 +57,8 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.22, 3.1.22]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
+            "version": "[3.1.21, 3.1.21]"
           }
         ],
         "frameworkReferences": {
@@ -81,7 +69,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
