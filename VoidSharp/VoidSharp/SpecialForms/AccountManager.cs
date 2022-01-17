@@ -10,6 +10,7 @@ namespace VoidSharp.SpecialForms
         public AccountManager()
         {
             InitializeComponent();
+            this.ShowInTaskbar = false;
         }
 
         private void darkLabel5_MouseEnter(object sender, EventArgs e)
