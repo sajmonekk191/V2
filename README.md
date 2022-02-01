@@ -5,3 +5,5 @@
   - AutoCleanse (Automatic Cleanse when getting stuned)
   - Little Drawings (Summoner Spells timer etc....)
   - Etcs. (Account Manager, some turbo Features)
+
+Finish project predict (20.05 2020)
