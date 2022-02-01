@@ -6,4 +6,5 @@
   - Little Drawings (Summoner Spells timer etc....)
   - Etcs. (Account Manager, some turbo Features)
 
-Finish project predict (20.05 2020)
+Start project predict (16 / 03 / 2021)
+Finish project predict (20 / 05 / 2022)
