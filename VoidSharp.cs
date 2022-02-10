@@ -4,11 +4,14 @@ using System.Drawing;
 using System.Net;
 using System.Threading;
 using System.Windows.Forms;
+using DiscordRPC;
+using VoidSharp.Other;
 
 namespace VoidSharp
 {
     public partial class VoidSharp : Form
     {
+        DiscordRpcClient client;
         Point mousedownpoint = Point.Empty;
         public VoidSharp()
         {
@@ -21,6 +24,7 @@ namespace VoidSharp
             MinimizeButton.BackColor = Color.FromArgb(108, 116, 116);
             miscuser1.Visible = false;
             generaluser1.Visible = false;
+            aimuser1.Visible = false;
             LogoPic.Visible = false;
             ExitButton.Visible = false;
             MinimizeButton.Visible = false;
@@ -41,9 +45,9 @@ namespace VoidSharp
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            Update();
+            UpdateVoid();
         }
-        private void Update()
+        private void UpdateVoid()
         {
             this.Show();
             progressBar1.Value = 3;
@@ -57,7 +61,7 @@ namespace VoidSharp
                 {
                     if (MessageBox.Show("An update is available", "Updater", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
                     {
-                        Process.Start(new ProcessStartInfo("http://81.162.196.29/downlaod/Void.zip") { UseShellExecute = true });
+                        Process.Start(new ProcessStartInfo("http://81.162.196.29/download/Void.zip") { UseShellExecute = true });
                         Environment.Exit(0);
                     }
                 }
@@ -93,7 +97,6 @@ namespace VoidSharp
             this.ShowIcon = true;
             this.ShowInTaskbar = true;
             this.ControlBox = true;
-
         }
         private void Wait(int time)
         {
@@ -108,6 +111,8 @@ namespace VoidSharp
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
+            client = new DiscordRpcClient(hodnoty.DiscordRpcID);
+            client.Dispose();
             Environment.Exit(0);
         }
 
@@ -168,12 +173,24 @@ namespace VoidSharp
         {
             generaluser1.Visible = true;
             miscuser1.Visible = false;
+            aimuser1.Visible = false;
         }
-
         private void MiscButton_Click(object sender, EventArgs e)
         {
             miscuser1.Visible = true;
             generaluser1.Visible = false;
+            aimuser1.Visible = false;
+        }
+        private void AutoAimButton_Click(object sender, EventArgs e)
+        {
+            aimuser1.Visible = true;
+            generaluser1.Visible = false;
+            miscuser1.Visible = false;
+        }
+        private void loadtextbox()
+        {
+            aimuser au = new aimuser();
+            au.championnamelbl.Text = hodnoty.SelectedChamp;
         }
     }
 }

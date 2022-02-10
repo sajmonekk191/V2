@@ -44,6 +44,7 @@
             this.generaluser1 = new global::VoidSharp.generaluser();
             this.miscuser1 = new global::VoidSharp.miscuser();
             this.darkLabel1 = new ClassicDarkTheme.Dark.DarkLabel();
+            this.aimuser1 = new global::VoidSharp.aimuser();
             ((System.ComponentModel.ISupportInitialize)(this.DiscordPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PayPalPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPic)).BeginInit();
@@ -98,6 +99,7 @@
             // 
             this.ExitButton.AutoSize = true;
             this.ExitButton.BackColor = System.Drawing.Color.Firebrick;
+            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ExitButton.Location = new System.Drawing.Point(571, 0);
             this.ExitButton.Name = "ExitButton";
@@ -112,6 +114,7 @@
             // 
             this.MinimizeButton.AutoSize = true;
             this.MinimizeButton.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.MinimizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MinimizeButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MinimizeButton.Location = new System.Drawing.Point(532, 0);
             this.MinimizeButton.Name = "MinimizeButton";
@@ -182,6 +185,7 @@
             this.AutoAimButton.TabIndex = 14;
             this.AutoAimButton.Text = "AutoAim";
             this.AutoAimButton.UseVisualStyleBackColor = false;
+            this.AutoAimButton.Click += new System.EventHandler(this.AutoAimButton_Click);
             // 
             // MiscButton
             // 
@@ -264,12 +268,20 @@
             this.darkLabel1.TabIndex = 20;
             this.darkLabel1.Text = "Void 1.0";
             // 
+            // aimuser1
+            // 
+            this.aimuser1.Location = new System.Drawing.Point(189, 71);
+            this.aimuser1.Name = "aimuser1";
+            this.aimuser1.Size = new System.Drawing.Size(416, 282);
+            this.aimuser1.TabIndex = 21;
+            // 
             // VoidSharp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(618, 370);
+            this.Controls.Add(this.aimuser1);
             this.Controls.Add(this.darkLabel1);
             this.Controls.Add(this.miscuser1);
             this.Controls.Add(this.generaluser1);
@@ -289,7 +301,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VoidSharp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "VoidSharp";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
@@ -319,5 +331,6 @@
         private global::VoidSharp.generaluser generaluser1;
         private global::VoidSharp.miscuser miscuser1;
         private ClassicDarkTheme.Dark.DarkLabel darkLabel1;
+        private global::VoidSharp.aimuser aimuser1;
     }
 }

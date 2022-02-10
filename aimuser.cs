@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
+using VoidSharp.Other;
 
 namespace VoidSharp
 {
@@ -13,6 +9,24 @@ namespace VoidSharp
         public aimuser()
         {
             InitializeComponent();
+        }
+
+        private void aimuser_Load(object sender, EventArgs e)
+        {
+            if (hodnoty.SelectedChamp != null)
+            {
+                championnamelbl.Text = hodnoty.SelectedChamp;
+            }
+            else
+            {
+                championnamelbl.Text = "Champion isn´t selected";
+            }
+        }
+
+        private void labeltimer_Tick(object sender, EventArgs e)
+        {
+             if(hodnoty.SelectedChamp != null)
+             championnamelbl.Text = hodnoty.SelectedChamp;
         }
     }
 }

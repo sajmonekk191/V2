@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
+using DiscordRPC;
+using VoidSharp.Other;
 
 namespace VoidSharp
 {
     public partial class miscuser : UserControl
     {
+        DiscordRpcClient client;
+        bool discordInitalized = false;
         public miscuser()
         {
             InitializeComponent();
@@ -17,17 +16,10 @@ namespace VoidSharp
             championlbl.Visible = false;
             championcmb.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-
-        private void Autologinpb_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void accountsbtn_Click(object sender, EventArgs e)
         {
             SpecialForms.AccountManager am = new SpecialForms.AccountManager();
             am.Show();
-            am.BringToFront();
         }
 
         private void Autologincb_CheckedChanged(object sender, EventArgs e)
@@ -72,14 +64,34 @@ namespace VoidSharp
 
         private void dcrpccb_CheckedChanged(object sender, EventArgs e)
         {
-            if (dcrpccb.Checked)
+            if (dcrpccb.Checked && !discordInitalized)
             {
                 dcrpclbl.Text = "Disable DiscordRPC";
+                client = new DiscordRpcClient(hodnoty.DiscordRpcID);
+                client.Initialize();
+                StartDiscordRPC();
             }
             else
             {
                 dcrpclbl.Text = "Enable DiscordRPC";
+                client.Dispose();
+                discordInitalized = false;
             }
+        }
+        private void StartDiscordRPC()
+        {
+            client.SetPresence(new RichPresence()
+            {
+                Details = "TEST VOID2",
+                State = "",
+                Timestamps = Timestamps.Now,
+                Assets = new Assets()
+                {
+                    LargeImageKey = "discordlogo",
+                    LargeImageText = "VoidSharp"
+                }
+            });
+            discordInitalized = true;
         }
     }
 }
