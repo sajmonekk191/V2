@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.champslbl = new System.Windows.Forms.Label();
             this.championnamelbl = new System.Windows.Forms.Label();
-            this.darkCheckbox1 = new ClassicDarkTheme.Dark.DarkCheckbox();
+            this.cbQ = new ClassicDarkTheme.Dark.DarkCheckbox();
             this.Qlbl = new System.Windows.Forms.Label();
             this.Wlbl = new System.Windows.Forms.Label();
-            this.darkCheckbox2 = new ClassicDarkTheme.Dark.DarkCheckbox();
+            this.cbW = new ClassicDarkTheme.Dark.DarkCheckbox();
             this.Elbl = new System.Windows.Forms.Label();
-            this.darkCheckbox3 = new ClassicDarkTheme.Dark.DarkCheckbox();
+            this.cbE = new ClassicDarkTheme.Dark.DarkCheckbox();
             this.Rlbl = new System.Windows.Forms.Label();
-            this.darkCheckbox4 = new ClassicDarkTheme.Dark.DarkCheckbox();
+            this.cbR = new ClassicDarkTheme.Dark.DarkCheckbox();
             this.labeltimer = new System.Windows.Forms.Timer(this.components);
             this.keybindQ = new AmongUsExternal.DarkTextbox();
             this.keybindW = new AmongUsExternal.DarkTextbox();
@@ -68,26 +68,26 @@
             this.championnamelbl.TabIndex = 1;
             this.championnamelbl.Text = "ChampionName";
             // 
-            // darkCheckbox1
+            // cbQ
             // 
-            this.darkCheckbox1.BackColor = System.Drawing.Color.Transparent;
-            this.darkCheckbox1.BorderThickness = 3;
-            this.darkCheckbox1.CheckboxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkCheckbox1.CheckboxBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
-            this.darkCheckbox1.CheckboxDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
-            this.darkCheckbox1.CheckboxHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkCheckbox1.CheckboxLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
-            this.darkCheckbox1.CheckboxUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkCheckbox1.Checked = false;
-            this.darkCheckbox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.darkCheckbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.darkCheckbox1.ForeColor = System.Drawing.Color.White;
-            this.darkCheckbox1.Location = new System.Drawing.Point(38, 88);
-            this.darkCheckbox1.Name = "darkCheckbox1";
-            this.darkCheckbox1.Size = new System.Drawing.Size(24, 24);
-            this.darkCheckbox1.TabIndex = 2;
-            this.darkCheckbox1.Text = "darkCheckbox1";
-            this.darkCheckbox1.Type = ClassicDarkTheme.Dark.DarkCheckbox.Types.Standart;
+            this.cbQ.BackColor = System.Drawing.Color.Transparent;
+            this.cbQ.BorderThickness = 3;
+            this.cbQ.CheckboxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.cbQ.CheckboxBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.cbQ.CheckboxDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.cbQ.CheckboxHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.cbQ.CheckboxLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
+            this.cbQ.CheckboxUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.cbQ.Checked = false;
+            this.cbQ.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbQ.ForeColor = System.Drawing.Color.White;
+            this.cbQ.Location = new System.Drawing.Point(38, 88);
+            this.cbQ.Name = "cbQ";
+            this.cbQ.Size = new System.Drawing.Size(24, 24);
+            this.cbQ.TabIndex = 2;
+            this.cbQ.Text = "darkCheckbox1";
+            this.cbQ.Type = ClassicDarkTheme.Dark.DarkCheckbox.Types.Standart;
             // 
             // Qlbl
             // 
@@ -109,26 +109,26 @@
             this.Wlbl.TabIndex = 5;
             this.Wlbl.Text = "W";
             // 
-            // darkCheckbox2
+            // cbW
             // 
-            this.darkCheckbox2.BackColor = System.Drawing.Color.Transparent;
-            this.darkCheckbox2.BorderThickness = 3;
-            this.darkCheckbox2.CheckboxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkCheckbox2.CheckboxBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
-            this.darkCheckbox2.CheckboxDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
-            this.darkCheckbox2.CheckboxHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkCheckbox2.CheckboxLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
-            this.darkCheckbox2.CheckboxUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkCheckbox2.Checked = false;
-            this.darkCheckbox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.darkCheckbox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.darkCheckbox2.ForeColor = System.Drawing.Color.White;
-            this.darkCheckbox2.Location = new System.Drawing.Point(38, 123);
-            this.darkCheckbox2.Name = "darkCheckbox2";
-            this.darkCheckbox2.Size = new System.Drawing.Size(24, 24);
-            this.darkCheckbox2.TabIndex = 4;
-            this.darkCheckbox2.Text = "darkCheckbox2";
-            this.darkCheckbox2.Type = ClassicDarkTheme.Dark.DarkCheckbox.Types.Standart;
+            this.cbW.BackColor = System.Drawing.Color.Transparent;
+            this.cbW.BorderThickness = 3;
+            this.cbW.CheckboxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.cbW.CheckboxBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.cbW.CheckboxDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.cbW.CheckboxHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.cbW.CheckboxLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
+            this.cbW.CheckboxUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.cbW.Checked = false;
+            this.cbW.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbW.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbW.ForeColor = System.Drawing.Color.White;
+            this.cbW.Location = new System.Drawing.Point(38, 123);
+            this.cbW.Name = "cbW";
+            this.cbW.Size = new System.Drawing.Size(24, 24);
+            this.cbW.TabIndex = 4;
+            this.cbW.Text = "darkCheckbox2";
+            this.cbW.Type = ClassicDarkTheme.Dark.DarkCheckbox.Types.Standart;
             // 
             // Elbl
             // 
@@ -140,26 +140,26 @@
             this.Elbl.TabIndex = 7;
             this.Elbl.Text = "E";
             // 
-            // darkCheckbox3
+            // cbE
             // 
-            this.darkCheckbox3.BackColor = System.Drawing.Color.Transparent;
-            this.darkCheckbox3.BorderThickness = 3;
-            this.darkCheckbox3.CheckboxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkCheckbox3.CheckboxBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
-            this.darkCheckbox3.CheckboxDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
-            this.darkCheckbox3.CheckboxHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkCheckbox3.CheckboxLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
-            this.darkCheckbox3.CheckboxUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkCheckbox3.Checked = false;
-            this.darkCheckbox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.darkCheckbox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.darkCheckbox3.ForeColor = System.Drawing.Color.White;
-            this.darkCheckbox3.Location = new System.Drawing.Point(38, 158);
-            this.darkCheckbox3.Name = "darkCheckbox3";
-            this.darkCheckbox3.Size = new System.Drawing.Size(24, 24);
-            this.darkCheckbox3.TabIndex = 6;
-            this.darkCheckbox3.Text = "darkCheckbox3";
-            this.darkCheckbox3.Type = ClassicDarkTheme.Dark.DarkCheckbox.Types.Standart;
+            this.cbE.BackColor = System.Drawing.Color.Transparent;
+            this.cbE.BorderThickness = 3;
+            this.cbE.CheckboxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.cbE.CheckboxBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.cbE.CheckboxDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.cbE.CheckboxHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.cbE.CheckboxLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
+            this.cbE.CheckboxUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.cbE.Checked = false;
+            this.cbE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbE.ForeColor = System.Drawing.Color.White;
+            this.cbE.Location = new System.Drawing.Point(38, 158);
+            this.cbE.Name = "cbE";
+            this.cbE.Size = new System.Drawing.Size(24, 24);
+            this.cbE.TabIndex = 6;
+            this.cbE.Text = "darkCheckbox3";
+            this.cbE.Type = ClassicDarkTheme.Dark.DarkCheckbox.Types.Standart;
             // 
             // Rlbl
             // 
@@ -171,26 +171,26 @@
             this.Rlbl.TabIndex = 9;
             this.Rlbl.Text = "R";
             // 
-            // darkCheckbox4
+            // cbR
             // 
-            this.darkCheckbox4.BackColor = System.Drawing.Color.Transparent;
-            this.darkCheckbox4.BorderThickness = 3;
-            this.darkCheckbox4.CheckboxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkCheckbox4.CheckboxBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
-            this.darkCheckbox4.CheckboxDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
-            this.darkCheckbox4.CheckboxHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkCheckbox4.CheckboxLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
-            this.darkCheckbox4.CheckboxUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkCheckbox4.Checked = false;
-            this.darkCheckbox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.darkCheckbox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.darkCheckbox4.ForeColor = System.Drawing.Color.White;
-            this.darkCheckbox4.Location = new System.Drawing.Point(38, 191);
-            this.darkCheckbox4.Name = "darkCheckbox4";
-            this.darkCheckbox4.Size = new System.Drawing.Size(24, 24);
-            this.darkCheckbox4.TabIndex = 8;
-            this.darkCheckbox4.Text = "darkCheckbox4";
-            this.darkCheckbox4.Type = ClassicDarkTheme.Dark.DarkCheckbox.Types.Standart;
+            this.cbR.BackColor = System.Drawing.Color.Transparent;
+            this.cbR.BorderThickness = 3;
+            this.cbR.CheckboxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.cbR.CheckboxBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.cbR.CheckboxDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.cbR.CheckboxHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.cbR.CheckboxLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
+            this.cbR.CheckboxUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.cbR.Checked = false;
+            this.cbR.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbR.ForeColor = System.Drawing.Color.White;
+            this.cbR.Location = new System.Drawing.Point(38, 191);
+            this.cbR.Name = "cbR";
+            this.cbR.Size = new System.Drawing.Size(24, 24);
+            this.cbR.TabIndex = 8;
+            this.cbR.Text = "darkCheckbox4";
+            this.cbR.Type = ClassicDarkTheme.Dark.DarkCheckbox.Types.Standart;
             // 
             // labeltimer
             // 
@@ -286,17 +286,17 @@
             this.Controls.Add(this.keybindW);
             this.Controls.Add(this.keybindQ);
             this.Controls.Add(this.Rlbl);
-            this.Controls.Add(this.darkCheckbox4);
+            this.Controls.Add(this.cbR);
             this.Controls.Add(this.Elbl);
-            this.Controls.Add(this.darkCheckbox3);
+            this.Controls.Add(this.cbE);
             this.Controls.Add(this.Wlbl);
-            this.Controls.Add(this.darkCheckbox2);
+            this.Controls.Add(this.cbW);
             this.Controls.Add(this.Qlbl);
-            this.Controls.Add(this.darkCheckbox1);
+            this.Controls.Add(this.cbQ);
             this.Controls.Add(this.championnamelbl);
             this.Controls.Add(this.champslbl);
             this.Name = "aimuser";
-            this.Size = new System.Drawing.Size(489, 315);
+            this.Size = new System.Drawing.Size(358, 255);
             this.Load += new System.EventHandler(this.aimuser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -307,14 +307,14 @@
 
         private System.Windows.Forms.Label champslbl;
         public System.Windows.Forms.Label championnamelbl;
-        private ClassicDarkTheme.Dark.DarkCheckbox darkCheckbox1;
+        private ClassicDarkTheme.Dark.DarkCheckbox cbQ;
         private System.Windows.Forms.Label Qlbl;
         private System.Windows.Forms.Label Wlbl;
-        private ClassicDarkTheme.Dark.DarkCheckbox darkCheckbox2;
+        private ClassicDarkTheme.Dark.DarkCheckbox cbW;
         private System.Windows.Forms.Label Elbl;
-        private ClassicDarkTheme.Dark.DarkCheckbox darkCheckbox3;
+        private ClassicDarkTheme.Dark.DarkCheckbox cbE;
         private System.Windows.Forms.Label Rlbl;
-        private ClassicDarkTheme.Dark.DarkCheckbox darkCheckbox4;
+        private ClassicDarkTheme.Dark.DarkCheckbox cbR;
         private System.Windows.Forms.Timer labeltimer;
         private AmongUsExternal.DarkTextbox keybindQ;
         private AmongUsExternal.DarkTextbox keybindW;

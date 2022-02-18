@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Drawing;
 
 namespace VoidSharp.Other
 {
@@ -97,9 +95,19 @@ namespace VoidSharp.Other
         // Account Manager //
 
         // Discord RPC //
-
         public static string DiscordRpcID = "941004535659376651";
-
         // Discord RPC //
+
+        // Orbwalker components //
+        public static Color EnemyPix = Color.FromArgb(50, 3, 0);
+        public static double rangevalue = 500;
+        // Orbwalker components //
+
+        // Spell Range //
+        public static Rectangle XerathQ = new Rectangle(0, 0, 1920, 1080);
+        public static Rectangle XerathW = new Rectangle(250, 45, 1570, 980);
+        public static Rectangle XerathE = new Rectangle(280, 90, 1350, 980);
+        public static Rectangle XerathR = new Rectangle(0, 0, 1920, 1080);
+        // Spell Range //
     }
 }

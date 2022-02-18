@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace VoidSharp.Inputs
+namespace VoidSharp.Cheat
 {
     public static class InputKeys
     {

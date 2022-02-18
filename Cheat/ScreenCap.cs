@@ -87,23 +87,24 @@ namespace VoidSharp.Cheat
             }
             return rect;
         }
-        public static Point? PixelSearch(Rectangle rect, Color PixelColor)
+        public static Point PixelSearch(Rectangle rect, Color PixelColor)
         {
             int konecx = rect.Width - rect.X;
             int konecy = rect.Height - rect.Y;
-            Point? Pixel_Coords = null;
-            Bitmap RegionIn_Bitmap = CaptureApplication("League of Legends");
+            Bitmap RegionIn_Bitmap = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
+            Graphics graphics = Graphics.FromImage(RegionIn_Bitmap);
+            graphics.CopyFromScreen(rect.X, rect.Y, 0, 0, new Size(rect.Width, rect.Height), CopyPixelOperation.SourceCopy);
             BitmapData RegionIn_BitmapData = RegionIn_Bitmap.LockBits(new Rectangle(0, 0, RegionIn_Bitmap.Width, RegionIn_Bitmap.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
 
             int[] Formatted_Color = new int[3] { PixelColor.B, PixelColor.G, PixelColor.R }; //bgr
 
             unsafe
             {
-                for (int y = 0; y < konecy; y++)
+                for (int y = rect.Y; y < konecy; y++)
                 {
                     byte* row = (byte*)RegionIn_BitmapData.Scan0 + (y * RegionIn_BitmapData.Stride);
 
-                    for (int x = 0; x < konecx; x++)
+                    for (int x = rect.X; x < konecx; x++)
                     {
                         if (row[x * 3] == Formatted_Color[0]) //blue
                         {
@@ -111,15 +112,14 @@ namespace VoidSharp.Cheat
                             {
                                 if (row[(x * 3) + 2] == Formatted_Color[2]) //red
                                 {
-                                    Pixel_Coords = new Point(x + rect.X + 65, y + rect.Y + 140);
-                                    return Pixel_Coords;
+                                    return new Point(x + rect.X + 65, y + rect.Y + 140);
                                 }
                             }
                         }
                     }
                 }
             }
-            return null;
+            return new Point(0, 0);
         }
     }
 }

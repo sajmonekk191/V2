@@ -129,6 +129,7 @@
             this.darkButton1.TabIndex = 4;
             this.darkButton1.Text = "Connect to League";
             this.darkButton1.UseVisualStyleBackColor = false;
+            this.darkButton1.Click += new System.EventHandler(this.darkButton1_Click);
             // 
             // enablebutton
             // 

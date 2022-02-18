@@ -5,6 +5,7 @@ using System.Net;
 using System.Threading;
 using System.Windows.Forms;
 using DiscordRPC;
+using LowLevelInput.Hooks;
 using VoidSharp.Other;
 
 namespace VoidSharp
@@ -13,6 +14,7 @@ namespace VoidSharp
     {
         DiscordRpcClient client;
         Point mousedownpoint = Point.Empty;
+        private static readonly InputManager InputManager = new InputManager();
         public VoidSharp()
         {
             InitializeComponent();

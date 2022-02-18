@@ -1,4 +1,7 @@
-﻿using System;
+﻿using LowLevelInput.Hooks;
+using System;
+using System.Diagnostics;
+using System.Linq;
 using System.Windows.Forms;
 using VoidSharp.Other;
 
@@ -6,6 +9,7 @@ namespace VoidSharp
 {
     public partial class generaluser : UserControl
     {
+        private static readonly InputManager InputManager = new InputManager();
         public generaluser()
         {
             InitializeComponent();
@@ -286,6 +290,22 @@ namespace VoidSharp
                     hodnoty.SelectedChamp = "Xayah";
                     break;
 
+            }
+        }
+
+        private void darkButton1_Click(object sender, EventArgs e)
+        {
+            Process[] league = Process.GetProcessesByName("League of Legends");
+            if (league != null)
+            {
+                if (league.Count() > 0) SpecialFunc.SetForegroundWindow(league[0].MainWindowHandle);
+                SpecialForms.DrawGUI dg = new SpecialForms.DrawGUI();
+                dg.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("League of Legends Process isn´t detected.");
             }
         }
     }
