@@ -34,6 +34,7 @@ namespace VoidSharp.Other
         public static float varuswu = 17.544f;
         public static float vaynewu = 17.544f;
         public static float xayahwu = 17.687f;
+        public static float xerathwu = 25.074f;
         // Champion Windup //
 
         // Champion Base Windup //
@@ -59,6 +60,7 @@ namespace VoidSharp.Other
         public static float varusbwu = 0.658f;
         public static float vaynebwu = 0.658f;
         public static float xayahbwu = 0.625f;
+        public static float xerathbwu = 0.625f;
         // Champion Base Windup //
 
         // Champion Windup Modifier //
@@ -84,6 +86,7 @@ namespace VoidSharp.Other
         public static float varusbwm = 1f;
         public static float vaynebwm = 1f;
         public static float xayahbwm = 1f;
+        public static float xerathbwm = 1f;
         // Champion Windup Modifier //
 
         // Account Manager //
@@ -99,14 +102,14 @@ namespace VoidSharp.Other
         // Discord RPC //
 
         // Orbwalker components //
-        public static Color EnemyPix = Color.FromArgb(50, 3, 0);
+        public static Color EnemyPix = Color.FromArgb(63, 6, 1);
         public static double rangevalue = 500;
         // Orbwalker components //
 
         // Spell Range //
         public static Rectangle XerathQ = new Rectangle(0, 0, 1920, 1080);
-        public static Rectangle XerathW = new Rectangle(250, 45, 1570, 980);
-        public static Rectangle XerathE = new Rectangle(280, 90, 1350, 980);
+        public static Rectangle XerathW = new Rectangle(220, 45, 1610, 1000);
+        public static Rectangle XerathE = new Rectangle(240, 90, 1390, 1000);
         public static Rectangle XerathR = new Rectangle(0, 0, 1920, 1080);
         // Spell Range //
     }

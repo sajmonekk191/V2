@@ -78,7 +78,8 @@
             "Twitch",
             "Varus",
             "Vayne",
-            "Xayah"});
+            "Xayah",
+            "Xerath"});
             this.champcb.Location = new System.Drawing.Point(271, 82);
             this.champcb.Name = "champcb";
             this.champcb.Size = new System.Drawing.Size(124, 24);
@@ -169,6 +170,7 @@
             this.champpb.Location = new System.Drawing.Point(271, 117);
             this.champpb.Name = "champpb";
             this.champpb.Size = new System.Drawing.Size(120, 120);
+            this.champpb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.champpb.TabIndex = 7;
             this.champpb.TabStop = false;
             // 

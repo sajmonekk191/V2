@@ -28,38 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.aimuser1 = new global::VoidSharp.aimuser();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // aimuser1
+            // panel1
             // 
-            this.aimuser1.BackColor = System.Drawing.Color.Transparent;
-            this.aimuser1.Location = new System.Drawing.Point(12, 12);
-            this.aimuser1.Name = "aimuser1";
-            this.aimuser1.Size = new System.Drawing.Size(350, 224);
-            this.aimuser1.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(23, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 21);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "-";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1907, 1046);
+            this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // DrawGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(385, 252);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.aimuser1);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.panel1);
             this.Name = "DrawGUI";
             this.Text = "DrawGUI";
             this.Load += new System.EventHandler(this.DrawGUI_Load);
@@ -67,12 +53,10 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.DrawGUI_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.DrawGUI_MouseUp);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private global::VoidSharp.aimuser aimuser1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

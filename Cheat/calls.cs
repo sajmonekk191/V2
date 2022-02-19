@@ -6,6 +6,7 @@ namespace VoidSharp.Cheat
 {
     internal class calls
     {
+        static int trytobreak;
         public static void Wait(int time)
         {
             Thread thread = new Thread(delegate ()
@@ -16,7 +17,7 @@ namespace VoidSharp.Cheat
             while (thread.IsAlive)
                 Application.DoEvents();
         }
-        public static void DoThing(string call, Rectangle rect)
+        public static void DoThing(string call, Rectangle rect, Point center)
         {
             Point enemypos;
             switch (call)
@@ -33,10 +34,27 @@ namespace VoidSharp.Cheat
                     }
                     break;
                 case "FindEnemy":
+                start:
                     enemypos = ScreenCap.PixelSearch(rect, Other.hodnoty.EnemyPix);
-                    if (enemypos.X == 0 && enemypos.Y == 0) 
-                        break;
-                    else Cursor.Position = enemypos;
+                    if (enemypos == null || enemypos.X == 0 && enemypos.Y == 0)
+                    {
+                        trytobreak++;
+                        if (trytobreak > 4)
+                        {
+                            trytobreak = 0;
+                            break;
+                        }
+                        goto start;
+                    }
+                    else
+                    {
+                        if (Other.hodnoty.SelectedChamp == "Xerath")
+                        {
+                            Cursor.Position = new Point(enemypos.X + center.X, enemypos.Y + center.Y);
+                        }
+                        else
+                            Cursor.Position = enemypos;
+                    }
                     break;
             }
         }

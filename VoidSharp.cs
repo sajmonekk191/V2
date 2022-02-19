@@ -99,6 +99,8 @@ namespace VoidSharp
             this.ShowIcon = true;
             this.ShowInTaskbar = true;
             this.ControlBox = true;
+            Process vs = Process.GetCurrentProcess();
+            vs.PriorityClass = ProcessPriorityClass.AboveNormal;
         }
         private void Wait(int time)
         {
@@ -188,11 +190,6 @@ namespace VoidSharp
             aimuser1.Visible = true;
             generaluser1.Visible = false;
             miscuser1.Visible = false;
-        }
-        private void loadtextbox()
-        {
-            aimuser au = new aimuser();
-            au.championnamelbl.Text = hodnoty.SelectedChamp;
         }
     }
 }

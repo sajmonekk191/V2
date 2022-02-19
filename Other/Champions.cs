@@ -30,5 +30,6 @@ namespace VoidSharp.Other
         public static string varus = "https://acqwmovtio.cloudimg.io/v7/https://ddragon.leagueoflegends.com/cdn/10.25.1/img/champion/Varus.png?h=120";
         public static string vayne = "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/95/VayneSquare.png/revision/latest/scale-to-width-down/120?cb=20170802170334";
         public static string xayah = "https://img.rankedboost.com/wp-content/plugins/league/assets/champion-icons/Xayah-Icon.png";
+        public static string xerath = "https://static.wikia.nocookie.net/leagueoflegends/images/5/5a/Xerath_Render.png/revision/latest/scale-to-width-down/340?cb=20170118094405";
     }
 }

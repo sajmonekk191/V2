@@ -289,6 +289,17 @@ namespace VoidSharp
                     hodnoty.finalBaseWindup = hodnoty.xayahbwu;
                     hodnoty.SelectedChamp = "Xayah";
                     break;
+                case "Xerath":
+                    wlbl.Visible = true;
+                    bwlbl.Visible = true;
+                    champpb.ImageLocation = Champions.xerath;
+
+                    wlbl.Text = ("Windup: " + hodnoty.xerathwu.ToString());
+                    bwlbl.Text = ("Base Windup: " + hodnoty.xerathbwu.ToString());
+                    hodnoty.finalWindup = hodnoty.xerathwu;
+                    hodnoty.finalBaseWindup = hodnoty.xerathbwu;
+                    hodnoty.SelectedChamp = "Xerath";
+                    break;
 
             }
         }
@@ -296,7 +307,7 @@ namespace VoidSharp
         private void darkButton1_Click(object sender, EventArgs e)
         {
             Process[] league = Process.GetProcessesByName("League of Legends");
-            if (league != null)
+            if (league.Count() > 0)
             {
                 if (league.Count() > 0) SpecialFunc.SetForegroundWindow(league[0].MainWindowHandle);
                 SpecialForms.DrawGUI dg = new SpecialForms.DrawGUI();
