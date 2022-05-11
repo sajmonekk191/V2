@@ -1,125 +1,105 @@
-﻿using System;
-using System.Diagnostics;
+﻿using VoidSharp.Other;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.Runtime.InteropServices;
+using Hazdryx.Drawing;
+using System;
 
 namespace VoidSharp.Cheat
 {
     internal class ScreenCap
     {
-        static Rectangle rect;
-        public static int starty;
-        public static int startx;
-        public static Bitmap CaptureApplication(string procName)
+        public static Point GetEnemyPosition(double ClientRange)
         {
-            var proc = Process.GetProcessesByName(procName)[0];
-            Interop.BringWindowToFront(procName);
-            var rect = new User32.Rect();
-            User32.GetWindowRect(proc.MainWindowHandle, ref rect);
-
-            int width = rect.right - rect.left;
-            int height = rect.bottom - rect.top;
-
-            var bmp = new Bitmap(width, height, PixelFormat.Format32bppArgb);
-            Graphics graphics = Graphics.FromImage(bmp);
-            graphics.CopyFromScreen(rect.left, rect.top, 0, 0, new Size(width, height), CopyPixelOperation.SourceCopy);
-            graphics.Dispose();
-            return bmp;
+            if (ClientRange >= 500 && ClientRange <= 550)
+            {
+                Rectangle rect = new Rectangle(450, 70, 910, 750);
+                return new Point((Size)PixelSearchEnemy(rect, hodnoty.EnemyPix));
+            }
+            if (ClientRange >= 550 && ClientRange <= 600)
+            {
+                Rectangle rect = new Rectangle(462, 70, 913, 782);
+                return new Point((Size)PixelSearchEnemy(rect, hodnoty.EnemyPix));
+            }
+            if (ClientRange >= 600 && ClientRange <= 650)
+            {
+                Rectangle rect = new Rectangle(403, 71, 964, 809);
+                return new Point((Size)PixelSearchEnemy(rect, hodnoty.EnemyPix));
+            }
+            if (ClientRange >= 650 && ClientRange <= 725)
+            {
+                Rectangle rect = new Rectangle(362, 35, 1100, 875);
+                return new Point((Size)PixelSearchEnemy(rect, hodnoty.EnemyPix));
+            }
+            if (ClientRange >= 725 && ClientRange <= 850)
+            {
+                Rectangle rect = new Rectangle(287, 0, 1225, 890);
+                return new Point((Size)PixelSearchEnemy(rect, hodnoty.EnemyPix));
+            }
+            if (ClientRange > 850)
+            {
+                Rectangle rect = new Rectangle(200, 0, 1380, 900);
+                return new Point((Size)PixelSearchEnemy(rect, hodnoty.EnemyPix));
+            }
+            return new Point(0,0);
         }
-        private class User32
+        public static Point PixelSearchEnemy(Rectangle rect, Color PixelColor)
         {
-            [StructLayout(LayoutKind.Sequential)]
-            public struct Rect
-            {
-                public int left;
-                public int top;
-                public int right;
-                public int bottom;
-            }
-
-            [DllImport("user32.dll")]
-            public static extern IntPtr GetWindowRect(IntPtr hWnd, ref Rect rect);
-        }
-        public static Rectangle GetRangeValue(double ClientRange)
-        {
-            if (ClientRange > 500 && ClientRange < 550)
-            {
-                rect = new Rectangle(502, 125, 1288, 755);
-                startx = 502;
-                starty = 125;
-                return rect;
-            }
-            if (ClientRange > 550 && ClientRange < 600)
-            {
-                rect = new Rectangle(462, 98, 1328, 782);
-                startx = 462;
-                starty = 98;
-                return rect;
-            }
-            if (ClientRange > 600 && ClientRange < 650)
-            {
-                rect = new Rectangle(423, 71, 1367, 809);
-                startx = 423;
-                starty = 71;
-                return rect;
-            }
-            if (ClientRange > 650 && ClientRange < 700)
-            {
-                rect = new Rectangle(344, 17, 1446, 863);
-                startx = 344;
-                starty = 17;
-                return rect;
-            }
-            if (ClientRange > 700 && ClientRange < 750)
-            {
-                rect = new Rectangle(305, 0, 1485, 890);
-                startx = 305;
-                starty = 0;
-                return rect;
-            }
-            if (ClientRange > 750 && ClientRange < 850)
-            {
-                rect = new Rectangle(226, 0, 1564, 944);
-                startx = 226;
-                starty = 0;
-                return rect;
-            }
-            return rect;
-        }
-        public static Point PixelSearch(Rectangle rect, Color PixelColor)
-        {
-            int konecx = rect.Width - rect.X;
-            int konecy = rect.Height - rect.Y;
-            Bitmap RegionIn_Bitmap = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
-            Graphics graphics = Graphics.FromImage(RegionIn_Bitmap);
-            graphics.CopyFromScreen(rect.X, rect.Y, 0, 0, new Size(rect.Width, rect.Height), CopyPixelOperation.SourceCopy);
-            BitmapData RegionIn_BitmapData = RegionIn_Bitmap.LockBits(new Rectangle(0, 0, RegionIn_Bitmap.Width, RegionIn_Bitmap.Height), ImageLockMode.ReadWrite, PixelFormat.Format24bppRgb);
-
-            int[] Formatted_Color = new int[3] { PixelColor.B, PixelColor.G, PixelColor.R }; //bgr
-
+            int searchvalue = PixelColor.ToArgb();
             unsafe
             {
-                for (int y = rect.Y; y < konecy; y++)
+                Bitmap BMP = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppRgb);
+                Graphics GFX = Graphics.FromImage(BMP);
+                GFX.CopyFromScreen(rect.X, rect.Y, 0, 0, rect.Size, CopyPixelOperation.SourceCopy);
+                using (FastBitmap bitmap = new FastBitmap(BMP))
                 {
-                    byte* row = (byte*)RegionIn_BitmapData.Scan0 + (y * RegionIn_BitmapData.Stride);
-
-                    for (int x = rect.X; x < konecx; x++)
+                    for (int i = 0; i < bitmap.Length; i++)
                     {
-                        if (row[x * 3] == Formatted_Color[0]) //blue
+                        if (searchvalue == bitmap.GetI(i))
                         {
-                            if (row[(x * 3) + 1] == Formatted_Color[1]) //green
+                            int x = i % bitmap.Width;
+                            int y = i / bitmap.Width;
+                            if (InCircle(new Point(x, y), rect))
                             {
-                                if (row[(x * 3) + 2] == Formatted_Color[2]) //red
-                                {
-                                    return new Point(x + rect.X + 65, y + rect.Y + 140);
-                                }
+                                return new Point(x + rect.X + 60, y + rect.Y + 140);
                             }
                         }
                     }
                 }
             }
             return new Point(0, 0);
+        }
+        public static bool InCircle(Point pos, Rectangle rect)
+        {
+            double ratio = (double)rect.Width / rect.Height;
+            double r = rect.Height / 2;
+            double y = rect.Height / 2 - pos.Y;
+            double x = (rect.Width / 2 - pos.X) / ratio;
+            if (x * x + y * y <= r * r)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool PixelSearchCD(Rectangle rect, Color PixelColor)
+        {
+            int searchvalue = PixelColor.ToArgb();
+            unsafe
+            {
+                Bitmap BMP = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppRgb);
+                Graphics GFX = Graphics.FromImage(BMP);
+                GFX.CopyFromScreen(rect.X, rect.Y, 0, 0, rect.Size, CopyPixelOperation.SourceCopy);
+                using (FastBitmap bitmap = new FastBitmap(BMP))
+                {
+                    for (int i = 0; i < bitmap.Length; i++)
+                    {
+                        if (searchvalue == bitmap.GetI(i))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
         }
     }
 }

@@ -55,9 +55,6 @@
     <Compile Update="SpecialForms\AccountManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SpecialForms\DrawGUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="SpecialForms\ErrorWindow.cs">
       <SubType>Form</SubType>
     </Compile>

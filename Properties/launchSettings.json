@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VoidSharp": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}

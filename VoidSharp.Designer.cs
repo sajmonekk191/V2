@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VoidSharp));
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.loadinglabel = new System.Windows.Forms.Label();
@@ -45,6 +46,9 @@
             this.miscuser1 = new global::VoidSharp.miscuser();
             this.darkLabel1 = new ClassicDarkTheme.Dark.DarkLabel();
             this.aimuser1 = new global::VoidSharp.aimuser();
+            this.Orbtimer = new System.Windows.Forms.Timer(this.components);
+            this.orbuser1 = new global::VoidSharp.orbuser();
+            this.healbarrieruser1 = new global::VoidSharp.healbarrieruser();
             ((System.ComponentModel.ISupportInitialize)(this.DiscordPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PayPalPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPic)).BeginInit();
@@ -165,6 +169,7 @@
             this.OrbwalkerButton.TabIndex = 13;
             this.OrbwalkerButton.Text = "Orbwalker";
             this.OrbwalkerButton.UseVisualStyleBackColor = false;
+            this.OrbwalkerButton.Click += new System.EventHandler(this.OrbwalkerButton_Click);
             // 
             // AutoAimButton
             // 
@@ -227,6 +232,7 @@
             this.HealBarrierButton.TabIndex = 16;
             this.HealBarrierButton.Text = "Auto Heal/Barrier";
             this.HealBarrierButton.UseVisualStyleBackColor = false;
+            this.HealBarrierButton.Click += new System.EventHandler(this.HealBarrierButton_Click);
             // 
             // LogoPic
             // 
@@ -242,7 +248,7 @@
             // generaluser1
             // 
             this.generaluser1.BackColor = System.Drawing.Color.Transparent;
-            this.generaluser1.Location = new System.Drawing.Point(189, 82);
+            this.generaluser1.Location = new System.Drawing.Point(189, 77);
             this.generaluser1.Name = "generaluser1";
             this.generaluser1.Size = new System.Drawing.Size(417, 276);
             this.generaluser1.TabIndex = 18;
@@ -250,7 +256,7 @@
             // miscuser1
             // 
             this.miscuser1.BackColor = System.Drawing.Color.Transparent;
-            this.miscuser1.Location = new System.Drawing.Point(189, 71);
+            this.miscuser1.Location = new System.Drawing.Point(189, 77);
             this.miscuser1.Name = "miscuser1";
             this.miscuser1.Size = new System.Drawing.Size(416, 282);
             this.miscuser1.TabIndex = 19;
@@ -270,10 +276,34 @@
             // 
             // aimuser1
             // 
-            this.aimuser1.Location = new System.Drawing.Point(189, 71);
+            this.aimuser1.BackColor = System.Drawing.Color.Transparent;
+            this.aimuser1.Location = new System.Drawing.Point(189, 77);
             this.aimuser1.Name = "aimuser1";
             this.aimuser1.Size = new System.Drawing.Size(416, 282);
             this.aimuser1.TabIndex = 21;
+            // 
+            // Orbtimer
+            // 
+            this.Orbtimer.Enabled = true;
+            this.Orbtimer.Interval = 1;
+            this.Orbtimer.Tick += new System.EventHandler(this.Orbtimer_Tick);
+            // 
+            // orbuser1
+            // 
+            this.orbuser1.BackColor = System.Drawing.Color.Transparent;
+            this.orbuser1.Location = new System.Drawing.Point(189, 77);
+            this.orbuser1.Name = "orbuser1";
+            this.orbuser1.Size = new System.Drawing.Size(416, 282);
+            this.orbuser1.TabIndex = 22;
+            // 
+            // healbarrieruser1
+            // 
+            this.healbarrieruser1.BackColor = System.Drawing.Color.Transparent;
+            this.healbarrieruser1.Location = new System.Drawing.Point(189, 77);
+            this.healbarrieruser1.Name = "healbarrieruser1";
+            this.healbarrieruser1.Size = new System.Drawing.Size(416, 282);
+            this.healbarrieruser1.TabIndex = 23;
+            this.healbarrieruser1.Visible = false;
             // 
             // VoidSharp
             // 
@@ -281,6 +311,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(618, 370);
+            this.Controls.Add(this.healbarrieruser1);
+            this.Controls.Add(this.orbuser1);
             this.Controls.Add(this.aimuser1);
             this.Controls.Add(this.darkLabel1);
             this.Controls.Add(this.miscuser1);
@@ -320,7 +352,7 @@
         private System.Windows.Forms.Label loadinglabel;
         private System.Windows.Forms.PictureBox DiscordPic;
         private System.Windows.Forms.PictureBox PayPalPic;
-        private System.Windows.Forms.Label ExitButton;
+        public System.Windows.Forms.Label ExitButton;
         private System.Windows.Forms.Label MinimizeButton;
         private ClassicDarkTheme.Dark.DarkButton ConnectButton;
         private ClassicDarkTheme.Dark.DarkButton OrbwalkerButton;
@@ -332,5 +364,8 @@
         private global::VoidSharp.miscuser miscuser1;
         private ClassicDarkTheme.Dark.DarkLabel darkLabel1;
         private global::VoidSharp.aimuser aimuser1;
+        private System.Windows.Forms.Timer Orbtimer;
+        private global::VoidSharp.orbuser orbuser1;
+        private global::VoidSharp.healbarrieruser healbarrieruser1;
     }
 }

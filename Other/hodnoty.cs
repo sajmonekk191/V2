@@ -4,15 +4,19 @@ namespace VoidSharp.Other
 {
     internal class hodnoty
     {
+        // Player Info //
+        public static string ActivePlayerEndpoint = @"https://127.0.0.1:2999/liveclientdata/activeplayer";
+        // Player Info //
+
         // Main Hodnoty //
         public static bool VoidActivated = false;
-        public static double finalWindup;
-        public static double finalBaseWindup;
+        public static bool AutoHeal = false;
+        public static float Windup;
+        public static float BaseWindup;
         public static string SelectedChamp;
         // Main Hodnoty //
 
         // Champion Windup //
-        public static float aphelioswu = 15.333f;
         public static float ashewu = 21.93f;
         public static float caitlynwu = 17.708f;
         public static float corkiwu = 10.00f;
@@ -38,7 +42,6 @@ namespace VoidSharp.Other
         // Champion Windup //
 
         // Champion Base Windup //
-        public static float apheliosbwu = 0.64f;
         public static float ashebwu = 0.658f;
         public static float caitlynbwu = 0.681f;
         public static float corkibwu = 0.638f;
@@ -64,7 +67,6 @@ namespace VoidSharp.Other
         // Champion Base Windup //
 
         // Champion Windup Modifier //
-        public static float apheliosbwm = 1f;
         public static float ashebwm = 1f;
         public static float caitlynbwm = 1f;
         public static float corkibwm = 1f;
@@ -102,15 +104,60 @@ namespace VoidSharp.Other
         // Discord RPC //
 
         // Orbwalker components //
-        public static Color EnemyPix = Color.FromArgb(63, 6, 1);
-        public static double rangevalue = 500;
+        public static bool OrbActivated = false;
+        public static bool AttackChamponly = false;
+        public static bool AttackEverything = false;
+        public static bool ShowRange = false;
+        public static bool tooglechamponly = false;
+        public static int AvPing = 50;
+        public static int HumanizerTime = 50;
+        public static Color EnemyPix = Color.FromArgb(63, 8, 3);
+        public static Point EnemyPosition = Point.Empty;
+        public static double AttackRange = double.NaN;
+        public static double AttackSpeed = double.NaN;
+        public static double PlayerHealth = double.NaN;
         // Orbwalker components //
 
-        // Spell Range //
-        public static Rectangle XerathQ = new Rectangle(0, 0, 1920, 1080);
-        public static Rectangle XerathW = new Rectangle(220, 45, 1610, 1000);
-        public static Rectangle XerathE = new Rectangle(240, 90, 1390, 1000);
-        public static Rectangle XerathR = new Rectangle(0, 0, 1920, 1080);
-        // Spell Range //
+        // Aim components //
+        public static bool AimActivated = false;
+        public static bool QActivated = false;
+        public static bool WActivated = false;
+        public static bool EActivated = false;
+        public static bool RActivated = false;
+        public static Color CDcolor = Color.FromArgb(231, 195, 123);
+        public static Rectangle CDposQ = new Rectangle(806, 992, 30, 30);
+        public static Rectangle CDposW = new Rectangle(851, 992, 30, 30);
+        public static Rectangle CDposE = new Rectangle(895, 992, 30, 30);
+        public static Rectangle CDposR = new Rectangle(939, 992, 30, 30);
+        public static bool ChargeQ = false;
+        public static bool ChargeW = false;
+        public static bool ChargeE = false;
+        public static bool ChargeR = false;
+        public static Rectangle rectQ = Rectangle.Empty;
+        public static Rectangle rectW = Rectangle.Empty;
+        public static Rectangle rectE = Rectangle.Empty;
+        public static Rectangle rectR = Rectangle.Empty;
+        // Aim components //
+
+        // AutoHB components //
+        public static bool HBActivated = false;
+        public static bool selectedD = false;
+        public static bool selectedF = false;
+        public static float Health = float.NaN;
+        public static Rectangle CDslotD = new Rectangle(990, 993, 30, 30);
+        public static Rectangle CDslotF = new Rectangle(1023, 993, 30, 30);
+        // AutoHB components //
+        public static float getWindup()
+        {
+            return Windup;
+        }
+        public static int getHumanize()
+        {
+            return HumanizerTime;
+        }
+        public static int getPing()
+        {
+            return AvPing;
+        }
     }
 }

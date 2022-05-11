@@ -5,7 +5,7 @@ using System.Net;
 using System.Threading;
 using System.Windows.Forms;
 using DiscordRPC;
-using LowLevelInput.Hooks;
+using VoidSharp.Cheat;
 using VoidSharp.Other;
 
 namespace VoidSharp
@@ -14,7 +14,6 @@ namespace VoidSharp
     {
         DiscordRpcClient client;
         Point mousedownpoint = Point.Empty;
-        private static readonly InputManager InputManager = new InputManager();
         public VoidSharp()
         {
             InitializeComponent();
@@ -25,6 +24,7 @@ namespace VoidSharp
             ExitButton.BackColor = Color.FromArgb(127, 37, 37);
             MinimizeButton.BackColor = Color.FromArgb(108, 116, 116);
             miscuser1.Visible = false;
+            orbuser1.Visible = false;
             generaluser1.Visible = false;
             aimuser1.Visible = false;
             LogoPic.Visible = false;
@@ -55,6 +55,7 @@ namespace VoidSharp
             progressBar1.Value = 3;
             loadinglabel.Location = new Point(loadinglabel.Left - 20, loadinglabel.Top);
             loadinglabel.Text = "Checking for Update..";
+            /*
             Wait(1500);
             WebClient webClient = new WebClient();
             try
@@ -74,6 +75,7 @@ namespace VoidSharp
                 Wait(1000);
                 Environment.Exit(0);
             }
+            */
             progressBar1.Value = 64;
             loadinglabel.Text = "Loading..";
             loadinglabel.Location = new Point(loadinglabel.Left + 30, loadinglabel.Top);
@@ -99,8 +101,6 @@ namespace VoidSharp
             this.ShowIcon = true;
             this.ShowInTaskbar = true;
             this.ControlBox = true;
-            Process vs = Process.GetCurrentProcess();
-            vs.PriorityClass = ProcessPriorityClass.AboveNormal;
         }
         private void Wait(int time)
         {
@@ -112,24 +112,20 @@ namespace VoidSharp
             while (thread.IsAlive)
                 Application.DoEvents();
         }
-
         private void ExitButton_Click(object sender, EventArgs e)
         {
             client = new DiscordRpcClient(hodnoty.DiscordRpcID);
             client.Dispose();
             Environment.Exit(0);
         }
-
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             mousedownpoint = new Point(e.X, e.Y);
         }
-
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
             if (mousedownpoint.IsEmpty)
@@ -137,59 +133,82 @@ namespace VoidSharp
             Form f = sender as Form;
             f.Location = new Point(f.Location.X + (e.X - mousedownpoint.X), f.Location.Y + (e.Y - mousedownpoint.Y));
         }
-
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
             mousedownpoint = Point.Empty;
         }
-
         private void ExitButton_MouseEnter(object sender, EventArgs e)
         {
             ExitButton.BackColor = Color.FromArgb(143, 37, 37);
         }
-
         private void ExitButton_MouseLeave(object sender, EventArgs e)
         {
             ExitButton.BackColor = Color.FromArgb(127, 37, 37);
         }
-
         private void MinimizeButton_MouseEnter(object sender, EventArgs e)
         {
             MinimizeButton.BackColor = Color.FromArgb(130, 134, 134);
         }
-
         private void MinimizeButton_MouseLeave(object sender, EventArgs e)
         {
             MinimizeButton.BackColor = Color.FromArgb(108, 116, 116);
         }
-
         private void DiscordPic_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Developer: sajmonekk#1565", "Discord", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         private void PayPalPic_Click(object sender, EventArgs e)
         {
             Process.Start(new ProcessStartInfo("https://www.paypal.com/paypalme/sajmonekk") { UseShellExecute = true });
         }
-
         private void ConnectButton_Click(object sender, EventArgs e)
         {
             generaluser1.Visible = true;
             miscuser1.Visible = false;
             aimuser1.Visible = false;
+            orbuser1.Visible = false;
+            healbarrieruser1.Visible = false;
         }
         private void MiscButton_Click(object sender, EventArgs e)
         {
             miscuser1.Visible = true;
             generaluser1.Visible = false;
             aimuser1.Visible = false;
+            orbuser1.Visible = false;
+            healbarrieruser1.Visible = false;
         }
         private void AutoAimButton_Click(object sender, EventArgs e)
         {
             aimuser1.Visible = true;
             generaluser1.Visible = false;
             miscuser1.Visible = false;
+            orbuser1.Visible = false;
+            healbarrieruser1.Visible = false;
+        }
+        private void OrbwalkerButton_Click(object sender, EventArgs e)
+        {
+            orbuser1.Visible = true;
+            aimuser1.Visible = false;
+            generaluser1.Visible = false;
+            miscuser1.Visible = false;
+            healbarrieruser1.Visible = false;
+        }
+        private void HealBarrierButton_Click(object sender, EventArgs e)
+        {
+            healbarrieruser1.Visible = true;
+            orbuser1.Visible = false;
+            aimuser1.Visible = false;
+            generaluser1.Visible = false;
+            miscuser1.Visible = false;
+        }
+        private void Orbtimer_Tick(object sender, EventArgs e)
+        {
+            if (hodnoty.VoidActivated)
+            {
+                Orbwalker.OrbwalkEnemy();
+                AimCore.Aimer();
+                AutoHB.Healer();
+            }
         }
     }
 }

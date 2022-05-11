@@ -1,5 +1,4 @@
-﻿using LowLevelInput.Hooks;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
@@ -9,7 +8,6 @@ namespace VoidSharp
 {
     public partial class generaluser : UserControl
     {
-        private static readonly InputManager InputManager = new InputManager();
         public generaluser()
         {
             InitializeComponent();
@@ -22,7 +20,8 @@ namespace VoidSharp
             champcb.DropDownStyle = ComboBoxStyle.DropDownList;
             champcb.Items.Insert(0, "Select Champion");
             champcb.SelectedIndex = 0;
-            statuspb.Image = Properties.Resources.Fail;
+            statuspb.Image = Properties.Resources.fail;
+            champpb.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void enablebutton_Click(object sender, EventArgs e)
@@ -33,31 +32,20 @@ namespace VoidSharp
                 enablebutton.Text = "Disable Void";
                 Statuslbl2.Text = "Enabled";
                 hodnoty.VoidActivated = true;
-                statuspb.Image = Properties.Resources.Succesfull;
+                statuspb.Image = Properties.Resources.succ;
             }
             else
             {
                 enablebutton.Text = "Enable Void";
                 Statuslbl2.Text = "Disabled";
                 hodnoty.VoidActivated = false;
-                statuspb.Image = Properties.Resources.Fail;
+                statuspb.Image = Properties.Resources.fail;
             }
         }
         private void champcb_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (champcb.SelectedItem.ToString().Trim())
             {
-                case "Aphelios":
-                    wlbl.Visible = true;
-                    bwlbl.Visible = true;
-                    champpb.ImageLocation = Champions.aphelios;
-
-                    wlbl.Text = ("Windup: " + hodnoty.aphelioswu.ToString());
-                    bwlbl.Text = ("Base Windup: " + hodnoty.apheliosbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.aphelioswu;
-                    hodnoty.finalBaseWindup = hodnoty.apheliosbwu;
-                    hodnoty.SelectedChamp = "Aphelios";
-                    break;
                 case "Ashe":
                     wlbl.Visible = true;
                     bwlbl.Visible = true;
@@ -65,9 +53,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.ashewu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.ashebwu.ToString());
-                    hodnoty.finalWindup = hodnoty.ashewu;
-                    hodnoty.finalBaseWindup = hodnoty.ashebwu;
+                    hodnoty.Windup = hodnoty.ashewu;
+                    hodnoty.BaseWindup = hodnoty.ashebwu;
                     hodnoty.SelectedChamp = "Ashe";
+                    hodnoty.rectQ = SpellRange.AsheQ;
+                    hodnoty.rectW = SpellRange.AsheW;
+                    hodnoty.rectE = SpellRange.AsheE;
+                    hodnoty.rectR = SpellRange.AsheR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Caitlyn":
                     wlbl.Visible = true;
@@ -76,9 +72,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.caitlynwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.caitlynbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.caitlynwu;
-                    hodnoty.finalBaseWindup = hodnoty.caitlynbwu;
+                    hodnoty.Windup = hodnoty.caitlynwu;
+                    hodnoty.BaseWindup = hodnoty.caitlynbwu;
                     hodnoty.SelectedChamp = "Caitlyn";
+                    hodnoty.rectQ = SpellRange.CaitlynQ;
+                    hodnoty.rectW = SpellRange.CaitlynW;
+                    hodnoty.rectE = SpellRange.CaitlynE;
+                    hodnoty.rectR = SpellRange.CaitlynR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Corki":
                     wlbl.Visible = true;
@@ -87,9 +91,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.corkiwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.corkibwu.ToString());
-                    hodnoty.finalWindup = hodnoty.corkiwu;
-                    hodnoty.finalBaseWindup = hodnoty.corkibwu;
+                    hodnoty.Windup = hodnoty.corkiwu;
+                    hodnoty.BaseWindup = hodnoty.corkibwu;
                     hodnoty.SelectedChamp = "Corki";
+                    hodnoty.rectQ = SpellRange.CorkiQ;
+                    hodnoty.rectW = SpellRange.CorkiW;
+                    hodnoty.rectE = SpellRange.CorkiE;
+                    hodnoty.rectR = SpellRange.CorkiR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Draven":
                     wlbl.Visible = true;
@@ -98,9 +110,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.dravenwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.dravenbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.dravenwu;
-                    hodnoty.finalBaseWindup = hodnoty.dravenbwu;
+                    hodnoty.Windup = hodnoty.dravenwu;
+                    hodnoty.BaseWindup = hodnoty.dravenbwu;
                     hodnoty.SelectedChamp = "Draven";
+                    hodnoty.rectQ = SpellRange.DravenQ;
+                    hodnoty.rectW = SpellRange.DravenW;
+                    hodnoty.rectE = SpellRange.DravenE;
+                    hodnoty.rectR = SpellRange.DravenR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Ezreal":
                     wlbl.Visible = true;
@@ -109,9 +129,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.ezrealwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.ezrealbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.ezrealwu;
-                    hodnoty.finalBaseWindup = hodnoty.ezrealbwu;
+                    hodnoty.Windup = hodnoty.ezrealwu;
+                    hodnoty.BaseWindup = hodnoty.ezrealbwu;
                     hodnoty.SelectedChamp = "Ezreal";
+                    hodnoty.rectQ = SpellRange.EzrealQ;
+                    hodnoty.rectW = SpellRange.EzrealW;
+                    hodnoty.rectE = SpellRange.EzrealE;
+                    hodnoty.rectR = SpellRange.EzrealR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Jinx":
                     wlbl.Visible = true;
@@ -120,9 +148,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.jinxwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.jinxbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.jinxwu;
-                    hodnoty.finalBaseWindup = hodnoty.jinxbwu;
+                    hodnoty.Windup = hodnoty.jinxwu;
+                    hodnoty.BaseWindup = hodnoty.jinxbwu;
                     hodnoty.SelectedChamp = "Jinx";
+                    hodnoty.rectQ = SpellRange.JinxQ;
+                    hodnoty.rectW = SpellRange.JinxW;
+                    hodnoty.rectE = SpellRange.JinxE;
+                    hodnoty.rectR = SpellRange.JinxR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Kaisa":
                     wlbl.Visible = true;
@@ -131,9 +167,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.kaisawu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.kaisabwu.ToString());
-                    hodnoty.finalWindup = hodnoty.kaisawu;
-                    hodnoty.finalBaseWindup = hodnoty.kaisabwu;
+                    hodnoty.Windup = hodnoty.kaisawu;
+                    hodnoty.BaseWindup = hodnoty.kaisabwu;
                     hodnoty.SelectedChamp = "Kaisa";
+                    hodnoty.rectQ = SpellRange.KaisaQ;
+                    hodnoty.rectW = SpellRange.KaisaW;
+                    hodnoty.rectE = SpellRange.KaisaE;
+                    hodnoty.rectR = SpellRange.KaisaR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Kalista":
                     wlbl.Visible = true;
@@ -142,9 +186,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.kalistawu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.kalistabwu.ToString());
-                    hodnoty.finalWindup = hodnoty.kalistawu;
-                    hodnoty.finalBaseWindup = hodnoty.kalistabwu;
+                    hodnoty.Windup = hodnoty.kalistawu;
+                    hodnoty.BaseWindup = hodnoty.kalistabwu;
                     hodnoty.SelectedChamp = "Kalista";
+                    hodnoty.rectQ = SpellRange.KalistaQ;
+                    hodnoty.rectW = SpellRange.KalistaW;
+                    hodnoty.rectE = SpellRange.KalistaE;
+                    hodnoty.rectR = SpellRange.KalistaR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Kayle":
                     wlbl.Visible = true;
@@ -153,9 +205,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.kaylewu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.kaylebwu.ToString());
-                    hodnoty.finalWindup = hodnoty.kaylewu;
-                    hodnoty.finalBaseWindup = hodnoty.kaylebwu;
+                    hodnoty.Windup = hodnoty.kaylewu;
+                    hodnoty.BaseWindup = hodnoty.kaylebwu;
                     hodnoty.SelectedChamp = "Kayle";
+                    hodnoty.rectQ = SpellRange.KayleQ;
+                    hodnoty.rectW = SpellRange.KayleW;
+                    hodnoty.rectE = SpellRange.KayleE;
+                    hodnoty.rectR = SpellRange.KayleR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Kindred":
                     wlbl.Visible = true;
@@ -164,9 +224,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.kindredwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.kindredbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.kindredwu;
-                    hodnoty.finalBaseWindup = hodnoty.kindredbwu;
+                    hodnoty.Windup = hodnoty.kindredwu;
+                    hodnoty.BaseWindup = hodnoty.kindredbwu;
                     hodnoty.SelectedChamp = "Kindred";
+                    hodnoty.rectQ = SpellRange.KindredQ;
+                    hodnoty.rectW = SpellRange.KindredW;
+                    hodnoty.rectE = SpellRange.KindredE;
+                    hodnoty.rectR = SpellRange.KindredR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Kogmaw":
                     wlbl.Visible = true;
@@ -175,9 +243,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.kogmawu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.kogmabwu.ToString());
-                    hodnoty.finalWindup = hodnoty.kogmawu;
-                    hodnoty.finalBaseWindup = hodnoty.kogmabwu;
+                    hodnoty.Windup = hodnoty.kogmawu;
+                    hodnoty.BaseWindup = hodnoty.kogmabwu;
                     hodnoty.SelectedChamp = "Kogmaw";
+                    hodnoty.rectQ = SpellRange.KogmawQ;
+                    hodnoty.rectW = SpellRange.KogmawW;
+                    hodnoty.rectE = SpellRange.KogmawE;
+                    hodnoty.rectR = SpellRange.KogmawR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Lucian":
                     wlbl.Visible = true;
@@ -186,9 +262,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.lucianwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.lucianbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.lucianwu;
-                    hodnoty.finalBaseWindup = hodnoty.lucianbwu;
+                    hodnoty.Windup = hodnoty.lucianwu;
+                    hodnoty.BaseWindup = hodnoty.lucianbwu;
                     hodnoty.SelectedChamp = "Lucian";
+                    hodnoty.rectQ = SpellRange.LucianQ;
+                    hodnoty.rectW = SpellRange.LucianW;
+                    hodnoty.rectE = SpellRange.LucianE;
+                    hodnoty.rectR = SpellRange.LucianR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Miss Fortune":
                     wlbl.Visible = true;
@@ -197,9 +281,13 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.mfwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.mfbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.mfwu;
-                    hodnoty.finalBaseWindup = hodnoty.mfbwu;
+                    hodnoty.Windup = hodnoty.mfwu;
+                    hodnoty.BaseWindup = hodnoty.mfbwu;
                     hodnoty.SelectedChamp = "Miss Fortune";
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Quinn":
                     wlbl.Visible = true;
@@ -208,9 +296,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.quinnwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.quinnbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.quinnwu;
-                    hodnoty.finalBaseWindup = hodnoty.quinnbwu;
+                    hodnoty.Windup = hodnoty.quinnwu;
+                    hodnoty.BaseWindup = hodnoty.quinnbwu;
                     hodnoty.SelectedChamp = "Quinn";
+                    hodnoty.rectQ = SpellRange.QuinnQ;
+                    hodnoty.rectW = SpellRange.QuinnW;
+                    hodnoty.rectE = SpellRange.QuinnE;
+                    hodnoty.rectR = SpellRange.QuinnR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Samira":
                     wlbl.Visible = true;
@@ -219,9 +315,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.samirawu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.samirabwu.ToString());
-                    hodnoty.finalWindup = hodnoty.samirawu;
-                    hodnoty.finalBaseWindup = hodnoty.samirabwu;
+                    hodnoty.Windup = hodnoty.samirawu;
+                    hodnoty.BaseWindup = hodnoty.samirabwu;
                     hodnoty.SelectedChamp = "Samira";
+                    hodnoty.rectQ = SpellRange.SamiraQ;
+                    hodnoty.rectW = SpellRange.SamiraW;
+                    hodnoty.rectE = SpellRange.SamiraE;
+                    hodnoty.rectR = SpellRange.SamiraR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Sivir":
                     wlbl.Visible = true;
@@ -230,9 +334,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.sivirwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.sivirbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.sivirwu;
-                    hodnoty.finalBaseWindup = hodnoty.sivirbwu;
+                    hodnoty.Windup = hodnoty.sivirwu;
+                    hodnoty.BaseWindup = hodnoty.sivirbwu;
                     hodnoty.SelectedChamp = "Sivir";
+                    hodnoty.rectQ = SpellRange.SivirQ;
+                    hodnoty.rectW = SpellRange.SivirW;
+                    hodnoty.rectE = SpellRange.SivirE;
+                    hodnoty.rectR = SpellRange.SivirR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Tristana":
                     wlbl.Visible = true;
@@ -241,9 +353,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.tristanawu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.tristanabwu.ToString());
-                    hodnoty.finalWindup = hodnoty.tristanawu;
-                    hodnoty.finalBaseWindup = hodnoty.tristanabwu;
+                    hodnoty.Windup = hodnoty.tristanawu;
+                    hodnoty.BaseWindup = hodnoty.tristanabwu;
                     hodnoty.SelectedChamp = "Tristana";
+                    hodnoty.rectQ = SpellRange.TristanaQ;
+                    hodnoty.rectW = SpellRange.TristanaW;
+                    hodnoty.rectE = SpellRange.TristanaE;
+                    hodnoty.rectR = SpellRange.TristanaR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Twitch":
                     wlbl.Visible = true;
@@ -252,9 +372,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.twitchwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.twitchbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.twitchwu;
-                    hodnoty.finalBaseWindup = hodnoty.twitchbwu;
+                    hodnoty.Windup = hodnoty.twitchwu;
+                    hodnoty.BaseWindup = hodnoty.twitchbwu;
                     hodnoty.SelectedChamp = "Twitch";
+                    hodnoty.rectQ = SpellRange.TwitchQ;
+                    hodnoty.rectW = SpellRange.TwitchW;
+                    hodnoty.rectE = SpellRange.TwitchE;
+                    hodnoty.rectR = SpellRange.TwitchR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Varus":
                     wlbl.Visible = true;
@@ -263,9 +391,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.varuswu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.varusbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.varuswu;
-                    hodnoty.finalBaseWindup = hodnoty.varusbwu;
+                    hodnoty.Windup = hodnoty.varuswu;
+                    hodnoty.BaseWindup = hodnoty.varusbwu;
                     hodnoty.SelectedChamp = "Varus";
+                    hodnoty.rectQ = SpellRange.VarusQ;
+                    hodnoty.rectW = SpellRange.VarusW;
+                    hodnoty.rectE = SpellRange.VarusE;
+                    hodnoty.rectR = SpellRange.VarusR;
+                    hodnoty.ChargeQ = true;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Vayne":
                     wlbl.Visible = true;
@@ -274,9 +410,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.vaynewu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.vaynebwu.ToString());
-                    hodnoty.finalWindup = hodnoty.vaynewu;
-                    hodnoty.finalBaseWindup = hodnoty.vaynebwu;
+                    hodnoty.Windup = hodnoty.vaynewu;
+                    hodnoty.BaseWindup = hodnoty.vaynebwu;
                     hodnoty.SelectedChamp = "Vayne";
+                    hodnoty.rectQ = SpellRange.VayneQ;
+                    hodnoty.rectW = SpellRange.VayneW;
+                    hodnoty.rectE = SpellRange.VayneE;
+                    hodnoty.rectR = SpellRange.VayneR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Xayah":
                     wlbl.Visible = true;
@@ -285,9 +429,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.xayahwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.xayahbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.xayahwu;
-                    hodnoty.finalBaseWindup = hodnoty.xayahbwu;
+                    hodnoty.Windup = hodnoty.xayahwu;
+                    hodnoty.BaseWindup = hodnoty.xayahbwu;
                     hodnoty.SelectedChamp = "Xayah";
+                    hodnoty.rectQ = SpellRange.XayahQ;
+                    hodnoty.rectW = SpellRange.XayahW;
+                    hodnoty.rectE = SpellRange.XayahE;
+                    hodnoty.rectR = SpellRange.XayahR;
+                    hodnoty.ChargeQ = false;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
                 case "Xerath":
                     wlbl.Visible = true;
@@ -296,9 +448,17 @@ namespace VoidSharp
 
                     wlbl.Text = ("Windup: " + hodnoty.xerathwu.ToString());
                     bwlbl.Text = ("Base Windup: " + hodnoty.xerathbwu.ToString());
-                    hodnoty.finalWindup = hodnoty.xerathwu;
-                    hodnoty.finalBaseWindup = hodnoty.xerathbwu;
+                    hodnoty.Windup = hodnoty.xerathwu;
+                    hodnoty.BaseWindup = hodnoty.xerathbwu;
                     hodnoty.SelectedChamp = "Xerath";
+                    hodnoty.rectQ = SpellRange.XerathQ;
+                    hodnoty.rectW = SpellRange.XerathW;
+                    hodnoty.rectE = SpellRange.XerathE;
+                    hodnoty.rectR = SpellRange.XerathR;
+                    hodnoty.ChargeQ = true;
+                    hodnoty.ChargeW = false;
+                    hodnoty.ChargeE = false;
+                    hodnoty.ChargeR = false;
                     break;
 
             }
@@ -307,11 +467,9 @@ namespace VoidSharp
         private void darkButton1_Click(object sender, EventArgs e)
         {
             Process[] league = Process.GetProcessesByName("League of Legends");
-            if (league.Count() > 0)
+            if (league != null)
             {
                 if (league.Count() > 0) SpecialFunc.SetForegroundWindow(league[0].MainWindowHandle);
-                SpecialForms.DrawGUI dg = new SpecialForms.DrawGUI();
-                dg.Show();
 
             }
             else

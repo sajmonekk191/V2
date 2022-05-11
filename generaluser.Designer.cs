@@ -42,9 +42,12 @@
             this.wlbl = new ClassicDarkTheme.Dark.DarkLabel();
             this.bwlbl = new ClassicDarkTheme.Dark.DarkLabel();
             this.darkPicturebox1 = new ClassicDarkTheme.Dark.DarkPicturebox();
+            this.darkLabel4 = new ClassicDarkTheme.Dark.DarkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.champpb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statuspb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // champcb
@@ -57,7 +60,6 @@
             this.champcb.ForeColor = System.Drawing.Color.White;
             this.champcb.FormattingEnabled = true;
             this.champcb.Items.AddRange(new object[] {
-            "Aphelios",
             "Ashe",
             "Caitlyn",
             "Corki",
@@ -106,7 +108,7 @@
             this.darkLabel2.ForeColor = System.Drawing.Color.White;
             this.darkLabel2.IsLink = false;
             this.darkLabel2.Link = "";
-            this.darkLabel2.Location = new System.Drawing.Point(65, 27);
+            this.darkLabel2.Location = new System.Drawing.Point(76, 63);
             this.darkLabel2.Name = "darkLabel2";
             this.darkLabel2.Size = new System.Drawing.Size(52, 15);
             this.darkLabel2.TabIndex = 3;
@@ -119,7 +121,7 @@
             this.darkButton1.FlatAppearance.BorderSize = 0;
             this.darkButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.darkButton1.ForeColor = System.Drawing.Color.White;
-            this.darkButton1.Location = new System.Drawing.Point(29, 46);
+            this.darkButton1.Location = new System.Drawing.Point(40, 82);
             this.darkButton1.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.darkButton1.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
             this.darkButton1.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
@@ -139,7 +141,7 @@
             this.enablebutton.FlatAppearance.BorderSize = 0;
             this.enablebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.enablebutton.ForeColor = System.Drawing.Color.White;
-            this.enablebutton.Location = new System.Drawing.Point(29, 143);
+            this.enablebutton.Location = new System.Drawing.Point(40, 178);
             this.enablebutton.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.enablebutton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
             this.enablebutton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
@@ -159,7 +161,7 @@
             this.ingamelbl.ForeColor = System.Drawing.Color.White;
             this.ingamelbl.IsLink = false;
             this.ingamelbl.Link = "";
-            this.ingamelbl.Location = new System.Drawing.Point(47, 119);
+            this.ingamelbl.Location = new System.Drawing.Point(58, 154);
             this.ingamelbl.Name = "ingamelbl";
             this.ingamelbl.Size = new System.Drawing.Size(92, 15);
             this.ingamelbl.TabIndex = 6;
@@ -170,13 +172,12 @@
             this.champpb.Location = new System.Drawing.Point(271, 117);
             this.champpb.Name = "champpb";
             this.champpb.Size = new System.Drawing.Size(120, 120);
-            this.champpb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.champpb.TabIndex = 7;
             this.champpb.TabStop = false;
             // 
             // statuspb
             // 
-            this.statuspb.Location = new System.Drawing.Point(76, 184);
+            this.statuspb.Location = new System.Drawing.Point(87, 219);
             this.statuspb.Name = "statuspb";
             this.statuspb.Size = new System.Drawing.Size(32, 32);
             this.statuspb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +191,7 @@
             this.statuslbl.ForeColor = System.Drawing.Color.White;
             this.statuslbl.IsLink = false;
             this.statuslbl.Link = "";
-            this.statuslbl.Location = new System.Drawing.Point(27, 193);
+            this.statuslbl.Location = new System.Drawing.Point(38, 228);
             this.statuslbl.Name = "statuslbl";
             this.statuslbl.Size = new System.Drawing.Size(42, 15);
             this.statuslbl.TabIndex = 9;
@@ -216,7 +217,7 @@
             this.Statuslbl2.ForeColor = System.Drawing.Color.White;
             this.Statuslbl2.IsLink = false;
             this.Statuslbl2.Link = "";
-            this.Statuslbl2.Location = new System.Drawing.Point(119, 191);
+            this.Statuslbl2.Location = new System.Drawing.Point(130, 226);
             this.Statuslbl2.Name = "Statuslbl2";
             this.Statuslbl2.Size = new System.Drawing.Size(39, 15);
             this.Statuslbl2.TabIndex = 11;
@@ -252,19 +253,45 @@
             // darkPicturebox1
             // 
             this.darkPicturebox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.darkPicturebox1.Image = global::VoidSharp.Properties.Resources.settings;
-            this.darkPicturebox1.Location = new System.Drawing.Point(158, 50);
+            this.darkPicturebox1.Image = global::VoidSharp.Properties.Resources.settings2;
+            this.darkPicturebox1.Location = new System.Drawing.Point(169, 86);
             this.darkPicturebox1.Name = "darkPicturebox1";
             this.darkPicturebox1.Size = new System.Drawing.Size(24, 24);
             this.darkPicturebox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.darkPicturebox1.TabIndex = 14;
             this.darkPicturebox1.TabStop = false;
             // 
+            // darkLabel4
+            // 
+            this.darkLabel4.AutoSize = true;
+            this.darkLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.darkLabel4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.darkLabel4.ForeColor = System.Drawing.Color.White;
+            this.darkLabel4.IsLink = false;
+            this.darkLabel4.Link = "";
+            this.darkLabel4.Location = new System.Drawing.Point(46, 16);
+            this.darkLabel4.Name = "darkLabel4";
+            this.darkLabel4.Size = new System.Drawing.Size(60, 20);
+            this.darkLabel4.TabIndex = 24;
+            this.darkLabel4.Text = "General";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VoidSharp.Properties.Resources.general1;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
             // generaluser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.darkLabel4);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.darkPicturebox1);
             this.Controls.Add(this.bwlbl);
             this.Controls.Add(this.wlbl);
@@ -284,6 +311,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.champpb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statuspb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +333,7 @@
         private ClassicDarkTheme.Dark.DarkLabel wlbl;
         private ClassicDarkTheme.Dark.DarkLabel bwlbl;
         private ClassicDarkTheme.Dark.DarkPicturebox darkPicturebox1;
+        private ClassicDarkTheme.Dark.DarkLabel darkLabel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

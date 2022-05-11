@@ -6,7 +6,6 @@ namespace VoidSharp.Other
 {
     internal class Champions
     {
-        public static string aphelios = "https://1.bp.blogspot.com/-R5ozICNl7AY/Xd2iaJ1x8wI/AAAAAAABb1c/Lkeeq4TPd7c7Hn2ThLeJe1fDE8dq5p2LgCLcBGAsYHQ/s1600/523.png";
         public static string ashe = "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/4/4a/AsheSquare.png/revision/latest/scale-to-width-down/120?cb=20170728180206";
         public static string caitlyn = "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/e6/CaitlynSquare.png/revision/latest/scale-to-width-down/120?cb=20170801175326";
         public static string corki = "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/3/3d/CorkiSquare.png/revision/latest/scale-to-width-down/120?cb=20170801184703";

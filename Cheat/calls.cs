@@ -6,7 +6,6 @@ namespace VoidSharp.Cheat
 {
     internal class calls
     {
-        static int trytobreak;
         public static void Wait(int time)
         {
             Thread thread = new Thread(delegate ()
@@ -17,44 +16,32 @@ namespace VoidSharp.Cheat
             while (thread.IsAlive)
                 Application.DoEvents();
         }
-        public static void DoThing(string call, Rectangle rect, Point center)
+        public static void DoThing(string call, Point enemypos)
         {
-            Point enemypos;
             switch (call)
             {
                 case "AttackEnemy":
-                    rect = ScreenCap.GetRangeValue(Other.hodnoty.rangevalue);
-                    enemypos = ScreenCap.PixelSearch(rect, Other.hodnoty.EnemyPix);
-                    if (enemypos == null)
+                    if(enemypos.X == 0 && enemypos.Y == 0)
+                    {
+                        Mouse.SetCursorPosition(Cursor.Position.X, Cursor.Position.Y);
+                        Mouse.MouseEvent(Mouse.MouseEventFlags.RightDown);
+                        Mouse.MouseEvent(Mouse.MouseEventFlags.RightUp);
                         break;
-                    else
-                    {
-                        Point lastcursorpos = new Point(Cursor.Position.X, Cursor.Position.Y);
-                        Cursor.Position = enemypos;
                     }
+                    Mouse.SetCursorPosition(enemypos.X, enemypos.Y);
+                    Mouse.MouseEvent(Mouse.MouseEventFlags.RightDown);
+                    Mouse.MouseEvent(Mouse.MouseEventFlags.RightUp);
                     break;
-                case "FindEnemy":
-                start:
-                    enemypos = ScreenCap.PixelSearch(rect, Other.hodnoty.EnemyPix);
-                    if (enemypos == null || enemypos.X == 0 && enemypos.Y == 0)
-                    {
-                        trytobreak++;
-                        if (trytobreak > 4)
-                        {
-                            trytobreak = 0;
-                            break;
-                        }
-                        goto start;
-                    }
-                    else
-                    {
-                        if (Other.hodnoty.SelectedChamp == "Xerath")
-                        {
-                            Cursor.Position = new Point(enemypos.X + center.X, enemypos.Y + center.Y);
-                        }
-                        else
-                            Cursor.Position = enemypos;
-                    }
+                case "StopPlayer":
+                    Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_S);
+                    Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_S);
+                    break;
+                case "MouseMove":
+                    Mouse.SetCursorPosition(enemypos.X, enemypos.Y);
+                    break;
+                case "RightClick":
+                    Mouse.MouseEvent(Mouse.MouseEventFlags.RightDown);
+                    Mouse.MouseEvent(Mouse.MouseEventFlags.RightUp);
                     break;
             }
         }
