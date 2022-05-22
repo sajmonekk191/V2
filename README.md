@@ -1,7 +1,7 @@
 # Void#
   League of Legends External Scripting Platform
   - Orbwalker (Champion Detection, Attack Everything) - 100%
-  - AutoAim (Aim to Champion and use Spell) - 90%
+  - AutoAim (Aim to Champion and use Spell) - 80%
   - AutoHB (Automatic Heal or Barrier if HP is under value) - 100%
   - Etcs. (Account Manager, some turbo Features) - 80%
 
