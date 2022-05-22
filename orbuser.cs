@@ -20,6 +20,30 @@ namespace VoidSharp
         {
             try
             {
+                if(hodnoty.AutoHumanize)
+                {
+                    float aspeed = Cheat.GetPlayerInfo.GetAttackSpeed();
+                    if(aspeed < 0.6)
+                    {
+                        Humanizertb.Text = "150";
+                    }
+                    else if(aspeed > 0.6 && aspeed < 0.9)
+                    {
+                        Humanizertb.Text = "120";
+                    }
+                    else if (aspeed > 0.9 && aspeed < 1.3)
+                    {
+                        Humanizertb.Text = "90";
+                    }
+                    else if (aspeed > 1.3 && aspeed < 1.6)
+                    {
+                        Humanizertb.Text = "50";
+                    }
+                    else if (aspeed > 1.6)
+                    {
+                        Humanizertb.Text = "0";
+                    }
+                }
                 hodnoty.AvPing = Convert.ToInt32(pingtb.Text);
                 hodnoty.HumanizerTime = Convert.ToInt32(Humanizertb.Text);
             }
@@ -66,6 +90,14 @@ namespace VoidSharp
                 hodnoty.OrbActivated = true;
             else
                 hodnoty.OrbActivated= false;
+        }
+
+        private void autohumanizecb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (autohumanizecb.Checked)
+                hodnoty.AutoHumanize = true;
+            else
+                hodnoty.AutoHumanize = false;
         }
     }
 }

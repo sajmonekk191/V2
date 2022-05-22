@@ -193,7 +193,7 @@ namespace VoidSharp
             miscuser1.Visible = false;
             healbarrieruser1.Visible = false;
         }
-        private void HealBarrierButton_Click(object sender, EventArgs e)
+        private void HealBarrierButton_Click_1(object sender, EventArgs e)
         {
             healbarrieruser1.Visible = true;
             orbuser1.Visible = false;

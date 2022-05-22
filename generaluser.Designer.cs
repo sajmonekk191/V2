@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(generaluser));
             this.champcb = new ClassicDarkTheme.Dark.DarkCombobox();
             this.darkLabel1 = new ClassicDarkTheme.Dark.DarkLabel();
             this.darkLabel2 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkButton1 = new ClassicDarkTheme.Dark.DarkButton();
             this.enablebutton = new ClassicDarkTheme.Dark.DarkButton();
             this.ingamelbl = new ClassicDarkTheme.Dark.DarkLabel();
             this.champpb = new ClassicDarkTheme.Dark.DarkPicturebox();
@@ -41,12 +41,11 @@
             this.Statuslbl2 = new ClassicDarkTheme.Dark.DarkLabel();
             this.wlbl = new ClassicDarkTheme.Dark.DarkLabel();
             this.bwlbl = new ClassicDarkTheme.Dark.DarkLabel();
-            this.darkPicturebox1 = new ClassicDarkTheme.Dark.DarkPicturebox();
             this.darkLabel4 = new ClassicDarkTheme.Dark.DarkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.darkButton1 = new ClassicDarkTheme.Dark.DarkButton();
             ((System.ComponentModel.ISupportInitialize)(this.champpb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statuspb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,31 +107,11 @@
             this.darkLabel2.ForeColor = System.Drawing.Color.White;
             this.darkLabel2.IsLink = false;
             this.darkLabel2.Link = "";
-            this.darkLabel2.Location = new System.Drawing.Point(76, 63);
+            this.darkLabel2.Location = new System.Drawing.Point(51, 60);
             this.darkLabel2.Name = "darkLabel2";
-            this.darkLabel2.Size = new System.Drawing.Size(52, 15);
+            this.darkLabel2.Size = new System.Drawing.Size(104, 15);
             this.darkLabel2.TabIndex = 3;
-            this.darkLabel2.Text = "Connect";
-            // 
-            // darkButton1
-            // 
-            this.darkButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.darkButton1.FlatAppearance.BorderSize = 0;
-            this.darkButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.darkButton1.ForeColor = System.Drawing.Color.White;
-            this.darkButton1.Location = new System.Drawing.Point(40, 82);
-            this.darkButton1.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkButton1.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
-            this.darkButton1.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkButton1.MouseLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.darkButton1.MouseUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.darkButton1.Name = "darkButton1";
-            this.darkButton1.Size = new System.Drawing.Size(124, 34);
-            this.darkButton1.TabIndex = 4;
-            this.darkButton1.Text = "Connect to League";
-            this.darkButton1.UseVisualStyleBackColor = false;
-            this.darkButton1.Click += new System.EventHandler(this.darkButton1_Click);
+            this.darkLabel2.Text = "Setup Target Color";
             // 
             // enablebutton
             // 
@@ -250,17 +229,6 @@
             this.bwlbl.TabIndex = 13;
             this.bwlbl.Text = "Base Windup: ";
             // 
-            // darkPicturebox1
-            // 
-            this.darkPicturebox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.darkPicturebox1.Image = global::VoidSharp.Properties.Resources.settings2;
-            this.darkPicturebox1.Location = new System.Drawing.Point(169, 86);
-            this.darkPicturebox1.Name = "darkPicturebox1";
-            this.darkPicturebox1.Size = new System.Drawing.Size(24, 24);
-            this.darkPicturebox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.darkPicturebox1.TabIndex = 14;
-            this.darkPicturebox1.TabStop = false;
-            // 
             // darkLabel4
             // 
             this.darkLabel4.AutoSize = true;
@@ -277,7 +245,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::VoidSharp.Properties.Resources.general1;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(10, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
@@ -285,14 +253,34 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // darkButton1
+            // 
+            this.darkButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.darkButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.darkButton1.FlatAppearance.BorderSize = 0;
+            this.darkButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.darkButton1.ForeColor = System.Drawing.Color.White;
+            this.darkButton1.Location = new System.Drawing.Point(40, 82);
+            this.darkButton1.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.darkButton1.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.darkButton1.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.darkButton1.MouseLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.darkButton1.MouseUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.darkButton1.Name = "darkButton1";
+            this.darkButton1.Size = new System.Drawing.Size(124, 34);
+            this.darkButton1.TabIndex = 25;
+            this.darkButton1.Text = "Setup";
+            this.darkButton1.UseVisualStyleBackColor = false;
+            this.darkButton1.Click += new System.EventHandler(this.darkButton1_Click_1);
+            // 
             // generaluser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.darkButton1);
             this.Controls.Add(this.darkLabel4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.darkPicturebox1);
             this.Controls.Add(this.bwlbl);
             this.Controls.Add(this.wlbl);
             this.Controls.Add(this.Statuslbl2);
@@ -302,7 +290,6 @@
             this.Controls.Add(this.champpb);
             this.Controls.Add(this.ingamelbl);
             this.Controls.Add(this.enablebutton);
-            this.Controls.Add(this.darkButton1);
             this.Controls.Add(this.darkLabel2);
             this.Controls.Add(this.darkLabel1);
             this.Controls.Add(this.champcb);
@@ -310,7 +297,6 @@
             this.Size = new System.Drawing.Size(431, 282);
             ((System.ComponentModel.ISupportInitialize)(this.champpb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statuspb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.darkPicturebox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -322,7 +308,6 @@
         private ClassicDarkTheme.Dark.DarkCombobox champcb;
         private ClassicDarkTheme.Dark.DarkLabel darkLabel1;
         private ClassicDarkTheme.Dark.DarkLabel darkLabel2;
-        private ClassicDarkTheme.Dark.DarkButton darkButton1;
         private ClassicDarkTheme.Dark.DarkButton enablebutton;
         private ClassicDarkTheme.Dark.DarkLabel ingamelbl;
         private ClassicDarkTheme.Dark.DarkPicturebox champpb;
@@ -332,8 +317,8 @@
         private ClassicDarkTheme.Dark.DarkLabel Statuslbl2;
         private ClassicDarkTheme.Dark.DarkLabel wlbl;
         private ClassicDarkTheme.Dark.DarkLabel bwlbl;
-        private ClassicDarkTheme.Dark.DarkPicturebox darkPicturebox1;
         private ClassicDarkTheme.Dark.DarkLabel darkLabel4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ClassicDarkTheme.Dark.DarkButton darkButton1;
     }
 }

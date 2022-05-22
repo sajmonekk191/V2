@@ -105,6 +105,7 @@
             this.ExitButton.BackColor = System.Drawing.Color.Firebrick;
             this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ExitButton.ForeColor = System.Drawing.SystemColors.Control;
             this.ExitButton.Location = new System.Drawing.Point(571, 0);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(49, 19);
@@ -120,6 +121,7 @@
             this.MinimizeButton.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.MinimizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MinimizeButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MinimizeButton.ForeColor = System.Drawing.SystemColors.Control;
             this.MinimizeButton.Location = new System.Drawing.Point(532, 0);
             this.MinimizeButton.Name = "MinimizeButton";
             this.MinimizeButton.Size = new System.Drawing.Size(39, 19);
@@ -232,7 +234,7 @@
             this.HealBarrierButton.TabIndex = 16;
             this.HealBarrierButton.Text = "Auto Heal/Barrier";
             this.HealBarrierButton.UseVisualStyleBackColor = false;
-            this.HealBarrierButton.Click += new System.EventHandler(this.HealBarrierButton_Click);
+            this.HealBarrierButton.Click += new System.EventHandler(this.HealBarrierButton_Click_1);
             // 
             // LogoPic
             // 
@@ -249,6 +251,7 @@
             // 
             this.generaluser1.BackColor = System.Drawing.Color.Transparent;
             this.generaluser1.Location = new System.Drawing.Point(189, 77);
+            this.generaluser1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.generaluser1.Name = "generaluser1";
             this.generaluser1.Size = new System.Drawing.Size(417, 276);
             this.generaluser1.TabIndex = 18;
@@ -257,6 +260,7 @@
             // 
             this.miscuser1.BackColor = System.Drawing.Color.Transparent;
             this.miscuser1.Location = new System.Drawing.Point(189, 77);
+            this.miscuser1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.miscuser1.Name = "miscuser1";
             this.miscuser1.Size = new System.Drawing.Size(416, 282);
             this.miscuser1.TabIndex = 19;
@@ -278,6 +282,7 @@
             // 
             this.aimuser1.BackColor = System.Drawing.Color.Transparent;
             this.aimuser1.Location = new System.Drawing.Point(189, 77);
+            this.aimuser1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.aimuser1.Name = "aimuser1";
             this.aimuser1.Size = new System.Drawing.Size(416, 282);
             this.aimuser1.TabIndex = 21;
@@ -285,13 +290,14 @@
             // Orbtimer
             // 
             this.Orbtimer.Enabled = true;
-            this.Orbtimer.Interval = 1;
+            this.Orbtimer.Interval = 10;
             this.Orbtimer.Tick += new System.EventHandler(this.Orbtimer_Tick);
             // 
             // orbuser1
             // 
             this.orbuser1.BackColor = System.Drawing.Color.Transparent;
             this.orbuser1.Location = new System.Drawing.Point(189, 77);
+            this.orbuser1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.orbuser1.Name = "orbuser1";
             this.orbuser1.Size = new System.Drawing.Size(416, 282);
             this.orbuser1.TabIndex = 22;
@@ -310,6 +316,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(618, 370);
             this.Controls.Add(this.healbarrieruser1);
             this.Controls.Add(this.orbuser1);
@@ -329,6 +336,7 @@
             this.Controls.Add(this.DiscordPic);
             this.Controls.Add(this.loadinglabel);
             this.Controls.Add(this.progressBar1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VoidSharp";

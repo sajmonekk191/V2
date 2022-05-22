@@ -10,7 +10,7 @@ namespace VoidSharp
         {
             InitializeComponent();
             darkCombobox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            darkCombobox1.Items.Insert(0, "Select Champion");
+            darkCombobox1.Items.Insert(0, "D/F");
             darkCombobox1.SelectedIndex = 0;
         }
 

@@ -466,14 +466,14 @@ namespace VoidSharp.Other
             {
                 hodnoty.CurentUsername = Properties.Settings.Default.Username1;
                 hodnoty.CurentPassword = Properties.Settings.Default.Password1;
-                hodnoty.success = true;
+                hodnoty.success = "correct";
                 return;
             }
             if (am.selectedCB2.Checked == true && SelectedSingleAcc(am))
             {
                 hodnoty.CurentUsername = Properties.Settings.Default.Username2;
                 hodnoty.CurentPassword = Properties.Settings.Default.Password2;
-                hodnoty.success = true;
+                hodnoty.success = "correct";
                 return;
             }
             if (am.selectedCB3.Checked == true && SelectedSingleAcc(am))
@@ -481,21 +481,21 @@ namespace VoidSharp.Other
                 
                 hodnoty.CurentUsername = Properties.Settings.Default.Username3;
                 hodnoty.CurentPassword = Properties.Settings.Default.Password3;
-                hodnoty.success = true;
+                hodnoty.success = "correct";
                 return;
             }
             if (am.selectedCB4.Checked == true && SelectedSingleAcc(am))
             {
                 hodnoty.CurentUsername = Properties.Settings.Default.Username4;
                 hodnoty.CurentPassword = Properties.Settings.Default.Password4;
-                hodnoty.success = true;
+                hodnoty.success = "correct";
                 return;
             }
             if (am.selectedCB5.Checked == true && SelectedSingleAcc(am))
             {
                 hodnoty.CurentUsername = Properties.Settings.Default.Username5;
                 hodnoty.CurentPassword = Properties.Settings.Default.Password5;
-                hodnoty.success = true;
+                hodnoty.success = "correct";
                 return;
             }
             if (am.selectedCB6.Checked == true && SelectedSingleAcc(am))
@@ -503,26 +503,26 @@ namespace VoidSharp.Other
                 
                 hodnoty.CurentUsername = Properties.Settings.Default.Username6;
                 hodnoty.CurentPassword = Properties.Settings.Default.Password6;
-                hodnoty.success = true;
+                hodnoty.success = "correct";
                 return;
             }
             if (am.selectedCB7.Checked == true && SelectedSingleAcc(am))
             {
                 hodnoty.CurentUsername = Properties.Settings.Default.Username7;
                 hodnoty.CurentPassword = Properties.Settings.Default.Password7;
-                hodnoty.success = true;
+                hodnoty.success = "correct";
                 return;
             }
             if (am.selectedCB8.Checked == true && SelectedSingleAcc(am))
             {
                 hodnoty.CurentUsername = Properties.Settings.Default.Username8;
                 hodnoty.CurentPassword = Properties.Settings.Default.Password8;
-                hodnoty.success = true;
+                hodnoty.success = "correct";
                 return;
             }
             else
             {
-                hodnoty.success = false;
+                hodnoty.success = "fail";
                 return;
             }
         }

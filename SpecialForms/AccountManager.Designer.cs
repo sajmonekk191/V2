@@ -677,15 +677,16 @@
             // 
             this.ExitLBL.AutoSize = true;
             this.ExitLBL.BackColor = System.Drawing.Color.Firebrick;
-            this.ExitLBL.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ExitLBL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitLBL.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ExitLBL.ForeColor = System.Drawing.Color.White;
             this.ExitLBL.IsLink = false;
             this.ExitLBL.Link = "";
-            this.ExitLBL.Location = new System.Drawing.Point(396, 6);
+            this.ExitLBL.Location = new System.Drawing.Point(378, 0);
             this.ExitLBL.Name = "ExitLBL";
-            this.ExitLBL.Size = new System.Drawing.Size(17, 19);
+            this.ExitLBL.Size = new System.Drawing.Size(42, 20);
             this.ExitLBL.TabIndex = 2;
-            this.ExitLBL.Text = "X";
+            this.ExitLBL.Text = "   X   ";
             this.ExitLBL.Click += new System.EventHandler(this.darkLabel5_Click);
             this.ExitLBL.MouseEnter += new System.EventHandler(this.darkLabel5_MouseEnter);
             this.ExitLBL.MouseLeave += new System.EventHandler(this.darkLabel5_MouseLeave);

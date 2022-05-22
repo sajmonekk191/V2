@@ -49,6 +49,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.darkLabel3 = new ClassicDarkTheme.Dark.DarkLabel();
             this.Activatecb = new System.Windows.Forms.CheckBox();
+            this.autohumanizecb = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -312,11 +313,24 @@
             this.Activatecb.UseVisualStyleBackColor = true;
             this.Activatecb.CheckedChanged += new System.EventHandler(this.Activatecb_CheckedChanged);
             // 
+            // autohumanizecb
+            // 
+            this.autohumanizecb.AutoSize = true;
+            this.autohumanizecb.ForeColor = System.Drawing.SystemColors.Control;
+            this.autohumanizecb.Location = new System.Drawing.Point(344, 99);
+            this.autohumanizecb.Name = "autohumanizecb";
+            this.autohumanizecb.Size = new System.Drawing.Size(52, 19);
+            this.autohumanizecb.TabIndex = 22;
+            this.autohumanizecb.Text = "Auto";
+            this.autohumanizecb.UseVisualStyleBackColor = true;
+            this.autohumanizecb.CheckedChanged += new System.EventHandler(this.autohumanizecb_CheckedChanged);
+            // 
             // orbuser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.autohumanizecb);
             this.Controls.Add(this.Activatecb);
             this.Controls.Add(this.darkLabel3);
             this.Controls.Add(this.pictureBox1);
@@ -367,5 +381,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private ClassicDarkTheme.Dark.DarkLabel darkLabel3;
         private System.Windows.Forms.CheckBox Activatecb;
+        private System.Windows.Forms.CheckBox autohumanizecb;
     }
 }

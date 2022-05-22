@@ -96,7 +96,7 @@ namespace VoidSharp.Other
         public static string CurentPassword = string.Empty;
 
         public static string HashedPassword = string.Empty;
-        public static bool success = false;
+        public static string success = string.Empty;
         // Account Manager //
 
         // Discord RPC //
@@ -104,6 +104,7 @@ namespace VoidSharp.Other
         // Discord RPC //
 
         // Orbwalker components //
+        public static bool AutoHumanize = false;
         public static bool OrbActivated = false;
         public static bool AttackChamponly = false;
         public static bool AttackEverything = false;
@@ -111,7 +112,7 @@ namespace VoidSharp.Other
         public static bool tooglechamponly = false;
         public static int AvPing = 50;
         public static int HumanizerTime = 50;
-        public static Color EnemyPix = Color.FromArgb(63, 8, 3);
+        public static Color EnemyPix = Color.FromArgb(63, 5, 0);
         public static Point EnemyPosition = Point.Empty;
         public static double AttackRange = double.NaN;
         public static double AttackSpeed = double.NaN;

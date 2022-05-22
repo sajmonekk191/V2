@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Drawing.Imaging;
 using Hazdryx.Drawing;
-using System;
+using System.Windows.Forms;
 
 namespace VoidSharp.Cheat
 {
@@ -44,6 +44,22 @@ namespace VoidSharp.Cheat
         }
         public static Point PixelSearchEnemy(Rectangle rect, Color PixelColor)
         {
+            int offsetX = 60;
+            int offsetY = 140;
+            
+            // Adjust rectangle if screen is not 16:9 1080p
+            if (Screen.PrimaryScreen.Bounds.Width != 1920 || Screen.PrimaryScreen.Bounds.Height != 1080)
+            {
+                double XRatio = Screen.PrimaryScreen.Bounds.Width / 1920;
+                double YRatio = Screen.PrimaryScreen.Bounds.Height / 1080;
+                rect.X = (int)(rect.X * XRatio);
+                rect.Y = (int)(rect.Y * YRatio);
+                rect.Width = (int)(rect.Width * XRatio);
+                rect.Height = (int)(rect.Height * YRatio);
+                offsetX = (int)(offsetX * XRatio);
+                offsetY = (int)(offsetY * YRatio);
+            }
+            
             int searchvalue = PixelColor.ToArgb();
             unsafe
             {
@@ -58,9 +74,9 @@ namespace VoidSharp.Cheat
                         {
                             int x = i % bitmap.Width;
                             int y = i / bitmap.Width;
-                            if (InCircle(new Point(x, y), rect))
+                            if (InCircle(x, y, rect))
                             {
-                                return new Point(x + rect.X + 60, y + rect.Y + 140);
+                                return new Point(x + rect.X + offsetX, y + rect.Y + offsetY);
                             }
                         }
                     }
@@ -68,12 +84,12 @@ namespace VoidSharp.Cheat
             }
             return new Point(0, 0);
         }
-        public static bool InCircle(Point pos, Rectangle rect)
+        public static bool InCircle(int X, int Y, Rectangle rect)
         {
             double ratio = (double)rect.Width / rect.Height;
             double r = rect.Height / 2;
-            double y = rect.Height / 2 - pos.Y;
-            double x = (rect.Width / 2 - pos.X) / ratio;
+            double y = rect.Height / 2 - Y;
+            double x = (rect.Width / 2 - X) / ratio;
             if (x * x + y * y <= r * r)
             {
                 return true;

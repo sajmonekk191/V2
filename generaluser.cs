@@ -477,5 +477,11 @@ namespace VoidSharp
                 MessageBox.Show("League of Legends Process isn´t detected.");
             }
         }
+        private void darkButton1_Click_1(object sender, EventArgs e)
+        {
+            SpecialForms.ColorPicker cp = new SpecialForms.ColorPicker();
+            cp.Show();
+            cp.BringToFront();
+        }
     }
 }
