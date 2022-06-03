@@ -7,4 +7,4 @@
 
 Start project predict (16 / 03 / 2021)
 
-Finish project predict (20 / 06 / 2022)
+Finish project predict (25/ 06 / 2022)
