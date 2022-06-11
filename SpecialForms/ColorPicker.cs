@@ -21,6 +21,10 @@ namespace VoidSharp.SpecialForms
 
         private void darkButton1_Click(object sender, EventArgs e)
         {
+            Color EnemyColor = new Color();
+            try { EnemyColor = Color.FromArgb(Convert.ToByte(textBox1.Text), Convert.ToByte(textBox3.Text), Convert.ToByte(textBox2.Text)); }
+            catch { }
+            hodnoty.EnemyPix = EnemyColor;
             this.Close();
         }
 
@@ -59,12 +63,9 @@ namespace VoidSharp.SpecialForms
         {
             Point undermous = Cursor.Position;
             Color picked = GetColorAt(undermous);
-            textBox1.Text = "";
-            textBox1.Text += picked.R.ToString();
-            textBox1.Text += ",";
-            textBox1.Text += picked.G.ToString();
-            textBox1.Text += ",";
-            textBox1.Text += picked.B.ToString();
+            textBox1.Text = picked.R.ToString();
+            textBox3.Text = picked.G.ToString();
+            textBox2.Text = picked.B.ToString();
             hodnoty.EnemyPix = picked;
         }
         private Color GetColorAt(Point point)
@@ -81,7 +82,6 @@ namespace VoidSharp.SpecialForms
                     gsrc.ReleaseHdc();
                 }
             }
-            bitmap.Save("wtf.png");
             return bitmap.GetPixel(0, 0);
         }
 

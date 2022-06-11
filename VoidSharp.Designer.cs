@@ -47,6 +47,8 @@
             this.darkLabel1 = new ClassicDarkTheme.Dark.DarkLabel();
             this.aimuser1 = new global::VoidSharp.aimuser();
             this.Orbtimer = new System.Windows.Forms.Timer(this.components);
+            this.Aimtimer = new System.Windows.Forms.Timer(this.components);
+            this.HBtimer = new System.Windows.Forms.Timer(this.components);
             this.orbuser1 = new global::VoidSharp.orbuser();
             this.healbarrieruser1 = new global::VoidSharp.healbarrieruser();
             ((System.ComponentModel.ISupportInitialize)(this.DiscordPic)).BeginInit();
@@ -290,8 +292,20 @@
             // Orbtimer
             // 
             this.Orbtimer.Enabled = true;
-            this.Orbtimer.Interval = 10;
+            this.Orbtimer.Interval = 1;
             this.Orbtimer.Tick += new System.EventHandler(this.Orbtimer_Tick);
+            // 
+            // Aimtimer
+            // 
+            this.Aimtimer.Enabled = true;
+            this.Aimtimer.Interval = 10;
+            this.Aimtimer.Tick += new System.EventHandler(this.Aimtimer_Tick);
+            // 
+            // HBtimer
+            // 
+            this.HBtimer.Enabled = true;
+            this.HBtimer.Interval = 50;
+            this.HBtimer.Tick += new System.EventHandler(this.HBtimer_Tick);
             // 
             // orbuser1
             // 
@@ -318,10 +332,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(618, 370);
+            this.Controls.Add(this.darkLabel1);
             this.Controls.Add(this.healbarrieruser1);
             this.Controls.Add(this.orbuser1);
             this.Controls.Add(this.aimuser1);
-            this.Controls.Add(this.darkLabel1);
             this.Controls.Add(this.miscuser1);
             this.Controls.Add(this.generaluser1);
             this.Controls.Add(this.LogoPic);
@@ -373,6 +387,8 @@
         private ClassicDarkTheme.Dark.DarkLabel darkLabel1;
         private global::VoidSharp.aimuser aimuser1;
         private System.Windows.Forms.Timer Orbtimer;
+        private System.Windows.Forms.Timer Aimtimer;
+        private System.Windows.Forms.Timer HBtimer;
         private global::VoidSharp.orbuser orbuser1;
         private global::VoidSharp.healbarrieruser healbarrieruser1;
     }

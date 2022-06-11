@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using VoidSharp.Other;
@@ -17,10 +18,10 @@ namespace VoidSharp.Cheat
         {
             if (hodnoty.VoidActivated && hodnoty.AimActivated)
             {
-                short keyQ = GetAsyncKeyState('Q');
-                short keyW = GetAsyncKeyState('W');
-                short keyE = GetAsyncKeyState('E');
-                short keyR = GetAsyncKeyState('R');
+                short keyQ = hodnoty.KeyQ;
+                short keyW = hodnoty.KeyW;
+                short keyE = hodnoty.KeyE;
+                short keyR = hodnoty.KeyR;
                 bool keyIsPressedQ = ((keyQ >> 15) & 0x0001) == 0x0001;
                 bool keyIsPressedW = ((keyW >> 15) & 0x0001) == 0x0001;
                 bool keyIsPressedE = ((keyE >> 15) & 0x0001) == 0x0001;
@@ -30,7 +31,8 @@ namespace VoidSharp.Cheat
                     if (keyIsPressedQ && hodnoty.QActivated)
                     {
                         Qdown = true;
-                        Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_1);
+                        SendKeys.Send("Q");
+                        //Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_1);
                     }
                     else if (Qdown && !keyIsPressedQ && hodnoty.QActivated)
                     {
@@ -38,8 +40,9 @@ namespace VoidSharp.Cheat
                         Point LastMovePos = Cursor.Position;
                         Point pos = ScreenCap.PixelSearchEnemy(hodnoty.rectQ, hodnoty.EnemyPix);
                         calls.DoThing("AttackEnemy", pos);
-                        Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_1);
-                        calls.Wait(10);
+                        SendKeys.Send("Q");
+                        //Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_1);
+                        calls.Wait(8);
                         calls.DoThing("MouseMove", LastMovePos);
                     }
                 }
@@ -50,9 +53,10 @@ namespace VoidSharp.Cheat
                         Point LastMovePos = Cursor.Position;
                         Point pos = ScreenCap.PixelSearchEnemy(hodnoty.rectQ, hodnoty.EnemyPix);
                         calls.DoThing("AttackEnemy", pos);
-                        Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_1);
-                        Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_1);
-                        System.Threading.Thread.Sleep(10);
+                        SendKeys.Send("Q");
+                        //Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_1);
+                        //Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_1);
+                        calls.Wait(8);
                         calls.DoThing("MouseMove", LastMovePos);
                     }
                 }
@@ -61,7 +65,8 @@ namespace VoidSharp.Cheat
                     if (keyIsPressedW && hodnoty.WActivated)
                     {
                         Wdown = true;
-                        Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_2);
+                        SendKeys.Send("W");
+                        //Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_2);
                     }
                     else if (Wdown && !keyIsPressedW && hodnoty.WActivated)
                     {
@@ -69,8 +74,9 @@ namespace VoidSharp.Cheat
                         Point LastMovePos = Cursor.Position;
                         Point pos = ScreenCap.PixelSearchEnemy(hodnoty.rectW, hodnoty.EnemyPix);
                         calls.DoThing("AttackEnemy", pos);
-                        Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_2);
-                        System.Threading.Thread.Sleep(10);
+                        SendKeys.Send("W");
+                        //Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_2);
+                        calls.Wait(8);
                         calls.DoThing("MouseMove", LastMovePos);
                     }
                 }
@@ -81,9 +87,10 @@ namespace VoidSharp.Cheat
                         Point LastMovePos = Cursor.Position;
                         Point pos = ScreenCap.PixelSearchEnemy(hodnoty.rectW, hodnoty.EnemyPix);
                         calls.DoThing("AttackEnemy", pos);
-                        Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_2);
-                        Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_2);
-                        System.Threading.Thread.Sleep(10);
+                        SendKeys.Send("W");
+                        //Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_2);
+                        //Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_2);
+                        calls.Wait(8);
                         calls.DoThing("MouseMove", LastMovePos);
                     }
                 }
@@ -101,7 +108,7 @@ namespace VoidSharp.Cheat
                         Point pos = ScreenCap.PixelSearchEnemy(hodnoty.rectE, hodnoty.EnemyPix);
                         calls.DoThing("AttackEnemy", pos);
                         Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_3);
-                        System.Threading.Thread.Sleep(10);
+                        calls.Wait(8);
                         calls.DoThing("MouseMove", LastMovePos);
                     }
                 }
@@ -114,7 +121,7 @@ namespace VoidSharp.Cheat
                         calls.DoThing("AttackEnemy", pos);
                         Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_3);
                         Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_3);
-                        System.Threading.Thread.Sleep(10);
+                        calls.Wait(8);
                         calls.DoThing("MouseMove", LastMovePos);
                     }
                 }
@@ -132,7 +139,7 @@ namespace VoidSharp.Cheat
                         Point pos = ScreenCap.PixelSearchEnemy(hodnoty.rectR, hodnoty.EnemyPix);
                         calls.DoThing("AttackEnemy", pos);
                         Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_4);
-                        System.Threading.Thread.Sleep(10);
+                        calls.Wait(8);
                         calls.DoThing("MouseMove", LastMovePos);
                     }
                 }
@@ -145,7 +152,7 @@ namespace VoidSharp.Cheat
                         calls.DoThing("AttackEnemy", pos);
                         Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_4);
                         Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_4);
-                        System.Threading.Thread.Sleep(10);
+                        calls.Wait(8);
                         calls.DoThing("MouseMove", LastMovePos);
                     }
                 }

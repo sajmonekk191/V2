@@ -4,6 +4,10 @@ namespace VoidSharp.Other
 {
     internal class hodnoty
     {
+        // ChangeName //
+        public static string ActualName = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
+        // ChangeName //
+
         // Player Info //
         public static string ActivePlayerEndpoint = @"https://127.0.0.1:2999/liveclientdata/activeplayer";
         // Player Info //
@@ -148,6 +152,18 @@ namespace VoidSharp.Other
         public static Rectangle CDslotD = new Rectangle(990, 993, 30, 30);
         public static Rectangle CDslotF = new Rectangle(1023, 993, 30, 30);
         // AutoHB components //
+
+        //KeyBinds//
+        public static short KeyQ = 0;
+        public static short KeyW = 0;
+        public static short KeyE = 0;
+        public static short KeyR = 0;
+        public static short KeyOutQ = 0;
+        public static short KeyOutW = 0;
+        public static short KeyOutE = 0;
+        public static short KeyOutR = 0;
+        //KeyBinds//
+
         public static float getWindup()
         {
             return Windup;

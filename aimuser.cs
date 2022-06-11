@@ -65,5 +65,17 @@ namespace VoidSharp
             else
                 hodnoty.AimActivated = false;
         }
+
+        private void savebtn_Click(object sender, EventArgs e)
+        {
+            hodnoty.KeyQ = GetAsyncKeyState(Convert.ToInt16(KeybindQ.Text));
+            hodnoty.KeyW = GetAsyncKeyState(Convert.ToInt16(KeybindW.Text));
+            hodnoty.KeyE = GetAsyncKeyState(Convert.ToInt16(KeybindE.Text));
+            hodnoty.KeyR = GetAsyncKeyState(Convert.ToInt16(KeybindR.Text));
+            hodnoty.KeyOutQ = GetAsyncKeyState(Convert.ToInt16(KeyOutQ.Text));
+            hodnoty.KeyOutW = GetAsyncKeyState(Convert.ToInt16(KeyOutW.Text));
+            hodnoty.KeyOutE = GetAsyncKeyState(Convert.ToInt16(KeyOutE.Text));
+            hodnoty.KeyOutR = GetAsyncKeyState(Convert.ToInt16(KeyOutR.Text));
+        }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Windows.Forms;
@@ -13,7 +15,9 @@ namespace VoidSharp
     public partial class VoidSharp : Form
     {
         DiscordRpcClient client;
+        Random random = new Random();
         Point mousedownpoint = Point.Empty;
+        System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
         public VoidSharp()
         {
             InitializeComponent();
@@ -55,8 +59,7 @@ namespace VoidSharp
             progressBar1.Value = 3;
             loadinglabel.Location = new Point(loadinglabel.Left - 20, loadinglabel.Top);
             loadinglabel.Text = "Checking for Update..";
-            /*
-            Wait(1500);
+            calls.Wait(1500);
             WebClient webClient = new WebClient();
             try
             {
@@ -65,6 +68,9 @@ namespace VoidSharp
                     if (MessageBox.Show("An update is available", "Updater", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
                     {
                         Process.Start(new ProcessStartInfo("http://81.162.196.29/download/Void.zip") { UseShellExecute = true });
+
+                        string pnv = Process.GetCurrentProcess().MainModule.FileName;
+                        Process.Start(new ProcessStartInfo(pnv) { UseShellExecute = true });
                         Environment.Exit(0);
                     }
                 }
@@ -72,16 +78,15 @@ namespace VoidSharp
             catch
             {
                 MessageBox.Show("Try to restart Void", "Error 7", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Wait(1000);
+                calls.Wait(1000);
                 Environment.Exit(0);
             }
-            */
             progressBar1.Value = 64;
             loadinglabel.Text = "Loading..";
             loadinglabel.Location = new Point(loadinglabel.Left + 30, loadinglabel.Top);
-            Wait(500);
+            calls.Wait(500);
             progressBar1.Value = 100;
-            Wait(100);
+            calls.Wait(100);
             this.Size = new Size(620, 370);
             this.Location = new Point(this.Location.X - 190, this.Location.Y - 150);
             progressBar1.Visible = false;
@@ -101,16 +106,10 @@ namespace VoidSharp
             this.ShowIcon = true;
             this.ShowInTaskbar = true;
             this.ControlBox = true;
-        }
-        private void Wait(int time)
-        {
-            Thread thread = new Thread(delegate ()
-            {
-                Thread.Sleep(time);
-            });
-            thread.Start();
-            while (thread.IsAlive)
-                Application.DoEvents();
+            timer.Interval = 50000;
+            timer.Enabled = true;
+            timer.Start();
+            timer.Tick += new EventHandler(ChangeNameLoop);
         }
         private void ExitButton_Click(object sender, EventArgs e)
         {
@@ -155,7 +154,7 @@ namespace VoidSharp
         }
         private void DiscordPic_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Developer: sajmonekk#1565", "Discord", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("sajmonekk#1565", "Discord", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void PayPalPic_Click(object sender, EventArgs e)
         {
@@ -203,12 +202,21 @@ namespace VoidSharp
         }
         private void Orbtimer_Tick(object sender, EventArgs e)
         {
-            if (hodnoty.VoidActivated)
-            {
-                Orbwalker.OrbwalkEnemy();
-                AimCore.Aimer();
-                AutoHB.Healer();
-            }
+            if (hodnoty.VoidActivated && hodnoty.OrbActivated) Orbwalker.OrbwalkEnemy();
+        }
+        private void Aimtimer_Tick(object sender, EventArgs e)
+        {
+            if (hodnoty.VoidActivated && hodnoty.AimActivated) AimCore.Aimer();
+        }
+        private void HBtimer_Tick(object sender, EventArgs e)
+        {
+            if (hodnoty.HBActivated && hodnoty.AimActivated) AutoHB.Healer();
+        }
+        private void ChangeNameLoop(object sender, EventArgs e)
+        {
+            string VoidName = SpecialFunc.RandomString(10) + ".exe";
+            File.Move(hodnoty.ActualName, VoidName);
+            hodnoty.ActualName = VoidName;
         }
     }
 }
