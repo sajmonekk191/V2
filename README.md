@@ -5,6 +5,6 @@
   - AutoCleanse (Automatic Cleanse when getting stuned) - 0% - Comming Soon
   - Etcs. (Account Manager, Discord RPC and some good Features) - 60% 
 
-Start project predict (16 / 03 / 2021)
+Start project predict (06 / 02 / 2021)
 
 Finish project predict (11/ 07 / 2022)
