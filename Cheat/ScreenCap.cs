@@ -1,7 +1,6 @@
 ﻿using VoidSharp.Other;
 using System.Drawing;
 using System.Drawing.Imaging;
-using Hazdryx.Drawing;
 using System.Windows.Forms;
 
 namespace VoidSharp.Cheat
@@ -66,7 +65,7 @@ namespace VoidSharp.Cheat
                 Bitmap BMP = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppRgb);
                 Graphics GFX = Graphics.FromImage(BMP);
                 GFX.CopyFromScreen(rect.X, rect.Y, 0, 0, rect.Size, CopyPixelOperation.SourceCopy);
-                using (FastBitmap bitmap = new FastBitmap(BMP))
+                using (//// bitmap = new ///(BMP))
                 {
                     for (int i = 0; i < bitmap.Length; i++)
                     {
@@ -104,7 +103,7 @@ namespace VoidSharp.Cheat
                 Bitmap BMP = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppRgb);
                 Graphics GFX = Graphics.FromImage(BMP);
                 GFX.CopyFromScreen(rect.X, rect.Y, 0, 0, rect.Size, CopyPixelOperation.SourceCopy);
-                using (FastBitmap bitmap = new FastBitmap(BMP))
+                using (/// bitmap = new ///(BMP))
                 {
                     for (int i = 0; i < bitmap.Length; i++)
                     {
