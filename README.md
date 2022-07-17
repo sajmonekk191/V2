@@ -1,4 +1,4 @@
-# VoidSharp
+# Void
   League of Legends External Scripting Platform
   - Orbwalker (Champion Detection, Attack Everything) - 100%
   - AutoAim (Aim to Champion and use Spell) - 95%
