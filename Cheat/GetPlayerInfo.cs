@@ -8,15 +8,22 @@ namespace VoidSharp.Cheat
     {
         public static float GetAttackSpeed()
         {
-            return API.GetActivePlayerData()["championStats"]["attackSpeed"].ToObject<float>();
+            if (hodnoty.VoidActivated)
+                return API.GetActivePlayerData()["championStats"]["attackSpeed"].ToObject<float>();
+            else return 0;
         }
+
         public static float GetAttackRange()
         {
-            return API.GetActivePlayerData()["championStats"]["attackRange"].ToObject<float>();
+            if (hodnoty.VoidActivated)
+                return API.GetActivePlayerData()["championStats"]["attackRange"].ToObject<float>();
+            else return 0;
         }
         public static float GetPlayerHealth()
         {
-            return API.GetActivePlayerData()["championStats"]["currentHealth"].ToObject<float>();
+            if (hodnoty.VoidActivated)
+                return API.GetActivePlayerData()["championStats"]["currentHealth"].ToObject<float>();
+            else return 0;
         }
 
     }

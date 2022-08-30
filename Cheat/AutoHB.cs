@@ -8,7 +8,7 @@ namespace VoidSharp.Cheat
         {
             if (hodnoty.HBActivated && hodnoty.Health >= GetPlayerInfo.GetPlayerHealth() && GetPlayerInfo.GetPlayerHealth() != 0)
             {
-                if(hodnoty.selectedD && isDready())
+                if (hodnoty.selectedD && isDready())
                 {
                     Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_D);
                     Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_D);
