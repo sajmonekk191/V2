@@ -18,6 +18,8 @@ namespace VoidSharp
         Random random = new Random();
         Point mousedownpoint = Point.Empty;
         System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+        public static System.Windows.Forms.Timer AfkScript = new System.Windows.Forms.Timer();
+        public static System.Windows.Forms.Timer AutoAccpt = new System.Windows.Forms.Timer();
         public VoidSharp()
         {
             InitializeComponent();
@@ -45,15 +47,11 @@ namespace VoidSharp
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.ControlBox = false;
-            this.Name = "VoidSharp";
+            this.Name = "Void";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
         private void Form1_Load(object sender, EventArgs e)
-        {
-            UpdateVoid();
-        }
-        private void UpdateVoid()
         {
             this.Show();
             progressBar1.Value = 3;
@@ -65,13 +63,22 @@ namespace VoidSharp
             {
                 if (!webClient.DownloadString("https://pastebin.com/fMU8eZAv").Contains("Update 1.0")) //Github udaje 
                 {
-                    if (MessageBox.Show("An update is available", "Updater", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                    if (MessageBox.Show("An update is available", "Updater", MessageBoxButtons.OK, MessageBoxIcon.Information) == DialogResult.OK)
                     {
-                        Process.Start(new ProcessStartInfo("http://81.162.196.29/download/Void.zip") { UseShellExecute = true });
-
-                        string pnv = Process.GetCurrentProcess().MainModule.FileName;
-                        Process.Start(new ProcessStartInfo(pnv) { UseShellExecute = true });
-                        Environment.Exit(0);
+                        try
+                        {
+                            lop:
+                            if (MessageBox.Show("Server isn´t responding (DDOSed or offline)", "Error 2", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry)
+                            {
+                                goto lop;
+                            }
+                            else Environment.Exit(0);
+                            Process.Start(new ProcessStartInfo("http://99.99.99.99/download/Void.zip") { UseShellExecute = true });
+                            string pnv = Process.GetCurrentProcess().MainModule.FileName;
+                            Process.Start(new ProcessStartInfo(pnv) { UseShellExecute = true });
+                            Environment.Exit(0);
+                        }
+                        catch { }
                     }
                 }
             }
@@ -102,14 +109,30 @@ namespace VoidSharp
             MiscButton.Visible = true;
             DiscordPic.Visible = true;
             PayPalPic.Visible = true;
-            this.TopMost = true;
+            this.TopMost = false;
             this.ShowIcon = true;
             this.ShowInTaskbar = true;
             this.ControlBox = true;
+            // LoadColors //
+            try
+            {
+                hodnoty.EnemyPix = Properties.Settings.Default.ChampColor;
+                hodnoty.AutoAcceptColor = Properties.Settings.Default.AcceptColor;
+            }
+            catch
+            {
+                hodnoty.EnemyPix = Color.FromArgb(63, 5, 0);
+                hodnoty.AutoAcceptColor = Color.FromArgb(21, 103, 101);
+            }
+            // LoadColors //
             timer.Interval = 50000;
             timer.Enabled = true;
             timer.Start();
             timer.Tick += new EventHandler(ChangeNameLoop);
+            AfkScript.Interval = 5000;
+            AfkScript.Tick += new EventHandler(AfkScriptTimer);
+            AutoAccpt.Interval = 5000;
+            AutoAccpt.Tick += new EventHandler(AutoAcceptTimer);
         }
         private void ExitButton_Click(object sender, EventArgs e)
         {
@@ -158,7 +181,7 @@ namespace VoidSharp
         }
         private void PayPalPic_Click(object sender, EventArgs e)
         {
-            Process.Start(new ProcessStartInfo("https://www.paypal.com/paypalme/sajmonekk") { UseShellExecute = true });
+            Process.Start(new ProcessStartInfo("https://www.paypal.com/donate/?hosted_button_id=PEG8NYGH636D8") { UseShellExecute = true });
         }
         private void ConnectButton_Click(object sender, EventArgs e)
         {
@@ -178,11 +201,12 @@ namespace VoidSharp
         }
         private void AutoAimButton_Click(object sender, EventArgs e)
         {
-            aimuser1.Visible = true;
+            MessageBox.Show("Comming soon!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            /*aimuser1.Visible = true;
             generaluser1.Visible = false;
             miscuser1.Visible = false;
             orbuser1.Visible = false;
-            healbarrieruser1.Visible = false;
+            healbarrieruser1.Visible = false;*/
         }
         private void OrbwalkerButton_Click(object sender, EventArgs e)
         {
@@ -204,19 +228,35 @@ namespace VoidSharp
         {
             if (hodnoty.VoidActivated && hodnoty.OrbActivated) Orbwalker.OrbwalkEnemy();
         }
-        private void Aimtimer_Tick(object sender, EventArgs e)
+        /*private void Aimtimer_Tick(object sender, EventArgs e)
         {
             if (hodnoty.VoidActivated && hodnoty.AimActivated) AimCore.Aimer();
-        }
+        }*/
         private void HBtimer_Tick(object sender, EventArgs e)
         {
-            if (hodnoty.HBActivated && hodnoty.AimActivated) AutoHB.Healer();
+            if (hodnoty.VoidActivated && hodnoty.HBActivated) AutoHB.Healer();
         }
         private void ChangeNameLoop(object sender, EventArgs e)
         {
-            string VoidName = SpecialFunc.RandomString(10) + ".exe";
+            string VoidName = SpecialFunc.RandomString(random.Next(5, 13)) + ".exe";
             File.Move(hodnoty.ActualName, VoidName);
             hodnoty.ActualName = VoidName;
+        }
+        private void AfkScriptTimer(object sender, EventArgs e)
+        {
+            if (hodnoty.AFKisActivated && hodnoty.VoidActivated)
+            {
+                this.SendToBack();
+                Process[] league = Process.GetProcessesByName("League of Legends");
+                SpecialFunc.SetForegroundWindow(league[0].MainWindowHandle);
+                Mouse.SetCursorPosition(Screen.PrimaryScreen.Bounds.Width / 2 + random.Next(-400, 400), Screen.PrimaryScreen.Bounds.Height / 2 + random.Next(-400, 400));
+                Mouse.MouseEvent(Mouse.MouseEventFlags.RightDown);
+                Mouse.MouseEvent(Mouse.MouseEventFlags.RightUp);
+            }
+        }
+        private void AutoAcceptTimer(object sender, EventArgs e)
+        {
+            if(hodnoty.AutoAcceptWorking) AutoAccept.FindMatch();
         }
     }
 }

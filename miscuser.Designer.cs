@@ -44,7 +44,11 @@
             this.championlbl = new ClassicDarkTheme.Dark.DarkLabel();
             this.darkLabel1 = new ClassicDarkTheme.Dark.DarkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.afkscriptlbl = new ClassicDarkTheme.Dark.DarkLabel();
+            this.Afkscriptcb = new ClassicDarkTheme.Dark.DarkCheckbox();
+            this.acceptoptionpb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acceptoptionpb)).BeginInit();
             this.SuspendLayout();
             // 
             // Autologincb
@@ -61,7 +65,7 @@
             this.Autologincb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Autologincb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Autologincb.ForeColor = System.Drawing.Color.White;
-            this.Autologincb.Location = new System.Drawing.Point(36, 64);
+            this.Autologincb.Location = new System.Drawing.Point(35, 101);
             this.Autologincb.Name = "Autologincb";
             this.Autologincb.Size = new System.Drawing.Size(24, 24);
             this.Autologincb.TabIndex = 0;
@@ -76,7 +80,7 @@
             this.AutoLoginlbl.ForeColor = System.Drawing.Color.White;
             this.AutoLoginlbl.IsLink = false;
             this.AutoLoginlbl.Link = "";
-            this.AutoLoginlbl.Location = new System.Drawing.Point(62, 70);
+            this.AutoLoginlbl.Location = new System.Drawing.Point(65, 108);
             this.AutoLoginlbl.Name = "AutoLoginlbl";
             this.AutoLoginlbl.Size = new System.Drawing.Size(101, 15);
             this.AutoLoginlbl.TabIndex = 1;
@@ -89,7 +93,7 @@
             this.AutoAcceptlbl.ForeColor = System.Drawing.Color.White;
             this.AutoAcceptlbl.IsLink = false;
             this.AutoAcceptlbl.Link = "";
-            this.AutoAcceptlbl.Location = new System.Drawing.Point(62, 105);
+            this.AutoAcceptlbl.Location = new System.Drawing.Point(65, 143);
             this.AutoAcceptlbl.Name = "AutoAcceptlbl";
             this.AutoAcceptlbl.Size = new System.Drawing.Size(108, 15);
             this.AutoAcceptlbl.TabIndex = 2;
@@ -109,7 +113,7 @@
             this.AutoAcceptcb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AutoAcceptcb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AutoAcceptcb.ForeColor = System.Drawing.Color.White;
-            this.AutoAcceptcb.Location = new System.Drawing.Point(36, 100);
+            this.AutoAcceptcb.Location = new System.Drawing.Point(35, 137);
             this.AutoAcceptcb.Name = "AutoAcceptcb";
             this.AutoAcceptcb.Size = new System.Drawing.Size(24, 24);
             this.AutoAcceptcb.TabIndex = 3;
@@ -124,11 +128,12 @@
             this.autochampselectlbl.ForeColor = System.Drawing.Color.White;
             this.autochampselectlbl.IsLink = false;
             this.autochampselectlbl.Link = "";
-            this.autochampselectlbl.Location = new System.Drawing.Point(62, 141);
+            this.autochampselectlbl.Location = new System.Drawing.Point(65, 179);
             this.autochampselectlbl.Name = "autochampselectlbl";
             this.autochampselectlbl.Size = new System.Drawing.Size(144, 15);
             this.autochampselectlbl.TabIndex = 5;
             this.autochampselectlbl.Text = "Enable Auto ChampSelect";
+            this.autochampselectlbl.Visible = false;
             // 
             // AutoChampselectcb
             // 
@@ -144,12 +149,13 @@
             this.AutoChampselectcb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AutoChampselectcb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AutoChampselectcb.ForeColor = System.Drawing.Color.White;
-            this.AutoChampselectcb.Location = new System.Drawing.Point(36, 136);
+            this.AutoChampselectcb.Location = new System.Drawing.Point(35, 173);
             this.AutoChampselectcb.Name = "AutoChampselectcb";
             this.AutoChampselectcb.Size = new System.Drawing.Size(24, 24);
             this.AutoChampselectcb.TabIndex = 6;
             this.AutoChampselectcb.Text = "darkCheckbox1";
             this.AutoChampselectcb.Type = ClassicDarkTheme.Dark.DarkCheckbox.Types.Standart;
+            this.AutoChampselectcb.Visible = false;
             this.AutoChampselectcb.CheckedChanged += new System.EventHandler(this.AutoChampselectcb_CheckedChanged);
             // 
             // darkLabel2
@@ -278,10 +284,11 @@
             "Varus",
             "Vayne",
             "Xayah"});
-            this.championcmb.Location = new System.Drawing.Point(62, 185);
+            this.championcmb.Location = new System.Drawing.Point(65, 223);
             this.championcmb.Name = "championcmb";
             this.championcmb.Size = new System.Drawing.Size(121, 24);
             this.championcmb.TabIndex = 13;
+            this.championcmb.Visible = false;
             // 
             // championlbl
             // 
@@ -290,11 +297,12 @@
             this.championlbl.ForeColor = System.Drawing.Color.White;
             this.championlbl.IsLink = false;
             this.championlbl.Link = "";
-            this.championlbl.Location = new System.Drawing.Point(88, 165);
+            this.championlbl.Location = new System.Drawing.Point(91, 203);
             this.championlbl.Name = "championlbl";
             this.championlbl.Size = new System.Drawing.Size(63, 15);
             this.championlbl.TabIndex = 14;
             this.championlbl.Text = "Champion";
+            this.championlbl.Visible = false;
             // 
             // darkLabel1
             // 
@@ -312,7 +320,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::VoidSharp.Properties.Resources.settings2;
+            this.pictureBox1.Image = global::VoidSharp.Properties.Resources.settings;
             this.pictureBox1.Location = new System.Drawing.Point(10, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
@@ -320,11 +328,61 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // afkscriptlbl
+            // 
+            this.afkscriptlbl.AutoSize = true;
+            this.afkscriptlbl.BackColor = System.Drawing.Color.Transparent;
+            this.afkscriptlbl.ForeColor = System.Drawing.Color.White;
+            this.afkscriptlbl.IsLink = false;
+            this.afkscriptlbl.Link = "";
+            this.afkscriptlbl.Location = new System.Drawing.Point(65, 74);
+            this.afkscriptlbl.Name = "afkscriptlbl";
+            this.afkscriptlbl.Size = new System.Drawing.Size(99, 15);
+            this.afkscriptlbl.TabIndex = 24;
+            this.afkscriptlbl.Text = "Enable AFK Script";
+            // 
+            // Afkscriptcb
+            // 
+            this.Afkscriptcb.BackColor = System.Drawing.Color.Transparent;
+            this.Afkscriptcb.BorderThickness = 3;
+            this.Afkscriptcb.CheckboxBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.Afkscriptcb.CheckboxBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.Afkscriptcb.CheckboxDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.Afkscriptcb.CheckboxHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.Afkscriptcb.CheckboxLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(39)))));
+            this.Afkscriptcb.CheckboxUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.Afkscriptcb.Checked = false;
+            this.Afkscriptcb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Afkscriptcb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Afkscriptcb.ForeColor = System.Drawing.Color.White;
+            this.Afkscriptcb.Location = new System.Drawing.Point(35, 67);
+            this.Afkscriptcb.Name = "Afkscriptcb";
+            this.Afkscriptcb.Size = new System.Drawing.Size(24, 24);
+            this.Afkscriptcb.TabIndex = 23;
+            this.Afkscriptcb.Text = "Enable AutoLogin";
+            this.Afkscriptcb.Type = ClassicDarkTheme.Dark.DarkCheckbox.Types.Standart;
+            this.Afkscriptcb.CheckedChanged += new System.EventHandler(this.Afkscriptcb_CheckedChanged);
+            // 
+            // acceptoptionpb
+            // 
+            this.acceptoptionpb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.acceptoptionpb.Image = global::VoidSharp.Properties.Resources.settings;
+            this.acceptoptionpb.Location = new System.Drawing.Point(176, 140);
+            this.acceptoptionpb.Name = "acceptoptionpb";
+            this.acceptoptionpb.Size = new System.Drawing.Size(22, 22);
+            this.acceptoptionpb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.acceptoptionpb.TabIndex = 25;
+            this.acceptoptionpb.TabStop = false;
+            this.acceptoptionpb.Click += new System.EventHandler(this.acceptoptionpb_Click);
+            // 
             // miscuser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.acceptoptionpb);
+            this.Controls.Add(this.afkscriptlbl);
+            this.Controls.Add(this.Afkscriptcb);
             this.Controls.Add(this.darkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.championlbl);
@@ -344,6 +402,7 @@
             this.Name = "miscuser";
             this.Size = new System.Drawing.Size(431, 282);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.acceptoptionpb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,5 +426,8 @@
         private ClassicDarkTheme.Dark.DarkLabel championlbl;
         private ClassicDarkTheme.Dark.DarkLabel darkLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ClassicDarkTheme.Dark.DarkLabel afkscriptlbl;
+        private ClassicDarkTheme.Dark.DarkCheckbox Afkscriptcb;
+        private System.Windows.Forms.PictureBox acceptoptionpb;
     }
 }

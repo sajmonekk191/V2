@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using VoidSharp.Cheat;
 using VoidSharp.Other;
 
 namespace VoidSharp
@@ -43,13 +44,22 @@ namespace VoidSharp
                     {
                         Humanizertb.Text = "0";
                     }
+                    else Humanizertb.Text = "null";
                 }
                 hodnoty.AvPing = Convert.ToInt32(pingtb.Text);
                 hodnoty.HumanizerTime = Convert.ToInt32(Humanizertb.Text);
             }
             catch { };
-            aslabel.Text = "AttackSpeed: " + Cheat.GetPlayerInfo.GetAttackSpeed().ToString();
-            arlabel.Text = "AttackRange: " + Cheat.GetPlayerInfo.GetAttackRange().ToString();
+            if (hodnoty.VoidActivated)
+            {
+                aslabel.Text = "AttackSpeed: " + GetPlayerInfo.GetAttackSpeed().ToString();
+                arlabel.Text = "AttackRange: " + GetPlayerInfo.GetAttackRange().ToString();
+            }
+            else
+            {
+                aslabel.Text = "AttackSpeed: " + "null";
+                arlabel.Text = "AttackRange: " + "null";
+            }
         }
 
         private void AttackChampcb_CheckedChanged(object sender, EventArgs e)

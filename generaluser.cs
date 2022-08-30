@@ -327,6 +327,25 @@ namespace VoidSharp
                     hodnoty.ChargeE = false;
                     hodnoty.ChargeR = false;
                     break;
+                case "Senna":
+                    wlbl.Visible = true;
+                    bwlbl.Visible = true;
+                    champpb.ImageLocation = Champions.senna;
+
+                    wlbl.Text = ("Windup: " + hodnoty.sennawu.ToString());
+                    bwlbl.Text = ("Base Windup: " + hodnoty.sennabwu.ToString());
+                    hodnoty.Windup = hodnoty.sennawu;
+                    hodnoty.BaseWindup = hodnoty.sennabwu;
+                    hodnoty.SelectedChamp = "Senna";
+                    //hodnoty.rectQ = SpellRange.SamiraQ;
+                    //hodnoty.rectW = SpellRange.SamiraW;
+                    //hodnoty.rectE = SpellRange.SamiraE;
+                    //hodnoty.rectR = SpellRange.SamiraR;
+                    //hodnoty.ChargeQ = false;
+                    //hodnoty.ChargeW = false;
+                    //hodnoty.ChargeE = false;
+                    //hodnoty.ChargeR = false;
+                    break;
                 case "Sivir":
                     wlbl.Visible = true;
                     bwlbl.Visible = true;
@@ -479,6 +498,7 @@ namespace VoidSharp
         }
         private void darkButton1_Click_1(object sender, EventArgs e)
         {
+            hodnoty.selectcolorchamp = true;
             SpecialForms.ColorPicker cp = new SpecialForms.ColorPicker();
             cp.Show();
             cp.BringToFront();

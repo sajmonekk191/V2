@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using DiscordRPC;
+using VoidSharp.Cheat;
 using VoidSharp.Other;
 
 namespace VoidSharp
@@ -38,11 +39,17 @@ namespace VoidSharp
         {
             if (AutoAcceptcb.Checked)
             {
+                hodnoty.AutoAcceptWorking = true;
                 AutoAcceptlbl.Text = "Disable AutoAccept";
+                VoidSharp.AutoAccpt.Enabled = true;
+                VoidSharp.AutoAccpt.Start();
             }
             else
             {
+                hodnoty.AutoAcceptWorking = false;
                 AutoAcceptlbl.Text = "Enable AutoAccept";
+                VoidSharp.AutoAccpt.Enabled = false;
+                VoidSharp.AutoAccpt.Stop();
             }
         }
 
@@ -82,7 +89,7 @@ namespace VoidSharp
         {
             client.SetPresence(new RichPresence()
             {
-                Details = "TEST VOID2",
+                Details = "Void",
                 State = "",
                 Timestamps = Timestamps.Now,
                 Assets = new Assets()
@@ -92,6 +99,33 @@ namespace VoidSharp
                 }
             });
             discordInitalized = true;
+        }
+
+        private void Afkscriptcb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Afkscriptcb.Checked)
+            {
+                hodnoty.AFKisActivated = true;
+                afkscriptlbl.Text = "Disable AFK Script";
+                VoidSharp.AfkScript.Enabled = true;
+                VoidSharp.AfkScript.Start();
+                Keyboard.SendKeyDown(Keyboard.ScanCodeShort.SPACE);
+            }
+            else
+            {
+                hodnoty.AFKisActivated = false;
+                afkscriptlbl.Text = "Enable AFK Script";
+                VoidSharp.AfkScript.Enabled = false;
+                VoidSharp.AfkScript.Stop();
+                Keyboard.SendKeyUp(Keyboard.ScanCodeShort.SPACE);
+            }
+        }
+
+        private void acceptoptionpb_Click(object sender, EventArgs e)
+        {
+            hodnoty.selectcolorchamp = false;
+            SpecialForms.ColorPicker cp = new SpecialForms.ColorPicker();
+            cp.Show();
         }
     }
 }

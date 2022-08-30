@@ -281,7 +281,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::VoidSharp.Properties.Resources.champonly1;
+            this.pictureBox1.Image = global::VoidSharp.Properties.Resources.champonly;
             this.pictureBox1.Location = new System.Drawing.Point(10, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);

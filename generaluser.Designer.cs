@@ -74,6 +74,7 @@
             "Miss Fortune",
             "Quinn",
             "Samira",
+            "Senna",
             "Sivir",
             "Tristana",
             "Twitch",

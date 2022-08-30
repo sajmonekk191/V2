@@ -241,7 +241,7 @@
             // LogoPic
             // 
             this.LogoPic.BackColor = System.Drawing.Color.Transparent;
-            this.LogoPic.Image = global::VoidSharp.Properties.Resources.logo1;
+            this.LogoPic.Image = global::VoidSharp.Properties.Resources.logo2;
             this.LogoPic.Location = new System.Drawing.Point(13, 11);
             this.LogoPic.Name = "LogoPic";
             this.LogoPic.Size = new System.Drawing.Size(100, 50);
@@ -294,12 +294,6 @@
             this.Orbtimer.Enabled = true;
             this.Orbtimer.Interval = 1;
             this.Orbtimer.Tick += new System.EventHandler(this.Orbtimer_Tick);
-            // 
-            // Aimtimer
-            // 
-            this.Aimtimer.Enabled = true;
-            this.Aimtimer.Interval = 10;
-            this.Aimtimer.Tick += new System.EventHandler(this.Aimtimer_Tick);
             // 
             // HBtimer
             // 
