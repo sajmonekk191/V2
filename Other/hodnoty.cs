@@ -4,6 +4,10 @@ namespace VoidSharp.Other
 {
     internal class hodnoty
     {
+        // ColorPicker //
+        public static bool selectcolorchamp = false;
+        //ColorPicker //
+
         // ChangeName //
         public static string ActualName = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
         // ChangeName //
@@ -36,6 +40,7 @@ namespace VoidSharp.Other
         public static float mfwu = 14.801f;
         public static float quinnwu = 17.544f;
         public static float samirawu = 15.00f;
+        public static float sennawu = 31.25f;
         public static float sivirwu = 12.00f;
         public static float tristanawu = 14.801f;
         public static float twitchwu = 20.192f;
@@ -61,6 +66,7 @@ namespace VoidSharp.Other
         public static float mfbwu = 0.656f;
         public static float quinnbwu = 0.668f;
         public static float samirabwu = 0.658f;
+        public static float sennabwu = 0.658f;
         public static float sivirbwu = 0.625f;
         public static float tristanabwu = 0.656f;
         public static float twitchbwu = 0.679f;
@@ -86,6 +92,7 @@ namespace VoidSharp.Other
         public static float mfbwm = 1f;
         public static float quinnbwm = 1f;
         public static float samirabwm = 1f;
+        public static float sennabwm = 1f;
         public static float sivirbwm = 1f;
         public static float tristanabwm = 1f;
         public static float twitchbwm = 1f;
@@ -158,23 +165,20 @@ namespace VoidSharp.Other
         public static short KeyW = 0;
         public static short KeyE = 0;
         public static short KeyR = 0;
-        public static short KeyOutQ = 0;
-        public static short KeyOutW = 0;
-        public static short KeyOutE = 0;
-        public static short KeyOutR = 0;
         //KeyBinds//
+
+        // AFK script //
+        public static bool AFKisActivated = false;
+        // AFK script //
+
+        // AutoAccept //
+        public static bool AutoAcceptWorking = false;
+        public static Color AutoAcceptColor = Color.FromArgb(21, 103, 101);
+        // AutoAccept //
 
         public static float getWindup()
         {
             return Windup;
-        }
-        public static int getHumanize()
-        {
-            return HumanizerTime;
-        }
-        public static int getPing()
-        {
-            return AvPing;
         }
     }
 }

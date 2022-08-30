@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 
@@ -16,5 +17,10 @@ namespace VoidSharp.Other
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
+        [DllImport("user32.dll")]
+        public static extern IntPtr FindWindow(string IpClassName, string IpWindowName);
+
+        [DllImport("user32.dll")]
+        public static extern bool GetWindowRect(IntPtr hwnd, out Rectangle IpRect);
     }
 }

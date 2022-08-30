@@ -1,0 +1,2 @@
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\publish\VoidSharp.pdb
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\publish\VoidSharp.exe

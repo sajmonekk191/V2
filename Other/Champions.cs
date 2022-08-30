@@ -20,6 +20,7 @@ namespace VoidSharp.Other
         public static string lucian = "https://img.rankedboost.com/wp-content/plugins/league/assets/champion-icons/Lucian-Icon.png";
         public static string missfortune = "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/9d/MissFortuneSquare.png/revision/latest/scale-to-width-down/120?cb=20170802061243";
         public static string quinn = "https://img.rankedboost.com/wp-content/plugins/league-of-legends-wild-rift/assets/champion-icons/Quinn-Icon.png";
+        public static string senna = "https://static.wikia.nocookie.net/leagueoflegends/images/3/33/Senna_Render.png/revision/latest?cb=20191101010332";
         public static string samira = "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/b/b3/SamiraSquare.png/revision/latest/scale-to-width-down/120?cb=20200830082811";
         public static string sivir = "https://img.rankedboost.com/wp-content/plugins/league/assets/champion-icons/Sivir-Icon.png";
         public static string teemo = "https://static.wikia.nocookie.net/leagueoflegends/images/9/9c/Teemo_OriginalSquare.png/revision/latest?cb=20150402221254";

@@ -24,7 +24,18 @@ namespace VoidSharp.SpecialForms
             Color EnemyColor = new Color();
             try { EnemyColor = Color.FromArgb(Convert.ToByte(textBox1.Text), Convert.ToByte(textBox3.Text), Convert.ToByte(textBox2.Text)); }
             catch { }
-            hodnoty.EnemyPix = EnemyColor;
+            if (!hodnoty.selectcolorchamp)
+            {
+                hodnoty.AutoAcceptColor = EnemyColor;
+                Properties.Settings.Default.AcceptColor = hodnoty.AutoAcceptColor;
+            }
+            else
+            {
+                hodnoty.EnemyPix = EnemyColor;
+                hodnoty.selectcolorchamp = false;
+                Properties.Settings.Default.ChampColor = hodnoty.EnemyPix;
+            }
+            Properties.Settings.Default.Save();
             this.Close();
         }
 
@@ -102,6 +113,12 @@ namespace VoidSharp.SpecialForms
         private void ExitButton_MouseLeave(object sender, EventArgs e)
         {
             ExitButton.BackColor = Color.FromArgb(127, 37, 37);
+        }
+
+        private void ColorPicker_Load(object sender, EventArgs e)
+        {
+            if(hodnoty.selectcolorchamp) pictureBox1.Image = Properties.Resources.pixelimg;
+            else pictureBox1.Image = Properties.Resources.Acceptimg;
         }
     }
 }

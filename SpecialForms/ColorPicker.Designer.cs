@@ -197,6 +197,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ColorPicker";
             this.Text = "ColorPicker";
+            this.Load += new System.EventHandler(this.ColorPicker_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ColorPicker_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ColorPicker_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ColorPicker_MouseUp);

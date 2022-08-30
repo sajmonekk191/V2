@@ -1,0 +1,62 @@
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\VoidSharp.exe
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\VoidSharp.deps.json
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\VoidSharp.runtimeconfig.json
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\VoidSharp.runtimeconfig.dev.json
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\VoidSharp.dll
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\VoidSharp.pdb
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\DiscordRPC.dll
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\FastBitmap.dll
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\LowLevelInput.dll
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\Microsoft.Win32.SystemEvents.dll
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\Newtonsoft.Json.dll
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\System.Drawing.Common.dll
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.csproj.AssemblyReference.cache
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.aimuser.resources
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.generaluser.resources
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.healbarrieruser.resources
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.miscuser.resources
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.orbuser.resources
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.Properties.Resources.resources
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.SpecialForms.AccountManager.resources
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.SpecialForms.ErrorWindow.resources
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.VoidSharp.resources
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.csproj.GenerateResource.cache
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.AssemblyInfoInputs.cache
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.AssemblyInfo.cs
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.csproj.CoreCompileInputs.cache
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.csproj.CopyComplete
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.dll
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.pdb
+C:\Users\simon.novak\Desktop\VoidText\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.genruntimeconfig.cache
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\VoidSharp.exe
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\VoidSharp.deps.json
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\VoidSharp.runtimeconfig.json
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\VoidSharp.runtimeconfig.dev.json
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\VoidSharp.dll
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\VoidSharp.pdb
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\DiscordRPC.dll
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\FastBitmap.dll
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\Microsoft.Win32.SystemEvents.dll
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\Newtonsoft.Json.dll
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\bin\Debug\netcoreapp3.1\win-x64\System.Drawing.Common.dll
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.csproj.AssemblyReference.cache
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.aimuser.resources
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.generaluser.resources
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.healbarrieruser.resources
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.miscuser.resources
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.orbuser.resources
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.Properties.Resources.resources
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.SpecialForms.AccountManager.resources
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.SpecialForms.ColorPicker.resources
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.SpecialForms.ErrorWindow.resources
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.VoidSharp.resources
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.csproj.GenerateResource.cache
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.AssemblyInfoInputs.cache
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.AssemblyInfo.cs
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.csproj.CoreCompileInputs.cache
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.csproj.CopyComplete
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.dll
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.pdb
+C:\Users\Root\Desktop\VoidText5 - kopie\VoidSharp\obj\Debug\netcoreapp3.1\win-x64\VoidSharp.genruntimeconfig.cache
