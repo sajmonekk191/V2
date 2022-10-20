@@ -112,158 +112,76 @@ namespace VoidSharp.SpecialForms
             usernameTB.Clear();
             passwordTB.Clear();
         }
-
-        private void showpassPB1_Click(object sender, EventArgs e)
-        {
-            string passtext = LBLpassword1.Text;
-            if (passtext.Contains("*"))
-            {
-                 hodnoty.HashedPassword = LBLpassword1.Text;
-                 LBLpassword1.Text = Properties.Settings.Default.Password1;
-            }
-            else
-            {
-                 LBLpassword1.Text = hodnoty.HashedPassword;
-            }
-        }
         private void LoadBTN_Click(object sender, EventArgs e)
         {
             LoginManagerUtilities.LoadAcc(this);
             ErrorWindow ew = new ErrorWindow();
             ew.Show();
             ew.BringToFront();
+            Properties.Settings.Default.CurentUsername = hodnoty.CurentUsername;
+            Properties.Settings.Default.Save();
         }
         private void DeleteBTN_Click(object sender, EventArgs e)
         {
-            if (selectedCB1.Checked == true)
-            {
-                LoginManagerUtilities.DelAcc(this, 1);
-            }
-            if (selectedCB2.Checked == true)
-            {
-                LoginManagerUtilities.DelAcc(this, 2);
-            }
-            if (selectedCB3.Checked == true)
-            {
-                LoginManagerUtilities.DelAcc(this, 3);
-            }
-            if (selectedCB4.Checked == true)
-            {
-                LoginManagerUtilities.DelAcc(this, 4);
-            }
-            if (selectedCB5.Checked == true)
-            {
-                LoginManagerUtilities.DelAcc(this, 5);
-            }
-            if (selectedCB6.Checked == true)
-            {
-                LoginManagerUtilities.DelAcc(this, 6);
-            }
-            if (selectedCB7.Checked == true)
-            {
-                LoginManagerUtilities.DelAcc(this, 7);
-            }
-            if (selectedCB8.Checked == true)
-            {
-                LoginManagerUtilities.DelAcc(this, 8);
-            }
+            if (selectedCB1.Checked == true) LoginManagerUtilities.DelAcc(this, 1);
+            if (selectedCB2.Checked == true) LoginManagerUtilities.DelAcc(this, 2);
+            if (selectedCB3.Checked == true) LoginManagerUtilities.DelAcc(this, 3);
+            if (selectedCB4.Checked == true) LoginManagerUtilities.DelAcc(this, 4);
+            if (selectedCB5.Checked == true) LoginManagerUtilities.DelAcc(this, 5);
+            if (selectedCB6.Checked == true) LoginManagerUtilities.DelAcc(this, 6);
+            if (selectedCB7.Checked == true) LoginManagerUtilities.DelAcc(this, 7);
+            if (selectedCB8.Checked == true) LoginManagerUtilities.DelAcc(this, 8);
+        }
+        private void showpassPB1_Click(object sender, EventArgs e)
+        {
+            ShowPassword(LBLpassword1, Properties.Settings.Default.Password1);
         }
 
         private void showpassPB2_Click(object sender, EventArgs e)
         {
-            string passtext = LBLpassword2.Text;
-            if (passtext.Contains("*"))
-            {
-                hodnoty.HashedPassword = LBLpassword2.Text;
-                LBLpassword2.Text = Properties.Settings.Default.Password2;
-            }
-            else
-            {
-                LBLpassword2.Text = hodnoty.HashedPassword;
-            }
+            ShowPassword(LBLpassword2, Properties.Settings.Default.Password2);
         }
 
         private void showpassPB3_Click(object sender, EventArgs e)
         {
-            string passtext = LBLpassword3.Text;
-            if (passtext.Contains("*"))
-            {
-                hodnoty.HashedPassword = LBLpassword3.Text;
-                LBLpassword3.Text = Properties.Settings.Default.Password3;
-            }
-            else
-            {
-                LBLpassword3.Text = hodnoty.HashedPassword;
-            }
+            ShowPassword(LBLpassword3, Properties.Settings.Default.Password3);
         }
 
         private void showpassPB4_Click(object sender, EventArgs e)
         {
-            string passtext = LBLpassword4.Text;
-            if (passtext.Contains("*"))
-            {
-                hodnoty.HashedPassword = LBLpassword4.Text;
-                LBLpassword4.Text = Properties.Settings.Default.Password4;
-            }
-            else
-            {
-                LBLpassword4.Text = hodnoty.HashedPassword;
-            }
+            ShowPassword(LBLpassword4, Properties.Settings.Default.Password4);
         }
 
         private void showpassPB5_Click(object sender, EventArgs e)
         {
-            string passtext = LBLpassword5.Text;
-            if (passtext.Contains("*"))
-            {
-                hodnoty.HashedPassword = LBLpassword5.Text;
-                LBLpassword5.Text = Properties.Settings.Default.Password5;
-            }
-            else
-            {
-                LBLpassword5.Text = hodnoty.HashedPassword;
-            }
+            ShowPassword(LBLpassword5, Properties.Settings.Default.Password5);
         }
 
         private void showpassPB6_Click(object sender, EventArgs e)
         {
-            string passtext = LBLpassword6.Text;
-            if (passtext.Contains("*"))
-            {
-                hodnoty.HashedPassword = LBLpassword6.Text;
-                LBLpassword6.Text = Properties.Settings.Default.Password6;
-            }
-            else
-            {
-                LBLpassword6.Text = hodnoty.HashedPassword;
-            }
+            ShowPassword(LBLpassword6, Properties.Settings.Default.Password6);
         }
 
         private void showpassPB7_Click(object sender, EventArgs e)
         {
-            string passtext = LBLpassword7.Text;
-            if (passtext.Contains("*"))
-            {
-                hodnoty.HashedPassword = LBLpassword7.Text;
-                LBLpassword7.Text = Properties.Settings.Default.Password7;
-            }
-            else
-            {
-                LBLpassword7.Text = hodnoty.HashedPassword;
-            }
+            ShowPassword(LBLpassword7, Properties.Settings.Default.Password7);
         }
 
         private void showpassPB8_Click(object sender, EventArgs e)
         {
-            string passtext = LBLpassword8.Text;
+            ShowPassword(LBLpassword8, Properties.Settings.Default.Password8);
+        }
+        private void ShowPassword(Label label, string password)
+        {
+            string passtext = label.Text;
             if (passtext.Contains("*"))
             {
-                hodnoty.HashedPassword = LBLpassword8.Text;
-                LBLpassword8.Text = Properties.Settings.Default.Password8;
+                hodnoty.HashedPassword = label.Text;
+                label.Text = password;
             }
             else
             {
-                LBLpassword8.Text = hodnoty.HashedPassword;
+                label.Text = hodnoty.HashedPassword;
             }
         }
     }

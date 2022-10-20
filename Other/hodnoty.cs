@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace VoidSharp.Other
 {
@@ -115,6 +116,7 @@ namespace VoidSharp.Other
         // Discord RPC //
 
         // Orbwalker components //
+        public static Keys OrbwalkerKey;
         public static bool AutoHumanize = false;
         public static bool OrbActivated = false;
         public static bool AttackChamponly = false;
@@ -123,7 +125,9 @@ namespace VoidSharp.Other
         public static bool tooglechamponly = false;
         public static int AvPing = 50;
         public static int HumanizerTime = 50;
-        public static Color EnemyPix = Color.FromArgb(63, 5, 0);
+        public static Color EnemyPix = Color.FromArgb(255, 63, 5, 0);
+        public static Color EnemyPix1 = Color.FromArgb(255, 63, 5, 0);
+        public static Color PlayerColor = Color.FromArgb(255, 59, 49, 5);
         public static Point EnemyPosition = Point.Empty;
         public static double AttackRange = double.NaN;
         public static double AttackSpeed = double.NaN;
@@ -136,7 +140,7 @@ namespace VoidSharp.Other
         public static bool WActivated = false;
         public static bool EActivated = false;
         public static bool RActivated = false;
-        public static Color CDcolor = Color.FromArgb(231, 195, 123);
+        public static Color CDcolor = Color.FromArgb(255, 231, 195, 123);
         public static Rectangle CDposQ = new Rectangle(806, 992, 30, 30);
         public static Rectangle CDposW = new Rectangle(851, 992, 30, 30);
         public static Rectangle CDposE = new Rectangle(895, 992, 30, 30);
@@ -151,14 +155,17 @@ namespace VoidSharp.Other
         public static Rectangle rectR = Rectangle.Empty;
         // Aim components //
 
-        // AutoHB components //
-        public static bool HBActivated = false;
-        public static bool selectedD = false;
-        public static bool selectedF = false;
-        public static float Health = float.NaN;
-        public static Rectangle CDslotD = new Rectangle(990, 993, 30, 30);
-        public static Rectangle CDslotF = new Rectangle(1023, 993, 30, 30);
-        // AutoHB components //
+        // Combos components //
+        public static bool CombosActivated = false;
+        public static bool QEnabled = false;
+        public static bool WEnabled = false;
+        public static bool EEnabled = false;
+        public static bool REnabled = false;
+        public static int QManaValue;
+        public static int WManaValue;
+        public static int EManaValue;
+        public static int RManaValue;
+        // Combos components //
 
         //KeyBinds//
         public static short KeyQ = 0;
@@ -173,7 +180,7 @@ namespace VoidSharp.Other
 
         // AutoAccept //
         public static bool AutoAcceptWorking = false;
-        public static Color AutoAcceptColor = Color.FromArgb(21, 103, 101);
+        public static Color AutoAcceptColor = Color.FromArgb(255, 21, 103, 101);
         // AutoAccept //
 
         public static float getWindup()

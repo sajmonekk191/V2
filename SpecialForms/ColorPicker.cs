@@ -22,7 +22,9 @@ namespace VoidSharp.SpecialForms
         private void darkButton1_Click(object sender, EventArgs e)
         {
             Color EnemyColor = new Color();
-            try { EnemyColor = Color.FromArgb(Convert.ToByte(textBox1.Text), Convert.ToByte(textBox3.Text), Convert.ToByte(textBox2.Text)); }
+            Color EnemyColor1 = new Color();
+            try { EnemyColor = Color.FromArgb(Convert.ToByte(Rtb.Text), Convert.ToByte(Gtb.Text), Convert.ToByte(Btb.Text));
+                  EnemyColor1 = Color.FromArgb(Convert.ToByte(Rtb1.Text), Convert.ToByte(Gtb1.Text), Convert.ToByte(Btb1.Text));}
             catch { }
             if (!hodnoty.selectcolorchamp)
             {
@@ -32,8 +34,10 @@ namespace VoidSharp.SpecialForms
             else
             {
                 hodnoty.EnemyPix = EnemyColor;
+                hodnoty.EnemyPix1 = EnemyColor1;
                 hodnoty.selectcolorchamp = false;
                 Properties.Settings.Default.ChampColor = hodnoty.EnemyPix;
+                Properties.Settings.Default.ChampColor1 = hodnoty.EnemyPix1;
             }
             Properties.Settings.Default.Save();
             this.Close();
@@ -74,10 +78,15 @@ namespace VoidSharp.SpecialForms
         {
             Point undermous = Cursor.Position;
             Color picked = GetColorAt(undermous);
-            textBox1.Text = picked.R.ToString();
-            textBox3.Text = picked.G.ToString();
-            textBox2.Text = picked.B.ToString();
+            Color picked1 = GetColorAt(new Point(undermous.X + 1, undermous.Y));
+            Rtb.Text = picked.R.ToString();
+            Gtb.Text = picked.G.ToString();
+            Btb.Text = picked.B.ToString();
+            Rtb1.Text = picked1.R.ToString();
+            Gtb1.Text = picked1.G.ToString();
+            Btb1.Text = picked1.B.ToString();
             hodnoty.EnemyPix = picked;
+            hodnoty.EnemyPix1 = picked1;
         }
         private Color GetColorAt(Point point)
         {
@@ -117,8 +126,20 @@ namespace VoidSharp.SpecialForms
 
         private void ColorPicker_Load(object sender, EventArgs e)
         {
-            if(hodnoty.selectcolorchamp) pictureBox1.Image = Properties.Resources.pixelimg;
-            else pictureBox1.Image = Properties.Resources.Acceptimg;
+            if (hodnoty.selectcolorchamp)
+            {
+                Rtb.Text = hodnoty.EnemyPix.R.ToString();
+                Gtb.Text = hodnoty.EnemyPix.G.ToString();
+                Btb.Text = hodnoty.EnemyPix.B.ToString();
+                Rtb1.Text = hodnoty.EnemyPix1.R.ToString();
+                Gtb1.Text = hodnoty.EnemyPix1.G.ToString();
+                Btb1.Text = hodnoty.EnemyPix1.B.ToString();
+                pictureBox1.Image = Properties.Resources.pixelimg;
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.Acceptimg;
+            }
         }
     }
 }
