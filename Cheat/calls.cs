@@ -1,21 +1,12 @@
 ﻿using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using VoidSharp.Other;
 
 namespace VoidSharp.Cheat
 {
     internal class calls
     {
-        public static void Wait(int time)
-        {
-            Thread thread = new Thread(delegate ()
-            {
-                Thread.Sleep(time);
-            });
-            thread.Start();
-            while (thread.IsAlive)
-                Application.DoEvents();
-        }
         public static void DoThing(string call, Point enemypos)
         {
             switch (call)
@@ -23,7 +14,6 @@ namespace VoidSharp.Cheat
                 case "AttackEnemy":
                     if(enemypos.X == 0 && enemypos.Y == 0)
                     {
-                        Mouse.SetCursorPosition(Cursor.Position.X, Cursor.Position.Y);
                         Mouse.MouseEvent(Mouse.MouseEventFlags.RightDown);
                         Mouse.MouseEvent(Mouse.MouseEventFlags.RightUp);
                         break;
@@ -44,6 +34,31 @@ namespace VoidSharp.Cheat
                     Mouse.MouseEvent(Mouse.MouseEventFlags.RightUp);
                     break;
             }
+        }
+        public static bool isQready()
+        {
+            if (ScreenCap.PixelSearchCD(hodnoty.CDposQ, hodnoty.CDcolor)) return true;
+            else return false;
+        }
+        public static bool isWready()
+        {
+            if (ScreenCap.PixelSearchCD(hodnoty.CDposW, hodnoty.CDcolor)) return true;
+            else return false;
+        }
+        public static bool isEready()
+        {
+            if (ScreenCap.PixelSearchCD(hodnoty.CDposE, hodnoty.CDcolor)) return true;
+            else return false;
+        }
+        public static bool isRready()
+        {
+            if (ScreenCap.PixelSearchCD(hodnoty.CDposR, hodnoty.CDcolor)) return true;
+            else return false;
+        }
+        public static bool IsKeyDown(Keys key)
+        {
+            short value = SpecialFunc.GetAsyncKeyState(key);
+            return ((value >> 15) & 0x0001) == 0x0001; ;
         }
     }
 }

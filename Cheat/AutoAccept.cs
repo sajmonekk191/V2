@@ -1,5 +1,6 @@
-﻿using System;
-using System.Drawing;
+﻿using Newtonsoft.Json;
+using System;
+using System.Diagnostics;
 using VoidSharp.Other;
 
 namespace VoidSharp.Cheat
@@ -7,28 +8,20 @@ namespace VoidSharp.Cheat
     class AutoAccept
     {
         public static IntPtr handle;
-        public static string Process = "League Of Legends";
+        public static Matchmaking.ReadyCheck readyCheck = new Matchmaking.ReadyCheck();
 
         public static void FindMatch()
         {
-            if (hodnoty.AutoAcceptWorking)
+            Process[] p = System.Diagnostics.Process.GetProcessesByName("LeagueClientUx");
+            if (p.Length != 0)
             {
                 try
                 {
-                    Rectangle rect;
-                    handle = SpecialFunc.FindWindow(null, Process);
-                    SpecialFunc.GetWindowRect(handle, out rect);
-                    SpecialFunc.SetForegroundWindow(handle);
-                    Point Position = ScreenCap.PixelSearch(rect, hodnoty.AutoAcceptColor);
-                    if (Position != new Point(0, 0))
-                    {
-                        SpecialFunc.SetForegroundWindow(handle);
-                        Mouse.SetCursorPosition(rect.X + Position.X, rect.Y + Position.Y);
-                        Mouse.MouseEvent(Mouse.MouseEventFlags.LeftDown);
-                        Mouse.MouseEvent(Mouse.MouseEventFlags.LeftUp);
-                    }
+                    string JsonReadyCheck = API.GetRequest(RestSharp.Method.Get, "/lol-matchmaking/v1/ready-check");
+                    readyCheck = JsonConvert.DeserializeObject<Matchmaking.ReadyCheck>(JsonReadyCheck);
+                    if (readyCheck.State == "InProgress") API.GetRequest(RestSharp.Method.Post, "/lol-matchmaking/v1/ready-check/accept");
                 }
-                catch { }
+                catch { };
             }
         }
     }

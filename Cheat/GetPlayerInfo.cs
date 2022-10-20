@@ -25,6 +25,18 @@ namespace VoidSharp.Cheat
                 return API.GetActivePlayerData()["championStats"]["currentHealth"].ToObject<float>();
             else return 0;
         }
+        public static float GetPlayerMana()
+        {
+            if (hodnoty.VoidActivated)
+                return API.GetActivePlayerData()["championStats"]["resourceValue"].ToObject<float>();
+            else return 0;
+        }
+        public static float GetPlayerMaxMana()
+        {
+            if (hodnoty.VoidActivated)
+                return API.GetActivePlayerData()["championStats"]["resourceMax"].ToObject<float>();
+            else return 0;
+        }
 
     }
 }

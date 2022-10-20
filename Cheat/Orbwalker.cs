@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 using VoidSharp.Other;
 
 namespace VoidSharp.Cheat
 {
     internal class Orbwalker
     {
+        private static int Waiter;
         private static int AAtick;
         private static int MoveCT;
         private static Point LastMousePos = Point.Empty;
-        [DllImport("user32.dll")]
-        private static extern short GetAsyncKeyState(int vKey);
         private static int GetAttackWindup()
         {
             float windup = hodnoty.getWindup();
@@ -41,60 +39,76 @@ namespace VoidSharp.Cheat
         }
         public static void OrbwalkEnemy()
         {
-            short key = GetAsyncKeyState(0x20);
+            short key = SpecialFunc.GetAsyncKeyState(hodnoty.OrbwalkerKey);
             bool keyIsPressed = ((key >> 15) & 0x0001) == 0x0001;
 
-            if(hodnoty.VoidActivated && hodnoty.OrbActivated)
+            if(hodnoty.VoidActivated && hodnoty.OrbActivated && SpecialFunc.IsLeagueFocused())
             {
-                if (keyIsPressed && AAtick < Environment.TickCount)
+                if (keyIsPressed)
                 {
-                    if (hodnoty.ShowRange)
-                        Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_C);
+                    if(Waiter < 2)Waiter++;
+                    if (hodnoty.ShowRange && !calls.IsKeyDown(Keys.C)) Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_C);
+                    if (hodnoty.tooglechamponly && !calls.IsKeyDown(Keys.NumPad9)) Keyboard.SendKeyDown(Keyboard.ScanCodeShort.NUMPAD9);
 
-                    if (hodnoty.tooglechamponly)
-                        Keyboard.SendKeyDown(Keyboard.ScanCodeShort.NUMPAD9);
-
-                    Point pos = ScreenCap.GetEnemyPosition(GetPlayerInfo.GetAttackRange());
-                    if (CanAttack() && pos != Point.Empty)
+                    if (AAtick < Environment.TickCount)
                     {
-                        LastMousePos = Cursor.Position;
+                        Point pos = ScreenCap.GetEnemyPosition(GetPlayerInfo.GetAttackRange());
+                        if (CanAttack() && hodnoty.AttackChamponly && pos != Point.Empty && Waiter >= 2)
+                        {
+                            LastMousePos = Cursor.Position;
 
-                        if (hodnoty.AttackChamponly)
-                            calls.DoThing("AttackEnemy", pos);
-                        if (hodnoty.AttackEverything)
+                            if (hodnoty.AttackChamponly)
+                            {
+                                calls.DoThing("AttackEnemy", pos);
+                                calls.DoThing("AttackEnemy", pos);
+                            }
+
+                            AAtick = Environment.TickCount;
+                            MoveCT = Environment.TickCount + GetAttackWindup();
+
+                            calls.DoThing("MouseMove", LastMousePos);
+                        }
+                        else if (CanAttack() && hodnoty.AttackEverything)
                         {
                             Keyboard.SendKeyDown(Keyboard.ScanCodeShort.KEY_A);
                             Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_A);
+                            AAtick = Environment.TickCount;
+                            MoveCT = Environment.TickCount + GetAttackWindup();
                         }
-
-                        AAtick = Environment.TickCount;
-                        MoveCT = Environment.TickCount + GetAttackWindup();
-
-                        calls.DoThing("MouseMove", LastMousePos);
-                    }
-                    else if (CanMove(10) && MoveCT <= Environment.TickCount)
-                    {
-                        calls.DoThing("RightClick", new Point(0, 0));
-
-                        LastMousePos = Cursor.Position;
-                    }
-                    else
-                    {
-                        System.Threading.Thread.Sleep(hodnoty.HumanizerTime);
-                        if (pos == Point.Empty)
+                        else if (CanMove(10) && MoveCT <= Environment.TickCount)
                         {
+                            calls.DoThing("RightClick", new Point(0, 0));
+
                             LastMousePos = Cursor.Position;
                         }
-                        calls.DoThing("RightClick", new Point(0, 0));
+                        //
+                        else if (!CanAttack() && Combos.CheckComboReady() && !hodnoty.AttackEverything)
+                        {
+                            Combos.MakeCombo();
+                            System.Threading.Thread.Sleep(hodnoty.HumanizerTime);
+                            if (pos == Point.Empty)
+                            {
+                                LastMousePos = Cursor.Position;
+                            }
+                            calls.DoThing("RightClick", new Point(0, 0));
+                        }
+                        //
+                        else
+                        {
+                            System.Threading.Thread.Sleep(hodnoty.HumanizerTime);
+                            if (pos == Point.Empty)
+                            {
+                                LastMousePos = Cursor.Position;
+                            }
+                            calls.DoThing("RightClick", new Point(0, 0));
+                        }
                     }
                 }
                 else
                 {
-                    if (hodnoty.ShowRange)
-                        Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_C);
-
-                    if (hodnoty.tooglechamponly)
-                        Keyboard.SendKeyUp(Keyboard.ScanCodeShort.NUMPAD9);
+                    if (hodnoty.ShowRange && calls.IsKeyDown(Keys.C)) Keyboard.SendKeyUp(Keyboard.ScanCodeShort.KEY_C);
+                    if (hodnoty.tooglechamponly && calls.IsKeyDown(Keys.NumPad9)) Keyboard.SendKeyUp(Keyboard.ScanCodeShort.NUMPAD9);
+                    Waiter = 0;
                 }
             }
         }

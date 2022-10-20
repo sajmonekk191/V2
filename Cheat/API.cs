@@ -1,13 +1,18 @@
 ﻿using Newtonsoft.Json.Linq;
+using RestSharp;
+using RestSharp.Authenticators;
 using System;
 using System.IO;
 using System.Net;
-using System.Windows.Forms;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 
 namespace VoidSharp.Cheat
 {
     class API
     {
+        private static int port = 0;
+        private static string token = string.Empty;
         public static JObject GetActivePlayerData()
         {
             if (IsLiveGameRunning())
@@ -19,15 +24,12 @@ namespace VoidSharp.Cheat
                 using (StreamReader reader = new StreamReader(stream))
                 {
                     try { return JObject.Parse(reader.ReadToEnd()); }
-                    catch
-                    {
-                        throw new Exception("League Procces not found!");
-                    }
+                    catch { throw new Exception("League is not Detected!"); }
                 }
             }
             else
             {
-                throw new Exception("League Procces not found!");
+                throw new Exception("League is not Detected!");
             }
         }
 
@@ -58,6 +60,36 @@ namespace VoidSharp.Cheat
             }
 
             return flag;
+        }
+        public static string GetRequest(Method method, string strrequest, object parameter = null, DataFormat dataFormat = DataFormat.None)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            ServicePointManager.ServerCertificateValidationCallback = (RemoteCertificateValidationCallback)Delegate.Combine(ServicePointManager.ServerCertificateValidationCallback, new RemoteCertificateValidationCallback(NetClass.NewClass.Main));
+            RestClient restClient = new RestClient("https://127.0.0.1:" + port)
+            {
+                Authenticator = new HttpBasicAuthenticator("riot", token)
+            };
+            RestRequest request = new RestRequest(strrequest, method);
+            var result = restClient.Execute(request);
+            if (method == Method.Put && dataFormat == DataFormat.Json)
+            {
+                request.AddBody(parameter);
+            }
+            else if (method == Method.Post)
+            {
+                request.AddBody(parameter);
+            }
+            return result.Content;
+        }
+        public class NetClass
+        {
+            internal bool Main(object object_0, X509Certificate x509Certificate_0, X509Chain x509Chain_0, SslPolicyErrors sslPolicyErrors_0)
+            {
+                return true;
+            }
+
+            public static readonly NetClass NewClass = new NetClass();
+            static RemoteCertificateValidationCallback callback;
         }
     }
 }
