@@ -1,7 +1,6 @@
 ﻿using VoidSharp.Other;
 using System.Drawing;
 using System.Drawing.Imaging;
-using Hazdryx.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System;
