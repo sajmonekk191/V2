@@ -1,10 +1,13 @@
-﻿using System;
+﻿// Fix Sleep na combach - Medium       - Priority 3
+// AutoQSS - VeryHard       - Priority 1
+// Fix Crashing po hře - Hard       - Priority 3
+// Udělat AutoLogin - Medium       - Priority 1
+// Fix AutoAccept - Easy       - Priority 1
+// Dodělat AutoChampSelect - Medium       - Priority 1
+// fix combo rectangle + fix all rectangles - Hard     - Priority 10 
+using System;
 using System.Diagnostics;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Threading;
 using System.Windows.Forms;
 using DiscordRPC;
 using VoidSharp.Cheat;
@@ -32,14 +35,14 @@ namespace VoidSharp
             miscuser1.Visible = false;
             orbuser1.Visible = false;
             generaluser1.Visible = false;
-            aimuser1.Visible = false;
+            banger1.Visible = false;
             LogoPic.Visible = false;
             ExitButton.Visible = false;
             MinimizeButton.Visible = false;
             ConnectButton.Visible = false;
             OrbwalkerButton.Visible = false;
             AutoAimButton.Visible = false;
-            HealBarrierButton.Visible = false;
+            CombosButton.Visible = false;
             MiscButton.Visible = false;
             DiscordPic.Visible = false;
             PayPalPic.Visible = false; 
@@ -57,8 +60,8 @@ namespace VoidSharp
             progressBar1.Value = 3;
             loadinglabel.Location = new Point(loadinglabel.Left - 20, loadinglabel.Top);
             loadinglabel.Text = "Checking for Update..";
-            calls.Wait(1500);
-            WebClient webClient = new WebClient();
+            SpecialFunc.Wait(1500);
+            /*WebClient webClient = new WebClient();
             try
             {
                 if (!webClient.DownloadString("https://pastebin.com/fMU8eZAv").Contains("Update 1.0")) //Github udaje 
@@ -85,15 +88,15 @@ namespace VoidSharp
             catch
             {
                 MessageBox.Show("Try to restart Void", "Error 7", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                calls.Wait(1000);
+                SpecialFunc.Wait(1000);
                 Environment.Exit(0);
-            }
+            }*/
             progressBar1.Value = 64;
             loadinglabel.Text = "Loading..";
             loadinglabel.Location = new Point(loadinglabel.Left + 30, loadinglabel.Top);
-            calls.Wait(500);
+            SpecialFunc.Wait(500);
             progressBar1.Value = 100;
-            calls.Wait(100);
+            SpecialFunc.Wait(100);
             this.Size = new Size(620, 370);
             this.Location = new Point(this.Location.X - 190, this.Location.Y - 150);
             progressBar1.Visible = false;
@@ -105,7 +108,7 @@ namespace VoidSharp
             ConnectButton.Visible = true;
             OrbwalkerButton.Visible = true;
             AutoAimButton.Visible = true;
-            HealBarrierButton.Visible = true;
+            CombosButton.Visible = true;
             MiscButton.Visible = true;
             DiscordPic.Visible = true;
             PayPalPic.Visible = true;
@@ -117,13 +120,12 @@ namespace VoidSharp
             try
             {
                 hodnoty.EnemyPix = Properties.Settings.Default.ChampColor;
+                hodnoty.EnemyPix1 = Properties.Settings.Default.ChampColor1;
                 hodnoty.AutoAcceptColor = Properties.Settings.Default.AcceptColor;
+                hodnoty.CurentUsername = Properties.Settings.Default.CurentUsername;
+                if(hodnoty.CurentUsername != String.Empty)Playerlbl.Text = hodnoty.CurentUsername;
             }
-            catch
-            {
-                hodnoty.EnemyPix = Color.FromArgb(63, 5, 0);
-                hodnoty.AutoAcceptColor = Color.FromArgb(21, 103, 101);
-            }
+            catch { }
             // LoadColors //
             timer.Interval = 50000;
             timer.Enabled = true;
@@ -133,6 +135,9 @@ namespace VoidSharp
             AfkScript.Tick += new EventHandler(AfkScriptTimer);
             AutoAccpt.Interval = 5000;
             AutoAccpt.Tick += new EventHandler(AutoAcceptTimer);
+            Process.GetCurrentProcess().PriorityBoostEnabled = true;
+            Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.AboveNormal;
+            Base.OnTick += Orbwalker.OrbwalkEnemy;
         }
         private void ExitButton_Click(object sender, EventArgs e)
         {
@@ -187,60 +192,47 @@ namespace VoidSharp
         {
             generaluser1.Visible = true;
             miscuser1.Visible = false;
-            aimuser1.Visible = false;
             orbuser1.Visible = false;
-            healbarrieruser1.Visible = false;
+            combos1.Visible = false;
+            banger1.Visible = false;
         }
         private void MiscButton_Click(object sender, EventArgs e)
         {
             miscuser1.Visible = true;
             generaluser1.Visible = false;
-            aimuser1.Visible = false;
             orbuser1.Visible = false;
-            healbarrieruser1.Visible = false;
+            combos1.Visible = false;
+            banger1.Visible = false;
         }
         private void AutoAimButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Comming soon!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            /*aimuser1.Visible = true;
-            generaluser1.Visible = false;
+            banger1.Visible = true;
             miscuser1.Visible = false;
+            generaluser1.Visible = false;
             orbuser1.Visible = false;
-            healbarrieruser1.Visible = false;*/
+            combos1.Visible = false;
         }
         private void OrbwalkerButton_Click(object sender, EventArgs e)
         {
             orbuser1.Visible = true;
-            aimuser1.Visible = false;
             generaluser1.Visible = false;
             miscuser1.Visible = false;
-            healbarrieruser1.Visible = false;
+            combos1.Visible = false;
+            banger1.Visible = false;
         }
         private void HealBarrierButton_Click_1(object sender, EventArgs e)
         {
-            healbarrieruser1.Visible = true;
+            combos1.Visible = true;
             orbuser1.Visible = false;
-            aimuser1.Visible = false;
             generaluser1.Visible = false;
             miscuser1.Visible = false;
-        }
-        private void Orbtimer_Tick(object sender, EventArgs e)
-        {
-            if (hodnoty.VoidActivated && hodnoty.OrbActivated) Orbwalker.OrbwalkEnemy();
-        }
-        /*private void Aimtimer_Tick(object sender, EventArgs e)
-        {
-            if (hodnoty.VoidActivated && hodnoty.AimActivated) AimCore.Aimer();
-        }*/
-        private void HBtimer_Tick(object sender, EventArgs e)
-        {
-            if (hodnoty.VoidActivated && hodnoty.HBActivated) AutoHB.Healer();
+            banger1.Visible = false;
         }
         private void ChangeNameLoop(object sender, EventArgs e)
         {
-            string VoidName = SpecialFunc.RandomString(random.Next(5, 13)) + ".exe";
+            /*string VoidName = SpecialFunc.RandomString(random.Next(5, 13)) + ".exe";
             File.Move(hodnoty.ActualName, VoidName);
-            hodnoty.ActualName = VoidName;
+            hodnoty.ActualName = VoidName;*/
         }
         private void AfkScriptTimer(object sender, EventArgs e)
         {
@@ -257,6 +249,15 @@ namespace VoidSharp
         private void AutoAcceptTimer(object sender, EventArgs e)
         {
             if(hodnoty.AutoAcceptWorking) AutoAccept.FindMatch();
+        }
+
+        private void Updater_Tick(object sender, EventArgs e)
+        {
+            if(hodnoty.CurentUsername != string.Empty)Playerlbl.Text = hodnoty.CurentUsername;
+        }
+        private void OrbWal()
+        {
+            Orbwalker.OrbwalkEnemy();
         }
     }
 }

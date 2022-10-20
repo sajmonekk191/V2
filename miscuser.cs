@@ -89,8 +89,8 @@ namespace VoidSharp
         {
             client.SetPresence(new RichPresence()
             {
-                Details = "Void",
-                State = "",
+                Details = "Connected: " + hodnoty.CurentUsername,
+                State = "Playing: " + hodnoty.SelectedChamp,
                 Timestamps = Timestamps.Now,
                 Assets = new Assets()
                 {

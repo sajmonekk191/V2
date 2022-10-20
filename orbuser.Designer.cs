@@ -34,7 +34,6 @@
             this.aslabel = new System.Windows.Forms.Label();
             this.arlabel = new System.Windows.Forms.Label();
             this.UpdateValue = new System.Windows.Forms.Timer(this.components);
-            this.pinglbl = new System.Windows.Forms.Label();
             this.humanizerlbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,12 +43,15 @@
             this.showrangecb = new ClassicDarkTheme.Dark.DarkCheckbox();
             this.tooglechampcb = new ClassicDarkTheme.Dark.DarkCheckbox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Humanizertb = new System.Windows.Forms.TextBox();
             this.pingtb = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.darkLabel3 = new ClassicDarkTheme.Dark.DarkLabel();
             this.Activatecb = new System.Windows.Forms.CheckBox();
-            this.autohumanizecb = new System.Windows.Forms.CheckBox();
+            this.keybindlbl = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Humanizertb = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.autohuma = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,25 +107,15 @@
             this.UpdateValue.Interval = 1000;
             this.UpdateValue.Tick += new System.EventHandler(this.UpdateValue_Tick);
             // 
-            // pinglbl
-            // 
-            this.pinglbl.AutoSize = true;
-            this.pinglbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.pinglbl.Location = new System.Drawing.Point(278, 129);
-            this.pinglbl.Name = "pinglbl";
-            this.pinglbl.Size = new System.Drawing.Size(77, 15);
-            this.pinglbl.TabIndex = 5;
-            this.pinglbl.Text = "Average Ping";
-            // 
             // humanizerlbl
             // 
             this.humanizerlbl.AutoSize = true;
             this.humanizerlbl.ForeColor = System.Drawing.SystemColors.Control;
-            this.humanizerlbl.Location = new System.Drawing.Point(284, 78);
+            this.humanizerlbl.Location = new System.Drawing.Point(299, 78);
             this.humanizerlbl.Name = "humanizerlbl";
-            this.humanizerlbl.Size = new System.Drawing.Size(65, 15);
+            this.humanizerlbl.Size = new System.Drawing.Size(31, 15);
             this.humanizerlbl.TabIndex = 7;
-            this.humanizerlbl.Text = "Humanizer";
+            this.humanizerlbl.Text = "Ping";
             // 
             // label1
             // 
@@ -253,30 +245,17 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Toogle Champ Only";
             // 
-            // Humanizertb
-            // 
-            this.Humanizertb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.Humanizertb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Humanizertb.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Humanizertb.ForeColor = System.Drawing.SystemColors.Control;
-            this.Humanizertb.Location = new System.Drawing.Point(293, 97);
-            this.Humanizertb.Name = "Humanizertb";
-            this.Humanizertb.Size = new System.Drawing.Size(45, 20);
-            this.Humanizertb.TabIndex = 17;
-            this.Humanizertb.Text = "50";
-            this.Humanizertb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // pingtb
             // 
             this.pingtb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.pingtb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pingtb.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.pingtb.ForeColor = System.Drawing.SystemColors.Control;
-            this.pingtb.Location = new System.Drawing.Point(293, 147);
+            this.pingtb.Location = new System.Drawing.Point(292, 96);
             this.pingtb.Name = "pingtb";
             this.pingtb.Size = new System.Drawing.Size(45, 20);
             this.pingtb.TabIndex = 18;
-            this.pingtb.Text = "50";
+            this.pingtb.Text = "0";
             this.pingtb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
@@ -313,29 +292,84 @@
             this.Activatecb.UseVisualStyleBackColor = true;
             this.Activatecb.CheckedChanged += new System.EventHandler(this.Activatecb_CheckedChanged);
             // 
-            // autohumanizecb
+            // keybindlbl
             // 
-            this.autohumanizecb.AutoSize = true;
-            this.autohumanizecb.ForeColor = System.Drawing.SystemColors.Control;
-            this.autohumanizecb.Location = new System.Drawing.Point(344, 99);
-            this.autohumanizecb.Name = "autohumanizecb";
-            this.autohumanizecb.Size = new System.Drawing.Size(52, 19);
-            this.autohumanizecb.TabIndex = 22;
-            this.autohumanizecb.Text = "Auto";
-            this.autohumanizecb.UseVisualStyleBackColor = true;
-            this.autohumanizecb.CheckedChanged += new System.EventHandler(this.autohumanizecb_CheckedChanged);
+            this.keybindlbl.AutoSize = true;
+            this.keybindlbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.keybindlbl.Location = new System.Drawing.Point(291, 186);
+            this.keybindlbl.Name = "keybindlbl";
+            this.keybindlbl.Size = new System.Drawing.Size(50, 15);
+            this.keybindlbl.TabIndex = 23;
+            this.keybindlbl.Text = "Keybind";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.Control;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Space",
+            "V",
+            "C",
+            "X"});
+            this.comboBox1.Location = new System.Drawing.Point(284, 204);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(64, 23);
+            this.comboBox1.TabIndex = 24;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // Humanizertb
+            // 
+            this.Humanizertb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.Humanizertb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Humanizertb.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Humanizertb.ForeColor = System.Drawing.SystemColors.Control;
+            this.Humanizertb.Location = new System.Drawing.Point(292, 144);
+            this.Humanizertb.Name = "Humanizertb";
+            this.Humanizertb.Size = new System.Drawing.Size(45, 20);
+            this.Humanizertb.TabIndex = 25;
+            this.Humanizertb.Text = "0";
+            this.Humanizertb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(284, 126);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 15);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Humanizer";
+            // 
+            // autohuma
+            // 
+            this.autohuma.AutoSize = true;
+            this.autohuma.ForeColor = System.Drawing.SystemColors.Control;
+            this.autohuma.Location = new System.Drawing.Point(345, 146);
+            this.autohuma.Name = "autohuma";
+            this.autohuma.Size = new System.Drawing.Size(52, 19);
+            this.autohuma.TabIndex = 27;
+            this.autohuma.Text = "Auto";
+            this.autohuma.UseVisualStyleBackColor = true;
+            this.autohuma.CheckedChanged += new System.EventHandler(this.autohuma_CheckedChanged);
             // 
             // orbuser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.autohumanizecb);
+            this.Controls.Add(this.autohuma);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Humanizertb);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.keybindlbl);
             this.Controls.Add(this.Activatecb);
             this.Controls.Add(this.darkLabel3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pingtb);
-            this.Controls.Add(this.Humanizertb);
             this.Controls.Add(this.tooglechampcb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.showrangecb);
@@ -345,7 +379,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.humanizerlbl);
-            this.Controls.Add(this.pinglbl);
             this.Controls.Add(this.arlabel);
             this.Controls.Add(this.aslabel);
             this.Controls.Add(this.darkLabel2);
@@ -366,7 +399,6 @@
         private System.Windows.Forms.Label aslabel;
         private System.Windows.Forms.Label arlabel;
         private System.Windows.Forms.Timer UpdateValue;
-        private System.Windows.Forms.Label pinglbl;
         private System.Windows.Forms.Label humanizerlbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -376,11 +408,14 @@
         private ClassicDarkTheme.Dark.DarkCheckbox showrangecb;
         private ClassicDarkTheme.Dark.DarkCheckbox tooglechampcb;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Humanizertb;
         private System.Windows.Forms.TextBox pingtb;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ClassicDarkTheme.Dark.DarkLabel darkLabel3;
         private System.Windows.Forms.CheckBox Activatecb;
-        private System.Windows.Forms.CheckBox autohumanizecb;
+        private System.Windows.Forms.Label keybindlbl;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox Humanizertb;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox autohuma;
     }
 }

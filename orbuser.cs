@@ -21,14 +21,14 @@ namespace VoidSharp
         {
             try
             {
-                if(hodnoty.AutoHumanize)
+                if (hodnoty.AutoHumanize)
                 {
-                    float aspeed = Cheat.GetPlayerInfo.GetAttackSpeed();
-                    if(aspeed < 0.6)
+                    float aspeed = GetPlayerInfo.GetAttackSpeed();
+                    if (aspeed < 0.6)
                     {
                         Humanizertb.Text = "150";
                     }
-                    else if(aspeed > 0.6 && aspeed < 0.9)
+                    else if (aspeed > 0.6 && aspeed < 0.9)
                     {
                         Humanizertb.Text = "120";
                     }
@@ -44,10 +44,7 @@ namespace VoidSharp
                     {
                         Humanizertb.Text = "0";
                     }
-                    else Humanizertb.Text = "null";
                 }
-                hodnoty.AvPing = Convert.ToInt32(pingtb.Text);
-                hodnoty.HumanizerTime = Convert.ToInt32(Humanizertb.Text);
             }
             catch { };
             if (hodnoty.VoidActivated)
@@ -101,13 +98,29 @@ namespace VoidSharp
             else
                 hodnoty.OrbActivated= false;
         }
-
-        private void autohumanizecb_CheckedChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (autohumanizecb.Checked)
-                hodnoty.AutoHumanize = true;
-            else
-                hodnoty.AutoHumanize = false;
+            switch (comboBox1.SelectedItem.ToString().Trim())
+            {
+                case "Space":
+                    hodnoty.OrbwalkerKey = Keys.Space;
+                    break;
+                case "V":
+                    hodnoty.OrbwalkerKey = Keys.V;
+                    break;
+                case "C":
+                    hodnoty.OrbwalkerKey = Keys.C;
+                    break;
+                case "X":
+                    hodnoty.OrbwalkerKey = Keys.X;
+                    break;
+            }
+        }
+
+        private void autohuma_CheckedChanged(object sender, EventArgs e)
+        {
+            if (autohuma.Checked == true) hodnoty.AutoHumanize = true;
+            else hodnoty.AutoHumanize = false;
         }
     }
 }

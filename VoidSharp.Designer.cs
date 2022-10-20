@@ -40,20 +40,21 @@
             this.OrbwalkerButton = new ClassicDarkTheme.Dark.DarkButton();
             this.AutoAimButton = new ClassicDarkTheme.Dark.DarkButton();
             this.MiscButton = new ClassicDarkTheme.Dark.DarkButton();
-            this.HealBarrierButton = new ClassicDarkTheme.Dark.DarkButton();
+            this.CombosButton = new ClassicDarkTheme.Dark.DarkButton();
             this.LogoPic = new System.Windows.Forms.PictureBox();
             this.generaluser1 = new global::VoidSharp.generaluser();
             this.miscuser1 = new global::VoidSharp.miscuser();
             this.darkLabel1 = new ClassicDarkTheme.Dark.DarkLabel();
-            this.aimuser1 = new global::VoidSharp.aimuser();
-            this.Orbtimer = new System.Windows.Forms.Timer(this.components);
-            this.Aimtimer = new System.Windows.Forms.Timer(this.components);
-            this.HBtimer = new System.Windows.Forms.Timer(this.components);
             this.orbuser1 = new global::VoidSharp.orbuser();
-            this.healbarrieruser1 = new global::VoidSharp.healbarrieruser();
+            this.Playerpb = new System.Windows.Forms.PictureBox();
+            this.Playerlbl = new System.Windows.Forms.Label();
+            this.Updater = new System.Windows.Forms.Timer(this.components);
+            this.banger1 = new global::VoidSharp.Banger();
+            this.combos1 = new global::VoidSharp.combos();
             ((System.ComponentModel.ISupportInitialize)(this.DiscordPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PayPalPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Playerpb)).BeginInit();
             this.SuspendLayout();
             // 
             // progressBar1
@@ -183,7 +184,7 @@
             this.AutoAimButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AutoAimButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AutoAimButton.ForeColor = System.Drawing.Color.White;
-            this.AutoAimButton.Location = new System.Drawing.Point(21, 174);
+            this.AutoAimButton.Location = new System.Drawing.Point(21, 266);
             this.AutoAimButton.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.AutoAimButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
             this.AutoAimButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
@@ -192,7 +193,7 @@
             this.AutoAimButton.Name = "AutoAimButton";
             this.AutoAimButton.Size = new System.Drawing.Size(140, 40);
             this.AutoAimButton.TabIndex = 14;
-            this.AutoAimButton.Text = "AutoAim";
+            this.AutoAimButton.Text = "Banger";
             this.AutoAimButton.UseVisualStyleBackColor = false;
             this.AutoAimButton.Click += new System.EventHandler(this.AutoAimButton_Click);
             // 
@@ -204,7 +205,7 @@
             this.MiscButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MiscButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MiscButton.ForeColor = System.Drawing.Color.White;
-            this.MiscButton.Location = new System.Drawing.Point(21, 266);
+            this.MiscButton.Location = new System.Drawing.Point(21, 220);
             this.MiscButton.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
             this.MiscButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
             this.MiscButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
@@ -217,26 +218,26 @@
             this.MiscButton.UseVisualStyleBackColor = false;
             this.MiscButton.Click += new System.EventHandler(this.MiscButton_Click);
             // 
-            // HealBarrierButton
+            // CombosButton
             // 
-            this.HealBarrierButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.HealBarrierButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HealBarrierButton.FlatAppearance.BorderSize = 0;
-            this.HealBarrierButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HealBarrierButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.HealBarrierButton.ForeColor = System.Drawing.Color.White;
-            this.HealBarrierButton.Location = new System.Drawing.Point(21, 220);
-            this.HealBarrierButton.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.HealBarrierButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
-            this.HealBarrierButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.HealBarrierButton.MouseLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
-            this.HealBarrierButton.MouseUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
-            this.HealBarrierButton.Name = "HealBarrierButton";
-            this.HealBarrierButton.Size = new System.Drawing.Size(140, 40);
-            this.HealBarrierButton.TabIndex = 16;
-            this.HealBarrierButton.Text = "Auto Heal/Barrier";
-            this.HealBarrierButton.UseVisualStyleBackColor = false;
-            this.HealBarrierButton.Click += new System.EventHandler(this.HealBarrierButton_Click_1);
+            this.CombosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.CombosButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CombosButton.FlatAppearance.BorderSize = 0;
+            this.CombosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CombosButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CombosButton.ForeColor = System.Drawing.Color.White;
+            this.CombosButton.Location = new System.Drawing.Point(21, 174);
+            this.CombosButton.MouseBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.CombosButton.MouseDownColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(26)))));
+            this.CombosButton.MouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.CombosButton.MouseLeaveColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(33)))));
+            this.CombosButton.MouseUpColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(46)))));
+            this.CombosButton.Name = "CombosButton";
+            this.CombosButton.Size = new System.Drawing.Size(140, 40);
+            this.CombosButton.TabIndex = 16;
+            this.CombosButton.Text = "Combos";
+            this.CombosButton.UseVisualStyleBackColor = false;
+            this.CombosButton.Click += new System.EventHandler(this.HealBarrierButton_Click_1);
             // 
             // LogoPic
             // 
@@ -278,28 +279,7 @@
             this.darkLabel1.Name = "darkLabel1";
             this.darkLabel1.Size = new System.Drawing.Size(48, 15);
             this.darkLabel1.TabIndex = 20;
-            this.darkLabel1.Text = "Void 1.0";
-            // 
-            // aimuser1
-            // 
-            this.aimuser1.BackColor = System.Drawing.Color.Transparent;
-            this.aimuser1.Location = new System.Drawing.Point(189, 77);
-            this.aimuser1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.aimuser1.Name = "aimuser1";
-            this.aimuser1.Size = new System.Drawing.Size(416, 282);
-            this.aimuser1.TabIndex = 21;
-            // 
-            // Orbtimer
-            // 
-            this.Orbtimer.Enabled = true;
-            this.Orbtimer.Interval = 1;
-            this.Orbtimer.Tick += new System.EventHandler(this.Orbtimer_Tick);
-            // 
-            // HBtimer
-            // 
-            this.HBtimer.Enabled = true;
-            this.HBtimer.Interval = 50;
-            this.HBtimer.Tick += new System.EventHandler(this.HBtimer_Tick);
+            this.darkLabel1.Text = "Void 1.1";
             // 
             // orbuser1
             // 
@@ -310,14 +290,50 @@
             this.orbuser1.Size = new System.Drawing.Size(416, 282);
             this.orbuser1.TabIndex = 22;
             // 
-            // healbarrieruser1
+            // Playerpb
             // 
-            this.healbarrieruser1.BackColor = System.Drawing.Color.Transparent;
-            this.healbarrieruser1.Location = new System.Drawing.Point(189, 77);
-            this.healbarrieruser1.Name = "healbarrieruser1";
-            this.healbarrieruser1.Size = new System.Drawing.Size(416, 282);
-            this.healbarrieruser1.TabIndex = 23;
-            this.healbarrieruser1.Visible = false;
+            this.Playerpb.BackColor = System.Drawing.Color.Transparent;
+            this.Playerpb.Image = global::VoidSharp.Properties.Resources.PlayerIcon;
+            this.Playerpb.Location = new System.Drawing.Point(489, 26);
+            this.Playerpb.Name = "Playerpb";
+            this.Playerpb.Size = new System.Drawing.Size(24, 24);
+            this.Playerpb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Playerpb.TabIndex = 24;
+            this.Playerpb.TabStop = false;
+            // 
+            // Playerlbl
+            // 
+            this.Playerlbl.AutoSize = true;
+            this.Playerlbl.BackColor = System.Drawing.Color.Transparent;
+            this.Playerlbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.Playerlbl.Location = new System.Drawing.Point(518, 31);
+            this.Playerlbl.Name = "Playerlbl";
+            this.Playerlbl.Size = new System.Drawing.Size(88, 15);
+            this.Playerlbl.TabIndex = 25;
+            this.Playerlbl.Text = "Not Connected";
+            // 
+            // Updater
+            // 
+            this.Updater.Enabled = true;
+            this.Updater.Interval = 2000;
+            this.Updater.Tick += new System.EventHandler(this.Updater_Tick);
+            // 
+            // banger1
+            // 
+            this.banger1.BackColor = System.Drawing.Color.Transparent;
+            this.banger1.Location = new System.Drawing.Point(189, 77);
+            this.banger1.Name = "banger1";
+            this.banger1.Size = new System.Drawing.Size(431, 282);
+            this.banger1.TabIndex = 26;
+            // 
+            // combos1
+            // 
+            this.combos1.BackColor = System.Drawing.Color.Transparent;
+            this.combos1.Location = new System.Drawing.Point(189, 77);
+            this.combos1.Name = "combos2";
+            this.combos1.Size = new System.Drawing.Size(431, 282);
+            this.combos1.TabIndex = 27;
+            this.combos1.Visible = false;
             // 
             // VoidSharp
             // 
@@ -326,14 +342,16 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(618, 370);
+            this.Controls.Add(this.combos1);
             this.Controls.Add(this.darkLabel1);
-            this.Controls.Add(this.healbarrieruser1);
+            this.Controls.Add(this.banger1);
+            this.Controls.Add(this.Playerlbl);
+            this.Controls.Add(this.Playerpb);
             this.Controls.Add(this.orbuser1);
-            this.Controls.Add(this.aimuser1);
             this.Controls.Add(this.miscuser1);
             this.Controls.Add(this.generaluser1);
             this.Controls.Add(this.LogoPic);
-            this.Controls.Add(this.HealBarrierButton);
+            this.Controls.Add(this.CombosButton);
             this.Controls.Add(this.MiscButton);
             this.Controls.Add(this.AutoAimButton);
             this.Controls.Add(this.OrbwalkerButton);
@@ -357,6 +375,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DiscordPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PayPalPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Playerpb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,16 +393,16 @@
         private ClassicDarkTheme.Dark.DarkButton OrbwalkerButton;
         private ClassicDarkTheme.Dark.DarkButton AutoAimButton;
         private ClassicDarkTheme.Dark.DarkButton MiscButton;
-        private ClassicDarkTheme.Dark.DarkButton HealBarrierButton;
+        private ClassicDarkTheme.Dark.DarkButton CombosButton;
         private System.Windows.Forms.PictureBox LogoPic;
         private global::VoidSharp.generaluser generaluser1;
         private global::VoidSharp.miscuser miscuser1;
         private ClassicDarkTheme.Dark.DarkLabel darkLabel1;
-        private global::VoidSharp.aimuser aimuser1;
-        private System.Windows.Forms.Timer Orbtimer;
-        private System.Windows.Forms.Timer Aimtimer;
-        private System.Windows.Forms.Timer HBtimer;
         private global::VoidSharp.orbuser orbuser1;
-        private global::VoidSharp.healbarrieruser healbarrieruser1;
+        private System.Windows.Forms.PictureBox Playerpb;
+        private System.Windows.Forms.Label Playerlbl;
+        private System.Windows.Forms.Timer Updater;
+        private global::VoidSharp.Banger banger1;
+        private global::VoidSharp.combos combos1;
     }
 }
