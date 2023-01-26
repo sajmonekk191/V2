@@ -5,6 +5,7 @@
   - AutoCleanse (Automatic Cleanse when getting stuned) - 100%
   - Etcs. (Account Manager, Discord RPC and some good Features) - 80% 
   - All festures + script code arent uploaded on github at this moment
+
 Start project (06 / 02 / 2021)
 
 Finish project predict (18/ 03 / 2023)
