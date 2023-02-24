@@ -17,6 +17,24 @@ namespace VoidSharp
 {
     public partial class VoidSharp : Form
     {
+        [DllImport("user32.dll")]
+        static extern IntPtr SetWindowsHookEx(int idHook, HookProc lpfn, IntPtr hMod, uint dwThreadId);
+
+        [DllImport("user32.dll")]
+        static extern int UnhookWindowsHookEx(IntPtr hhk);
+
+        [DllImport("user32.dll")]
+        static extern int CallNextHookEx(IntPtr hhk, int nCode, IntPtr wParam, IntPtr lParam);
+
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetModuleHandle(string lpModuleName);
+
+        const int WH_KEYBOARD_LL = 13;
+        const int VK_SPACE = 0x20;
+        const int WM_KEYDOWN = 0x0100;
+
+        delegate int HookProc(int code, IntPtr wParam, IntPtr lParam);
+        static IntPtr hookHandle = IntPtr.Zero;
         DiscordRpcClient client;
         Random random = new Random();
         Point mousedownpoint = Point.Empty;
@@ -133,16 +151,18 @@ namespace VoidSharp
             timer.Tick += new EventHandler(ChangeNameLoop);
             AfkScript.Interval = 5000;
             AfkScript.Tick += new EventHandler(AfkScriptTimer);
-            AutoAccpt.Interval = 5000;
-            AutoAccpt.Tick += new EventHandler(AutoAcceptTimer);
+            //AutoAccpt.Interval = 5000;
+            //AutoAccpt.Tick += new EventHandler(AutoAcceptTimer);
             Process.GetCurrentProcess().PriorityBoostEnabled = true;
             Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.AboveNormal;
-            Base.OnTick += Orbwalker.OrbwalkEnemy;
+            //Base.OnTick += Orbwalker.OrbwalkEnemy;
+            hookHandle = SetHook(KeyboardProc);
         }
         private void ExitButton_Click(object sender, EventArgs e)
         {
             client = new DiscordRpcClient(hodnoty.DiscordRpcID);
             client.Dispose();
+            UnhookWindowsHookEx(hookHandle);
             Environment.Exit(0);
         }
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -255,9 +275,22 @@ namespace VoidSharp
         {
             if(hodnoty.CurentUsername != string.Empty)Playerlbl.Text = hodnoty.CurentUsername;
         }
-        private void OrbWal()
+        static IntPtr SetHook(HookProc proc)
         {
-            Orbwalker.OrbwalkEnemy();
+            IntPtr hModule = GetModuleHandle(null);
+            return SetWindowsHookEx(WH_KEYBOARD_LL, proc, hModule, 0);
+        }
+        static int KeyboardProc(int code, IntPtr wParam, IntPtr lParam)
+        {
+            if (code >= 0 && wParam == (IntPtr)WM_KEYDOWN)
+            {
+                int vkCode = Marshal.ReadInt32(lParam);
+                if (vkCode == VK_SPACE)
+                {
+                    Orbwalker.OrbwalkEnemy();
+                }
+            }
+            return CallNextHookEx(hookHandle, code, wParam, lParam);
         }
     }
 }
